@@ -1,0 +1,4377 @@
+training algo results:
+
+baseline:
+
+Model size: 0.23690M
+Model size: 0.69171M
+=====> Start DRL training and Online Evaluate <===== 
+epoch 1/100	 reward 0.12530668891589378	  cost 0.002499999711290002	
+0.0
+epoch 2/100	 reward 0.13277410199599607	  cost 0.07754519581794739	
+0.28846153846153844
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 3/100	 reward 0.4432367033050174	  cost 0.11784418672323227	
+0.26794871794871794
+epoch 4/100	 reward 0.48927611035960067	  cost 0.1457902491092682	
+0.3756410256410256
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 5/100	 reward 0.35949014873731705	  cost 0.04479502886533737	
+0.28717948717948716
+epoch 6/100	 reward 0.4631727307183402	  cost 0.038562990725040436	
+0.3320512820512821
+epoch 7/100	 reward 0.47943576531750814	  cost 0.05659394711256027	
+0.3897435897435898
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 8/100	 reward 0.48234071791172023	  cost 0.028581250458955765	
+0.24358974358974358
+epoch 9/100	 reward 0.4322967321248282	  cost 0.05077245458960533	
+0.3615384615384615
+epoch 10/100	 reward 0.4386592298178446	  cost 0.06352507323026657	
+0.3525641025641026
+epoch 11/100	 reward 0.5016087014050711	  cost 0.05686561018228531	
+0.3333333333333333
+epoch 12/100	 reward 0.479642206231753	  cost 0.09992766380310059	
+0.20256410256410257
+epoch 13/100	 reward 0.4981349188373202	  cost 0.04236748069524765	
+0.22179487179487184
+epoch 14/100	 reward 0.4630877349490211	  cost 0.05494982749223709	
+0.2794871794871795
+epoch 15/100	 reward 0.42768846279098877	  cost 0.0012584866490215063	
+0.0
+epoch 16/100	 reward 0.37589116967859726	  cost -0.001378578250296414	
+0.0
+epoch 17/100	 reward 0.30168466123088594	  cost 0.0419718436896801	
+0.3294871794871795
+epoch 18/100	 reward 0.4925787111123403	  cost 0.015424856916069984	
+0.4435897435897435
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 19/100	 reward 0.35847624632929076	  cost 0.0024988495279103518	
+0.0
+epoch 20/100	 reward 0.40814883015445536	  cost 0.07392195612192154	
+0.4256410256410256
+epoch 21/100	 reward 0.5531076388699668	  cost 0.13919495046138763	
+0.5115384615384616
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 22/100	 reward 0.590208258430163	  cost 0.22861093282699585	
+0.3871794871794872
+epoch 23/100	 reward 0.5690604291927247	  cost 0.08289127051830292	
+0.4576923076923076
+epoch 24/100	 reward 0.5195110653127942	  cost 0.0751822292804718	
+0.40512820512820513
+epoch 25/100	 reward 0.5587761628911609	  cost 0.27791664004325867	
+0.43846153846153846
+epoch 26/100	 reward 0.6311451892909549	  cost 0.1105385348200798	
+0.43846153846153846
+epoch 27/100	 reward 0.669458244159108	  cost 0.21352487802505493	
+0.40769230769230774
+epoch 28/100	 reward 0.6341628414960133	  cost 0.06085478141903877	
+0.3679487179487179
+epoch 29/100	 reward 0.6329696120534624	  cost 0.08508198708295822	
+0.3333333333333333
+epoch 30/100	 reward 0.6545461840572812	  cost 0.09643562138080597	
+0.2564102564102564
+epoch 31/100	 reward 0.6445684073368709	  cost 0.09254511445760727	
+0.19615384615384615
+epoch 32/100	 reward 0.6629323270491192	  cost 0.041267167776823044	
+0.32051282051282054
+epoch 33/100	 reward 0.7010696330240794	  cost 0.10156472027301788	
+0.2858974358974359
+epoch 34/100	 reward 0.6747146366891408	  cost 0.07081727683544159	
+0.32051282051282054
+epoch 35/100	 reward 0.6683466334286191	  cost 0.10659157484769821	
+0.27948717948717944
+epoch 36/100	 reward 0.7193090236470814	  cost 0.10962773859500885	
+0.3371794871794872
+epoch 37/100	 reward 0.6986669651383447	  cost 0.06989163160324097	
+0.36666666666666664
+epoch 38/100	 reward 0.7159827762558347	  cost 0.15019351243972778	
+0.33076923076923076
+epoch 39/100	 reward 0.7205873262314569	  cost 0.08560420572757721	
+0.3679487179487179
+epoch 40/100	 reward 0.6939579760460627	  cost 0.01639140583574772	
+0.34615384615384615
+epoch 41/100	 reward 0.647099011909394	  cost 0.016734786331653595	
+0.39487179487179486
+epoch 42/100	 reward 0.6840278725964682	  cost 0.07188764214515686	
+0.4051282051282052
+epoch 43/100	 reward 0.7088479131176358	  cost 0.031508080661296844	
+0.44487179487179496
+epoch 44/100	 reward 0.7265156909681502	  cost 0.055426500737667084	
+0.4102564102564103
+epoch 45/100	 reward 0.6796664196820487	  cost -0.02384798973798752	
+0.33717948717948715
+epoch 46/100	 reward 0.5870949363424665	  cost -0.04577145352959633	
+0.37179487179487186
+epoch 47/100	 reward 0.6267440991174608	  cost -0.027063949033617973	
+0.3974358974358974
+epoch 48/100	 reward 0.6374811848288492	  cost 0.022959358990192413	
+0.37820512820512814
+epoch 49/100	 reward 0.6802428180830818	  cost 0.05179169401526451	
+0.40641025641025635
+epoch 50/100	 reward 0.7018773978664762	  cost 0.012554719112813473	
+0.36538461538461536
+epoch 51/100	 reward 0.6932135482061478	  cost 0.03479379788041115	
+0.40384615384615385
+epoch 52/100	 reward 0.5790736273073015	  cost -0.04633883386850357	
+0.4205128205128205
+epoch 53/100	 reward 0.6210009336471558	  cost -0.05928051844239235	
+0.3487179487179487
+epoch 54/100	 reward 0.6032637613727933	  cost -0.10867346823215485	
+0.33974358974358976
+epoch 55/100	 reward 0.617612628823235	  cost -0.06322437524795532	
+0.28846153846153844
+epoch 56/100	 reward 0.6116406253689811	  cost -0.0732010155916214	
+0.23333333333333336
+epoch 57/100	 reward 0.6168254178762437	  cost -0.006066144444048405	
+0.2717948717948718
+epoch 58/100	 reward 0.6289104523829052	  cost 0.00471043586730957	
+0.2153846153846154
+epoch 59/100	 reward 0.6257161657299314	  cost 0.020263798534870148	
+0.28076923076923077
+epoch 60/100	 reward 0.6182841546478726	  cost -0.04645392298698425	
+0.2153846153846154
+epoch 61/100	 reward 0.6155989467813855	  cost -0.023459861055016518	
+0.18333333333333332
+epoch 62/100	 reward 0.6272273246447245	  cost -0.0457005649805069	
+0.18589743589743588
+epoch 63/100	 reward 0.6329081419536045	  cost 0.006051790900528431	
+0.17692307692307693
+epoch 64/100	 reward 0.6489390229327339	  cost 0.013881616294384003	
+0.17435897435897435
+epoch 65/100	 reward 0.6468438067322686	  cost 0.06895505636930466	
+0.1641025641025641
+epoch 66/100	 reward 0.6569056136551357	  cost 0.025825146585702896	
+0.24743589743589745
+epoch 67/100	 reward 0.6498902874333518	  cost 0.004879986867308617	
+0.22435897435897434
+epoch 68/100	 reward 0.6382428833984193	  cost 0.01757085882127285	
+0.16794871794871793
+epoch 69/100	 reward 0.6388360543478102	  cost 0.022468464449048042	
+0.2435897435897436
+epoch 70/100	 reward 0.6591165864183789	  cost 0.04366010054945946	
+0.19743589743589746
+epoch 71/100	 reward 0.6734540814161301	  cost 0.027462026104331017	
+0.23846153846153845
+epoch 72/100	 reward 0.6683696130627677	  cost 0.010370954871177673	
+0.2769230769230769
+epoch 73/100	 reward 0.6631034411986669	  cost -0.019022047519683838	
+0.2769230769230769
+epoch 74/100	 reward 0.6463967652547927	  cost -0.02493409812450409	
+0.24743589743589742
+epoch 75/100	 reward 0.67007984879471	  cost 0.07169686257839203	
+0.2705128205128205
+epoch 76/100	 reward 0.6742877735978081	  cost 0.013490085490047932	
+0.2948717948717948
+epoch 77/100	 reward 0.6826969865390233	  cost 0.04381629824638367	
+0.3012820512820512
+epoch 78/100	 reward 0.6863941324041004	  cost 0.007917028851807117	
+0.25384615384615383
+epoch 79/100	 reward 0.6867227431138357	  cost 0.05979239195585251	
+0.2564102564102564
+epoch 80/100	 reward 0.694913465976715	  cost 0.03188081085681915	
+0.24230769230769228
+epoch 81/100	 reward 0.6970727149077823	  cost 0.009711635299026966	
+0.2358974358974359
+epoch 82/100	 reward 0.68747472516128	  cost -0.007067323662340641	
+0.25256410256410255
+epoch 83/100	 reward 0.6792729336874825	  cost -0.014161504805088043	
+0.24615384615384617
+epoch 84/100	 reward 0.6678777277185804	  cost 0.014969266951084137	
+0.22692307692307695
+epoch 85/100	 reward 0.6655142265842074	  cost -0.013835633173584938	
+0.22051282051282048
+epoch 86/100	 reward 0.6641619365555901	  cost 0.013077429495751858	
+0.22692307692307695
+epoch 87/100	 reward 0.6719834137246724	  cost 0.011880828998982906	
+0.24615384615384617
+epoch 88/100	 reward 0.6664900148198718	  cost -0.005388891790062189	
+0.2564102564102564
+epoch 89/100	 reward 0.6701494753928412	  cost -0.016768744215369225	
+0.24358974358974358
+epoch 90/100	 reward 0.6776312129838126	  cost 0.023161660879850388	
+0.2782051282051282
+epoch 91/100	 reward 0.6795032803217569	  cost 0.021015461534261703	
+0.2782051282051282
+epoch 92/100	 reward 0.674126053849856	  cost -0.06008042022585869	
+0.2564102564102564
+epoch 93/100	 reward 0.6698619423877625	  cost -0.01524614728987217	
+0.2371794871794872
+epoch 94/100	 reward 0.6742314603215172	  cost -0.0036906125023961067	
+0.2846153846153846
+epoch 95/100	 reward 0.6786048162551154	  cost 0.02336588129401207	
+0.2692307692307692
+epoch 96/100	 reward 0.6835705123345056	  cost -0.02015059068799019	
+0.27179487179487183
+epoch 97/100	 reward 0.6871002233596074	  cost -0.006192606408149004	
+0.30641025641025643
+epoch 98/100	 reward 0.6891200293529602	  cost 0.038534976541996	
+0.2538461538461539
+epoch 99/100	 reward 0.68305024822553	  cost 0.03321988135576248	
+0.23717948717948717
+epoch 100/100	 reward 0.6868941930362158	  cost 0.03043614886701107	
+0.23717948717948717
+
+=====> Start PPO Training <=====
+Epoch 1/100 | Reward: -0.109240
+Recall: 0.064103
+🔥 Best model saved!
+Epoch 2/100 | Reward: -0.082797
+Recall: 0.000000
+Epoch 3/100 | Reward: -0.048621
+Recall: 0.012821
+Epoch 4/100 | Reward: -0.039298
+Recall: 0.000000
+Epoch 5/100 | Reward: -0.027088
+Recall: 0.012821
+Epoch 6/100 | Reward: -0.018394
+Recall: 0.028205
+Epoch 7/100 | Reward: -0.017202
+Recall: 0.041026
+Epoch 8/100 | Reward: -0.014730
+Recall: 0.091026
+🔥 Best model saved!
+Epoch 9/100 | Reward: -0.013700
+Recall: 0.047436
+Epoch 10/100 | Reward: -0.014723
+Recall: 0.064103
+Epoch 11/100 | Reward: -0.006482
+Recall: 0.015385
+Epoch 12/100 | Reward: -0.005990
+Recall: 0.000000
+Epoch 13/100 | Reward: -0.006159
+Recall: 0.030769
+Epoch 14/100 | Reward: -0.006076
+Recall: 0.050000
+Epoch 15/100 | Reward: -0.005930
+Recall: 0.098718
+🔥 Best model saved!
+Epoch 16/100 | Reward: -0.004641
+Recall: 0.117949
+🔥 Best model saved!
+Epoch 17/100 | Reward: -0.010033
+Recall: 0.064103
+Epoch 18/100 | Reward: -0.003755
+Recall: 0.044872
+Epoch 19/100 | Reward: -0.007981
+Recall: 0.025641
+Epoch 20/100 | Reward: -0.008676
+Recall: 0.120513
+🔥 Best model saved!
+Epoch 21/100 | Reward: -0.003723
+Recall: 0.111538
+Epoch 22/100 | Reward: -0.005378
+Recall: 0.053846
+Epoch 23/100 | Reward: -0.008358
+Recall: 0.069231
+Epoch 24/100 | Reward: -0.007408
+Recall: 0.092308
+Epoch 25/100 | Reward: -0.006234
+Recall: 0.044872
+Epoch 26/100 | Reward: -0.006447
+Recall: 0.034615
+Epoch 27/100 | Reward: -0.006402
+Recall: 0.066667
+Epoch 28/100 | Reward: -0.006627
+Recall: 0.050000
+Epoch 29/100 | Reward: -0.005012
+Recall: 0.034615
+Epoch 30/100 | Reward: -0.006753
+Recall: 0.073077
+Epoch 31/100 | Reward: -0.006551
+Recall: 0.053846
+Epoch 32/100 | Reward: -0.008553
+Recall: 0.015385
+Epoch 33/100 | Reward: -0.010020
+Recall: 0.038462
+Epoch 34/100 | Reward: -0.003005
+Recall: 0.012821
+Epoch 35/100 | Reward: -0.007715
+Recall: 0.032051
+Epoch 36/100 | Reward: -0.009019
+Recall: 0.000000
+Epoch 37/100 | Reward: -0.005747
+Recall: 0.098718
+Epoch 38/100 | Reward: -0.008202
+Recall: 0.000000
+Epoch 39/100 | Reward: -0.008267
+Recall: 0.139744
+🔥 Best model saved!
+Epoch 40/100 | Reward: -0.006077
+Recall: 0.091026
+Epoch 41/100 | Reward: -0.006420
+Recall: 0.088462
+Epoch 42/100 | Reward: -0.010255
+Recall: 0.135897
+Epoch 43/100 | Reward: -0.009580
+Recall: 0.047436
+Epoch 44/100 | Reward: -0.007508
+Recall: 0.064103
+Epoch 45/100 | Reward: -0.008412
+Recall: 0.041026
+Epoch 46/100 | Reward: -0.010370
+Recall: 0.060256
+Epoch 47/100 | Reward: -0.005594
+Recall: 0.084615
+Epoch 48/100 | Reward: -0.008073
+Recall: 0.051282
+Epoch 49/100 | Reward: -0.009572
+Recall: 0.019231
+Epoch 50/100 | Reward: -0.013466
+Recall: 0.105128
+Epoch 51/100 | Reward: -0.006388
+Recall: 0.094872
+Epoch 52/100 | Reward: -0.008730
+Recall: 0.057692
+Epoch 53/100 | Reward: -0.008840
+Recall: 0.114103
+Epoch 54/100 | Reward: -0.008135
+Recall: 0.000000
+Epoch 55/100 | Reward: -0.009093
+Recall: 0.000000
+Epoch 56/100 | Reward: -0.010362
+Recall: 0.079487
+Epoch 57/100 | Reward: -0.006918
+Recall: 0.012821
+Epoch 58/100 | Reward: -0.008509
+Recall: 0.082051
+Epoch 59/100 | Reward: -0.008827
+Recall: 0.088462
+Epoch 60/100 | Reward: -0.011925
+Recall: 0.053846
+Epoch 61/100 | Reward: -0.008939
+Recall: 0.111538
+Epoch 62/100 | Reward: -0.015126
+Recall: 0.043590
+Epoch 63/100 | Reward: -0.008522
+Recall: 0.069231
+Epoch 64/100 | Reward: -0.008299
+Recall: 0.041026
+Epoch 65/100 | Reward: -0.007306
+Recall: 0.057692
+Epoch 66/100 | Reward: -0.006414
+Recall: 0.028205
+Epoch 67/100 | Reward: -0.010193
+Recall: 0.060256
+Epoch 68/100 | Reward: -0.007245
+Recall: 0.051282
+Epoch 69/100 | Reward: -0.006352
+Recall: 0.038462
+Epoch 70/100 | Reward: -0.007064
+Recall: 0.082051
+Epoch 71/100 | Reward: -0.006615
+Recall: 0.025641
+Epoch 72/100 | Reward: -0.007121
+Recall: 0.064103
+Epoch 73/100 | Reward: -0.005939
+Recall: 0.079487
+Epoch 74/100 | Reward: -0.009840
+Recall: 0.000000
+Epoch 75/100 | Reward: -0.008776
+Recall: 0.082051
+Epoch 76/100 | Reward: -0.006793
+Recall: 0.075641
+Epoch 77/100 | Reward: -0.006257
+Recall: 0.135897
+Epoch 78/100 | Reward: -0.005130
+Recall: 0.047436
+Epoch 79/100 | Reward: -0.011662
+Recall: 0.000000
+Epoch 80/100 | Reward: -0.006093
+Recall: 0.083333
+Epoch 81/100 | Reward: -0.012626
+Recall: 0.092308
+Epoch 82/100 | Reward: -0.008792
+Recall: 0.032051
+Epoch 83/100 | Reward: -0.009015
+Recall: 0.066667
+Epoch 84/100 | Reward: -0.002687
+Recall: 0.073077
+Epoch 85/100 | Reward: -0.003927
+Recall: 0.066667
+Epoch 86/100 | Reward: -0.009958
+Recall: 0.050000
+Epoch 87/100 | Reward: -0.009345
+Recall: 0.085897
+Epoch 88/100 | Reward: -0.010113
+Recall: 0.051282
+
+ppo with normalising reward:
+
+=====> Start PPO Training <=====
+Epoch 1/100 | Reward: 0.046321
+Recall: 0.219231
+🔥 Best model saved!
+Epoch 2/100 | Reward: 0.051807
+Recall: 0.292308
+🔥 Best model saved!
+Epoch 3/100 | Reward: 0.048918
+Recall: 0.273077
+Epoch 4/100 | Reward: 0.047428
+Recall: 0.279487
+Epoch 5/100 | Reward: 0.046290
+Recall: 0.262821
+Epoch 6/100 | Reward: 0.046907
+Recall: 0.393590
+🔥 Best model saved!
+Epoch 7/100 | Reward: 0.043241
+Recall: 0.350000
+Epoch 8/100 | Reward: 0.044660
+Recall: 0.302564
+Epoch 9/100 | Reward: 0.044939
+Recall: 0.334615
+Epoch 10/100 | Reward: 0.040061
+Recall: 0.300000
+Epoch 11/100 | Reward: 0.042468
+Recall: 0.264103
+Epoch 12/100 | Reward: 0.041419
+Recall: 0.306410
+Epoch 13/100 | Reward: 0.038219
+Recall: 0.289744
+Epoch 14/100 | Reward: 0.037735
+Recall: 0.315385
+Epoch 15/100 | Reward: 0.039533
+Recall: 0.341026
+Epoch 16/100 | Reward: 0.041885
+Recall: 0.366667
+Epoch 17/100 | Reward: 0.037349
+Recall: 0.287179
+Epoch 18/100 | Reward: 0.037662
+Recall: 0.319231
+Epoch 19/100 | Reward: 0.037309
+Recall: 0.265385
+Epoch 20/100 | Reward: 0.039467
+Recall: 0.242308
+Epoch 21/100 | Reward: 0.037034
+Recall: 0.283333
+Epoch 22/100 | Reward: 0.037576
+Recall: 0.351282
+Epoch 23/100 | Reward: 0.037280
+Recall: 0.251282
+Epoch 24/100 | Reward: 0.037273
+Recall: 0.296154
+Epoch 25/100 | Reward: 0.039515
+Recall: 0.261538
+Epoch 26/100 | Reward: 0.038478
+Recall: 0.303846
+Epoch 27/100 | Reward: 0.037704
+Recall: 0.280769
+Epoch 28/100 | Reward: 0.036221
+Recall: 0.262821
+Epoch 29/100 | Reward: 0.035792
+Recall: 0.256410
+Epoch 30/100 | Reward: 0.036647
+Recall: 0.312821
+Epoch 31/100 | Reward: 0.038682
+Recall: 0.264103
+Epoch 32/100 | Reward: 0.038994
+Recall: 0.244872
+Epoch 33/100 | Reward: 0.037149
+Recall: 0.248718
+Epoch 34/100 | Reward: 0.037933
+Recall: 0.321795
+Epoch 35/100 | Reward: 0.038557
+Recall: 0.287179
+Epoch 36/100 | Reward: 0.037004
+Recall: 0.306410
+Epoch 37/100 | Reward: 0.035951
+Recall: 0.283333
+Epoch 38/100 | Reward: 0.036007
+Recall: 0.237179
+Epoch 39/100 | Reward: 0.035609
+Recall: 0.325641
+Epoch 40/100 | Reward: 0.035474
+Recall: 0.289744
+Epoch 41/100 | Reward: 0.035525
+Recall: 0.291026
+Epoch 42/100 | Reward: 0.035464
+Recall: 0.306410
+Epoch 43/100 | Reward: 0.037251
+Recall: 0.210256
+Epoch 44/100 | Reward: 0.037783
+Recall: 0.276923
+Epoch 45/100 | Reward: 0.037138
+Recall: 0.315385
+Epoch 46/100 | Reward: 0.036801
+Recall: 0.351282
+Epoch 47/100 | Reward: 0.036378
+Recall: 0.237179
+Epoch 48/100 | Reward: 0.036362
+Recall: 0.274359
+Epoch 49/100 | Reward: 0.036143
+Recall: 0.373077
+Epoch 50/100 | Reward: 0.036888
+Recall: 0.270513
+Epoch 51/100 | Reward: 0.036967
+Recall: 0.266667
+Epoch 52/100 | Reward: 0.036060
+Recall: 0.300000
+Epoch 53/100 | Reward: 0.035705
+Recall: 0.226923
+Epoch 54/100 | Reward: 0.036094
+Recall: 0.283333
+Epoch 55/100 | Reward: 0.035938
+Recall: 0.306410
+Epoch 56/100 | Reward: 0.035960
+Recall: 0.283333
+Epoch 57/100 | Reward: 0.036104
+Recall: 0.328205
+Epoch 58/100 | Reward: 0.035990
+Recall: 0.276923
+Epoch 59/100 | Reward: 0.036460
+Recall: 0.248718
+Epoch 60/100 | Reward: 0.036081
+Recall: 0.339744
+Epoch 61/100 | Reward: 0.036121
+Recall: 0.266667
+Epoch 62/100 | Reward: 0.036103
+Recall: 0.346154
+Epoch 63/100 | Reward: 0.036172
+Recall: 0.321795
+Epoch 64/100 | Reward: 0.036431
+Recall: 0.346154
+Epoch 65/100 | Reward: 0.036749
+Recall: 0.280769
+Epoch 66/100 | Reward: 0.037127
+Recall: 0.283333
+Epoch 67/100 | Reward: 0.036981
+Recall: 0.248718
+Epoch 68/100 | Reward: 0.036789
+Recall: 0.352564
+Epoch 69/100 | Reward: 0.036447
+Recall: 0.330769
+Epoch 70/100 | Reward: 0.036416
+Recall: 0.358974
+Epoch 71/100 | Reward: 0.036585
+Recall: 0.326923
+Epoch 72/100 | Reward: 0.036527
+Recall: 0.369231
+Epoch 73/100 | Reward: 0.036518
+Recall: 0.328205
+Epoch 74/100 | Reward: 0.036600
+Recall: 0.315385
+Epoch 75/100 | Reward: 0.036531
+Recall: 0.334615
+Epoch 76/100 | Reward: 0.036974
+Recall: 0.328205
+Epoch 77/100 | Reward: 0.036587
+Recall: 0.328205
+Epoch 78/100 | Reward: 0.036662
+Recall: 0.330769
+Epoch 79/100 | Reward: 0.036647
+Recall: 0.317949
+Epoch 80/100 | Reward: 0.036685
+Recall: 0.302564
+Epoch 81/100 | Reward: 0.037017
+Recall: 0.321795
+Epoch 82/100 | Reward: 0.036728
+Recall: 0.328205
+Epoch 83/100 | Reward: 0.036650
+Recall: 0.280769
+Epoch 84/100 | Reward: 0.036347
+Recall: 0.343590
+Epoch 85/100 | Reward: 0.036332
+Recall: 0.266667
+Epoch 86/100 | Reward: 0.036204
+Recall: 0.261538
+Epoch 87/100 | Reward: 0.036366
+Recall: 0.321795
+Epoch 88/100 | Reward: 0.036300
+Recall: 0.289744
+Epoch 89/100 | Reward: 0.036488
+Recall: 0.321795
+Epoch 90/100 | Reward: 0.036459
+Recall: 0.334615
+Epoch 91/100 | Reward: 0.036527
+Recall: 0.283333
+Epoch 92/100 | Reward: 0.036734
+Recall: 0.255128
+Epoch 93/100 | Reward: 0.036695
+Recall: 0.341026
+Epoch 94/100 | Reward: 0.036663
+Recall: 0.321795
+Epoch 95/100 | Reward: 0.036591
+Recall: 0.353846
+Epoch 96/100 | Reward: 0.036453
+Recall: 0.302564
+Epoch 97/100 | Reward: 0.036463
+Recall: 0.283333
+Epoch 98/100 | Reward: 0.036982
+Recall: 0.293590
+Epoch 99/100 | Reward: 0.036767
+Recall: 0.283333
+Epoch 100/100 | Reward: 0.036873
+Recall: 0.334615
+
+
+normal sac
+Epoch 1 | Reward: 0.001578 | Alpha: 0.9570
+Recall: 0.000000
+Epoch 2 | Reward: 0.001611 | Alpha: 0.8984
+Recall: 0.012821
+🔥 Best SAC model saved!
+Epoch 3 | Reward: 0.001610 | Alpha: 0.8435
+Recall: 0.000000
+Epoch 4 | Reward: 0.001606 | Alpha: 0.7919
+Recall: 0.000000
+Epoch 5 | Reward: 0.001667 | Alpha: 0.7435
+Recall: 0.012821
+Epoch 6 | Reward: 0.001600 | Alpha: 0.6981
+Recall: 0.000000
+Epoch 7 | Reward: 0.001568 | Alpha: 0.6555
+Recall: 0.000000
+Epoch 8 | Reward: 0.001602 | Alpha: 0.6154
+Recall: 0.000000
+Epoch 9 | Reward: 0.001576 | Alpha: 0.5778
+Recall: 0.000000
+Epoch 10 | Reward: 0.001575 | Alpha: 0.5426
+Recall: 0.000000
+Epoch 11 | Reward: 0.001610 | Alpha: 0.5094
+Recall: 0.000000
+Epoch 12 | Reward: 0.001598 | Alpha: 0.4783
+Recall: 0.066667
+🔥 Best SAC model saved!
+Epoch 13 | Reward: 0.001531 | Alpha: 0.4491
+Recall: 0.000000
+Epoch 14 | Reward: 0.001574 | Alpha: 0.4217
+Recall: 0.019231
+Epoch 15 | Reward: 0.001593 | Alpha: 0.3959
+Recall: 0.000000
+Epoch 16 | Reward: 0.001567 | Alpha: 0.3718
+Recall: 0.000000
+Epoch 17 | Reward: 0.001517 | Alpha: 0.3491
+Recall: 0.060256
+Epoch 18 | Reward: 0.001567 | Alpha: 0.3277
+Recall: 0.015385
+Epoch 19 | Reward: 0.001548 | Alpha: 0.3077
+Recall: 0.028205
+Epoch 20 | Reward: 0.001609 | Alpha: 0.2889
+Recall: 0.012821
+Epoch 21 | Reward: 0.001580 | Alpha: 0.2713
+Recall: 0.019231
+Epoch 22 | Reward: 0.001568 | Alpha: 0.2547
+Recall: 0.019231
+Epoch 23 | Reward: 0.001647 | Alpha: 0.2392
+Recall: 0.012821
+Epoch 24 | Reward: 0.001630 | Alpha: 0.2246
+Recall: 0.019231
+Epoch 25 | Reward: 0.001617 | Alpha: 0.2108
+Recall: 0.070513
+🔥 Best SAC model saved!
+Epoch 26 | Reward: 0.001579 | Alpha: 0.1980
+Recall: 0.012821
+Epoch 27 | Reward: 0.001576 | Alpha: 0.1859
+Recall: 0.089744
+🔥 Best SAC model saved!
+Epoch 28 | Reward: 0.001573 | Alpha: 0.1745
+Recall: 0.012821
+Epoch 29 | Reward: 0.001554 | Alpha: 0.1639
+Recall: 0.000000
+Epoch 30 | Reward: 0.001569 | Alpha: 0.1539
+Recall: 0.019231
+Epoch 31 | Reward: 0.001574 | Alpha: 0.1445
+Recall: 0.070513
+Epoch 32 | Reward: 0.001630 | Alpha: 0.1356
+Recall: 0.019231
+Epoch 33 | Reward: 0.001528 | Alpha: 0.1274
+Recall: 0.051282
+Epoch 34 | Reward: 0.001569 | Alpha: 0.1196
+Recall: 0.019231
+Epoch 35 | Reward: 0.001550 | Alpha: 0.1123
+Recall: 0.019231
+Epoch 36 | Reward: 0.001588 | Alpha: 0.1054
+Recall: 0.051282
+Epoch 37 | Reward: 0.001551 | Alpha: 0.0990
+Recall: 0.038462
+Epoch 38 | Reward: 0.001541 | Alpha: 0.0930
+Recall: 0.064103
+Epoch 39 | Reward: 0.001525 | Alpha: 0.0873
+Recall: 0.038462
+Epoch 40 | Reward: 0.001635 | Alpha: 0.0820
+Recall: 0.092308
+🔥 Best SAC model saved!
+Epoch 41 | Reward: 0.001602 | Alpha: 0.0770
+Recall: 0.019231
+Epoch 42 | Reward: 0.001609 | Alpha: 0.0723
+Recall: 0.038462
+Epoch 43 | Reward: 0.001587 | Alpha: 0.0678
+Recall: 0.051282
+Epoch 44 | Reward: 0.001591 | Alpha: 0.0637
+Recall: 0.000000
+Epoch 45 | Reward: 0.001586 | Alpha: 0.0598
+Recall: 0.019231
+Epoch 46 | Reward: 0.001521 | Alpha: 0.0562
+Recall: 0.012821
+Epoch 47 | Reward: 0.001550 | Alpha: 0.0527
+Recall: 0.019231
+Epoch 48 | Reward: 0.001599 | Alpha: 0.0495
+Recall: 0.019231
+Epoch 49 | Reward: 0.001564 | Alpha: 0.0465
+Recall: 0.044872
+Epoch 50 | Reward: 0.001589 | Alpha: 0.0437
+Recall: 0.000000
+Epoch 51 | Reward: 0.001598 | Alpha: 0.0410
+Recall: 0.015385
+Epoch 52 | Reward: 0.001608 | Alpha: 0.0385
+Recall: 0.019231
+Epoch 53 | Reward: 0.001625 | Alpha: 0.0361
+Recall: 0.032051
+Epoch 54 | Reward: 0.001611 | Alpha: 0.0339
+Recall: 0.038462
+Epoch 55 | Reward: 0.001640 | Alpha: 0.0319
+Recall: 0.019231
+Epoch 56 | Reward: 0.001554 | Alpha: 0.0299
+Recall: 0.047436
+Epoch 57 | Reward: 0.001571 | Alpha: 0.0281
+Recall: 0.000000
+Epoch 58 | Reward: 0.001599 | Alpha: 0.0264
+Recall: 0.079487
+Epoch 59 | Reward: 0.001588 | Alpha: 0.0248
+Recall: 0.000000
+Epoch 60 | Reward: 0.001622 | Alpha: 0.0233
+Recall: 0.089744
+Epoch 61 | Reward: 0.001608 | Alpha: 0.0218
+Recall: 0.019231
+Epoch 62 | Reward: 0.001602 | Alpha: 0.0205
+Recall: 0.083333
+Epoch 63 | Reward: 0.001634 | Alpha: 0.0192
+Recall: 0.064103
+Epoch 64 | Reward: 0.001573 | Alpha: 0.0181
+Recall: 0.032051
+Epoch 65 | Reward: 0.001604 | Alpha: 0.0170
+Recall: 0.064103
+Epoch 66 | Reward: 0.001564 | Alpha: 0.0159
+Recall: 0.038462
+Epoch 67 | Reward: 0.001584 | Alpha: 0.0150
+Recall: 0.044872
+Epoch 68 | Reward: 0.001623 | Alpha: 0.0140
+Recall: 0.064103
+Epoch 69 | Reward: 0.001613 | Alpha: 0.0132
+Recall: 0.000000
+Epoch 70 | Reward: 0.001597 | Alpha: 0.0124
+Recall: 0.000000
+Epoch 71 | Reward: 0.001641 | Alpha: 0.0116
+Recall: 0.064103
+Epoch 72 | Reward: 0.001595 | Alpha: 0.0109
+Recall: 0.064103
+Epoch 73 | Reward: 0.001632 | Alpha: 0.0103
+Recall: 0.044872
+Epoch 74 | Reward: 0.001643 | Alpha: 0.0096
+Recall: 0.019231
+Epoch 75 | Reward: 0.001582 | Alpha: 0.0090
+Recall: 0.038462
+Epoch 76 | Reward: 0.001634 | Alpha: 0.0085
+Recall: 0.000000
+Epoch 77 | Reward: 0.001651 | Alpha: 0.0080
+Recall: 0.019231
+Epoch 78 | Reward: 0.001581 | Alpha: 0.0075
+Recall: 0.019231
+Epoch 79 | Reward: 0.001604 | Alpha: 0.0070
+Recall: 0.019231
+Epoch 80 | Reward: 0.001694 | Alpha: 0.0066
+Recall: 0.032051
+Epoch 81 | Reward: 0.001666 | Alpha: 0.0062
+Recall: 0.000000
+Epoch 82 | Reward: 0.001585 | Alpha: 0.0058
+Recall: 0.019231
+Epoch 83 | Reward: 0.001621 | Alpha: 0.0055
+Recall: 0.038462
+Epoch 84 | Reward: 0.001583 | Alpha: 0.0051
+Recall: 0.038462
+Epoch 85 | Reward: 0.001658 | Alpha: 0.0048
+Recall: 0.000000
+Epoch 86 | Reward: 0.001707 | Alpha: 0.0045
+Recall: 0.057692
+Epoch 87 | Reward: 0.001663 | Alpha: 0.0042
+Recall: 0.019231
+Epoch 88 | Reward: 0.001614 | Alpha: 0.0040
+Recall: 0.034615
+Epoch 89 | Reward: 0.001640 | Alpha: 0.0037
+Recall: 0.034615
+Epoch 90 | Reward: 0.001701 | Alpha: 0.0035
+Recall: 0.019231
+Epoch 91 | Reward: 0.001663 | Alpha: 0.0033
+Recall: 0.000000
+Epoch 92 | Reward: 0.001673 | Alpha: 0.0031
+Recall: 0.000000
+Epoch 93 | Reward: 0.001717 | Alpha: 0.0029
+Recall: 0.000000
+Epoch 94 | Reward: 0.001626 | Alpha: 0.0027
+Recall: 0.012821
+Epoch 95 | Reward: 0.001717 | Alpha: 0.0026
+Recall: 0.034615
+Epoch 96 | Reward: 0.001635 | Alpha: 0.0024
+Recall: 0.047436
+Epoch 97 | Reward: 0.001677 | Alpha: 0.0023
+Recall: 0.000000
+Epoch 98 | Reward: 0.001682 | Alpha: 0.0021
+Recall: 0.000000
+
+sac_multiscale
+
+Epoch 1 | Reward: 0.001307 | Alpha: 1.0014
+   [Debug] A-Loss: -0.1306 | C-Loss: 0.2093 | Q-val: -0.0242 | Ent: 0.1529
+Recall: 0.000000
+Epoch 2 | Reward: 0.001327 | Alpha: 1.0035
+   [Debug] A-Loss: -0.1542 | C-Loss: 0.0055 | Q-val: -0.0191 | Ent: 0.1723
+Recall: 0.000000
+Epoch 3 | Reward: 0.001352 | Alpha: 1.0055
+   [Debug] A-Loss: -0.1771 | C-Loss: 0.0025 | Q-val: -0.0122 | Ent: 0.1881
+Recall: 0.000000
+Epoch 4 | Reward: 0.001304 | Alpha: 1.0076
+   [Debug] A-Loss: -0.1922 | C-Loss: 0.0013 | Q-val: -0.0083 | Ent: 0.1989
+Recall: 0.000000
+Epoch 5 | Reward: 0.001477 | Alpha: 1.0096
+   [Debug] A-Loss: -0.2049 | C-Loss: 0.0007 | Q-val: -0.0055 | Ent: 0.2084
+Recall: 0.000000
+Epoch 6 | Reward: 0.001901 | Alpha: 1.0116
+   [Debug] A-Loss: -0.2137 | C-Loss: 0.0004 | Q-val: -0.0036 | Ent: 0.2148
+Recall: 0.000000
+Epoch 7 | Reward: 0.001906 | Alpha: 1.0137
+   [Debug] A-Loss: -0.2236 | C-Loss: 0.0003 | Q-val: -0.0021 | Ent: 0.2226
+Recall: 0.000000
+Epoch 8 | Reward: 0.001861 | Alpha: 1.0157
+   [Debug] A-Loss: -0.2318 | C-Loss: 0.0002 | Q-val: -0.0011 | Ent: 0.2292
+Recall: 0.000000
+Epoch 9 | Reward: 0.001928 | Alpha: 1.0177
+   [Debug] A-Loss: -0.2396 | C-Loss: 0.0001 | Q-val: -0.0007 | Ent: 0.2360
+Recall: 0.000000
+Epoch 10 | Reward: 0.001869 | Alpha: 1.0197
+   [Debug] A-Loss: -0.2462 | C-Loss: 0.0001 | Q-val: -0.0003 | Ent: 0.2417
+Recall: 0.000000
+Epoch 11 | Reward: 0.001839 | Alpha: 1.0218
+   [Debug] A-Loss: -0.2541 | C-Loss: 0.0001 | Q-val: 0.0003 | Ent: 0.2483
+Recall: 0.000000
+Epoch 12 | Reward: 0.001858 | Alpha: 1.0238
+   [Debug] A-Loss: -0.2603 | C-Loss: 0.0001 | Q-val: 0.0006 | Ent: 0.2537
+Recall: 0.000000
+Epoch 13 | Reward: 0.001827 | Alpha: 1.0259
+   [Debug] A-Loss: -0.2655 | C-Loss: 0.0001 | Q-val: 0.0004 | Ent: 0.2584
+Recall: 0.000000
+Epoch 14 | Reward: 0.001863 | Alpha: 1.0279
+   [Debug] A-Loss: -0.2721 | C-Loss: 0.0001 | Q-val: 0.0005 | Ent: 0.2642
+Recall: 0.000000
+Epoch 15 | Reward: 0.001775 | Alpha: 1.0299
+   [Debug] A-Loss: -0.2791 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.2702
+Recall: 0.000000
+Epoch 16 | Reward: 0.001784 | Alpha: 1.0320
+   [Debug] A-Loss: -0.2850 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.2754
+Recall: 0.000000
+Epoch 17 | Reward: 0.001767 | Alpha: 1.0340
+   [Debug] A-Loss: -0.2915 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.2812
+Recall: 0.000000
+Epoch 18 | Reward: 0.001777 | Alpha: 1.0361
+   [Debug] A-Loss: -0.2970 | C-Loss: 0.0001 | Q-val: 0.0006 | Ent: 0.2862
+Recall: 0.000000
+Epoch 19 | Reward: 0.001731 | Alpha: 1.0381
+   [Debug] A-Loss: -0.3043 | C-Loss: 0.0000 | Q-val: 0.0009 | Ent: 0.2923
+Recall: 0.000000
+Epoch 20 | Reward: 0.001752 | Alpha: 1.0401
+   [Debug] A-Loss: -0.3110 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.2983
+Recall: 0.000000
+Epoch 21 | Reward: 0.001703 | Alpha: 1.0422
+   [Debug] A-Loss: -0.3175 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.3040
+Recall: 0.000000
+Epoch 22 | Reward: 0.001700 | Alpha: 1.0442
+   [Debug] A-Loss: -0.3243 | C-Loss: 0.0000 | Q-val: 0.0004 | Ent: 0.3102
+Recall: 0.000000
+Epoch 23 | Reward: 0.001717 | Alpha: 1.0463
+   [Debug] A-Loss: -0.3324 | C-Loss: 0.0000 | Q-val: 0.0010 | Ent: 0.3168
+Recall: 0.000000
+Epoch 24 | Reward: 0.001719 | Alpha: 1.0483
+   [Debug] A-Loss: -0.3409 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.3245
+Recall: 0.000000
+Epoch 25 | Reward: 0.001668 | Alpha: 1.0503
+   [Debug] A-Loss: -0.3499 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.3325
+Recall: 0.000000
+Epoch 26 | Reward: 0.001642 | Alpha: 1.0523
+   [Debug] A-Loss: -0.3601 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.3415
+Recall: 0.000000
+Epoch 27 | Reward: 0.001621 | Alpha: 1.0543
+   [Debug] A-Loss: -0.3729 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.3532
+Recall: 0.000000
+Epoch 28 | Reward: 0.001581 | Alpha: 1.0562
+   [Debug] A-Loss: -0.3904 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.3691
+Recall: 0.000000
+Epoch 29 | Reward: 0.001502 | Alpha: 1.0581
+   [Debug] A-Loss: -0.4196 | C-Loss: 0.0000 | Q-val: 0.0004 | Ent: 0.3964
+Recall: 0.000000
+Epoch 30 | Reward: 0.001335 | Alpha: 1.0593
+   [Debug] A-Loss: -0.5365 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.5059
+Recall: 0.019231
+🔥 Best SAC model saved!
+Epoch 31 | Reward: 0.001351 | Alpha: 1.0593
+   [Debug] A-Loss: -0.7237 | C-Loss: 0.0000 | Q-val: 0.0005 | Ent: 0.6827
+Recall: 0.000000
+Epoch 32 | Reward: 0.001347 | Alpha: 1.0592
+   [Debug] A-Loss: -0.7341 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6926
+Recall: 0.000000
+Epoch 33 | Reward: 0.001277 | Alpha: 1.0590
+   [Debug] A-Loss: -0.7342 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6927
+Recall: 0.000000
+Epoch 34 | Reward: 0.001306 | Alpha: 1.0589
+   [Debug] A-Loss: -0.7339 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.6924
+Recall: 0.000000
+Epoch 35 | Reward: 0.001284 | Alpha: 1.0588
+   [Debug] A-Loss: -0.7337 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6924
+Recall: 0.019231
+Epoch 36 | Reward: 0.001337 | Alpha: 1.0586
+   [Debug] A-Loss: -0.7336 | C-Loss: 0.0000 | Q-val: 0.0005 | Ent: 0.6924
+Recall: 0.000000
+Epoch 37 | Reward: 0.001290 | Alpha: 1.0584
+   [Debug] A-Loss: -0.7333 | C-Loss: 0.0000 | Q-val: 0.0003 | Ent: 0.6925
+Recall: 0.000000
+Epoch 38 | Reward: 0.001294 | Alpha: 1.0582
+   [Debug] A-Loss: -0.7335 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.6925
+Recall: 0.000000
+Epoch 39 | Reward: 0.001280 | Alpha: 1.0580
+   [Debug] A-Loss: -0.7335 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.6925
+Recall: 0.000000
+Epoch 40 | Reward: 0.001290 | Alpha: 1.0577
+   [Debug] A-Loss: -0.7331 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6925
+Recall: 0.000000
+Epoch 41 | Reward: 0.001324 | Alpha: 1.0575
+   [Debug] A-Loss: -0.7328 | C-Loss: 0.0000 | Q-val: 0.0004 | Ent: 0.6926
+Recall: 0.000000
+Epoch 42 | Reward: 0.001355 | Alpha: 1.0571
+   [Debug] A-Loss: -0.7332 | C-Loss: 0.0000 | Q-val: 0.0009 | Ent: 0.6926
+Recall: 0.000000
+Epoch 43 | Reward: 0.001292 | Alpha: 1.0568
+   [Debug] A-Loss: -0.7324 | C-Loss: 0.0000 | Q-val: 0.0003 | Ent: 0.6926
+Recall: 0.000000
+Epoch 44 | Reward: 0.001339 | Alpha: 1.0564
+   [Debug] A-Loss: -0.7329 | C-Loss: 0.0000 | Q-val: 0.0011 | Ent: 0.6926
+Recall: 0.000000
+Epoch 45 | Reward: 0.001338 | Alpha: 1.0560
+   [Debug] A-Loss: -0.7323 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.6926
+Recall: 0.000000
+Epoch 46 | Reward: 0.001311 | Alpha: 1.0555
+   [Debug] A-Loss: -0.7320 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.6927
+Recall: 0.000000
+Epoch 47 | Reward: 0.001334 | Alpha: 1.0550
+   [Debug] A-Loss: -0.7317 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6929
+Recall: 0.000000
+Epoch 48 | Reward: 0.001321 | Alpha: 1.0544
+   [Debug] A-Loss: -0.7315 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.6929
+Recall: 0.000000
+Epoch 49 | Reward: 0.001338 | Alpha: 1.0538
+   [Debug] A-Loss: -0.7310 | C-Loss: 0.0000 | Q-val: 0.0005 | Ent: 0.6930
+Recall: 0.000000
+Epoch 50 | Reward: 0.001322 | Alpha: 1.0531
+   [Debug] A-Loss: -0.7308 | C-Loss: 0.0000 | Q-val: 0.0009 | Ent: 0.6929
+Recall: 0.000000
+Epoch 51 | Reward: 0.001277 | Alpha: 1.0523
+   [Debug] A-Loss: -0.7293 | C-Loss: 0.0000 | Q-val: 0.0002 | Ent: 0.6927
+Recall: 0.000000
+Epoch 52 | Reward: 0.001332 | Alpha: 1.0515
+   [Debug] A-Loss: -0.7295 | C-Loss: 0.0000 | Q-val: 0.0009 | Ent: 0.6927
+Recall: 0.000000
+Epoch 53 | Reward: 0.001361 | Alpha: 1.0506
+   [Debug] A-Loss: -0.7285 | C-Loss: 0.0000 | Q-val: 0.0005 | Ent: 0.6927
+Recall: 0.000000
+Epoch 54 | Reward: 0.001336 | Alpha: 1.0496
+   [Debug] A-Loss: -0.7277 | C-Loss: 0.0000 | Q-val: 0.0003 | Ent: 0.6927
+Recall: 0.000000
+Epoch 55 | Reward: 0.001312 | Alpha: 1.0485
+   [Debug] A-Loss: -0.7276 | C-Loss: 0.0000 | Q-val: 0.0010 | Ent: 0.6927
+Recall: 0.000000
+Epoch 56 | Reward: 0.001306 | Alpha: 1.0473
+   [Debug] A-Loss: -0.7267 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.6927
+Recall: 0.000000
+Epoch 57 | Reward: 0.001334 | Alpha: 1.0461
+   [Debug] A-Loss: -0.7256 | C-Loss: 0.0000 | Q-val: 0.0005 | Ent: 0.6927
+Recall: 0.000000
+Epoch 58 | Reward: 0.001339 | Alpha: 1.0447
+   [Debug] A-Loss: -0.7248 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6927
+Recall: 0.000000
+Epoch 59 | Reward: 0.001317 | Alpha: 1.0433
+   [Debug] A-Loss: -0.7239 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.6927
+Recall: 0.000000
+Epoch 60 | Reward: 0.001321 | Alpha: 1.0418
+   [Debug] A-Loss: -0.7224 | C-Loss: 0.0000 | Q-val: 0.0002 | Ent: 0.6927
+Recall: 0.000000
+Epoch 61 | Reward: 0.001297 | Alpha: 1.0402
+   [Debug] A-Loss: -0.7217 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6927
+Recall: 0.000000
+Epoch 62 | Reward: 0.001321 | Alpha: 1.0386
+   [Debug] A-Loss: -0.7209 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.6927
+Recall: 0.000000
+Epoch 63 | Reward: 0.001283 | Alpha: 1.0369
+   [Debug] A-Loss: -0.7196 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.6927
+Recall: 0.000000
+Epoch 64 | Reward: 0.001321 | Alpha: 1.0351
+   [Debug] A-Loss: -0.7177 | C-Loss: 0.0000 | Q-val: 0.0000 | Ent: 0.6927
+Recall: 0.000000
+Epoch 65 | Reward: 0.001332 | Alpha: 1.0332
+   [Debug] A-Loss: -0.7171 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.6927
+Recall: 0.000000
+Epoch 66 | Reward: 0.001309 | Alpha: 1.0313
+   [Debug] A-Loss: -0.7155 | C-Loss: 0.0000 | Q-val: 0.0004 | Ent: 0.6927
+Recall: 0.000000
+Epoch 67 | Reward: 0.001348 | Alpha: 1.0294
+   [Debug] A-Loss: -0.7144 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6927
+Recall: 0.000000
+Epoch 68 | Reward: 0.001302 | Alpha: 1.0274
+   [Debug] A-Loss: -0.7130 | C-Loss: 0.0000 | Q-val: 0.0005 | Ent: 0.6927
+Recall: 0.000000
+Epoch 69 | Reward: 0.001308 | Alpha: 1.0254
+   [Debug] A-Loss: -0.7115 | C-Loss: 0.0000 | Q-val: 0.0004 | Ent: 0.6927
+Recall: 0.000000
+Epoch 70 | Reward: 0.001350 | Alpha: 1.0234
+   [Debug] A-Loss: -0.7101 | C-Loss: 0.0000 | Q-val: 0.0004 | Ent: 0.6927
+Recall: 0.000000
+Epoch 71 | Reward: 0.001315 | Alpha: 1.0214
+   [Debug] A-Loss: -0.7089 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6927
+Recall: 0.000000
+Epoch 72 | Reward: 0.001317 | Alpha: 1.0193
+   [Debug] A-Loss: -0.7073 | C-Loss: 0.0000 | Q-val: 0.0004 | Ent: 0.6927
+Recall: 0.000000
+Epoch 73 | Reward: 0.001293 | Alpha: 1.0173
+   [Debug] A-Loss: -0.7059 | C-Loss: 0.0000 | Q-val: 0.0004 | Ent: 0.6927
+Recall: 0.000000
+Epoch 74 | Reward: 0.001336 | Alpha: 1.0152
+   [Debug] A-Loss: -0.7045 | C-Loss: 0.0000 | Q-val: 0.0005 | Ent: 0.6927
+Recall: 0.000000
+Epoch 75 | Reward: 0.001303 | Alpha: 1.0131
+   [Debug] A-Loss: -0.7034 | C-Loss: 0.0000 | Q-val: 0.0009 | Ent: 0.6927
+Recall: 0.000000
+Epoch 76 | Reward: 0.001354 | Alpha: 1.0110
+   [Debug] A-Loss: -0.7014 | C-Loss: 0.0000 | Q-val: 0.0003 | Ent: 0.6927
+Recall: 0.000000
+Epoch 77 | Reward: 0.001306 | Alpha: 1.0089
+   [Debug] A-Loss: -0.7004 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.6927
+Recall: 0.000000
+Epoch 78 | Reward: 0.001340 | Alpha: 1.0069
+   [Debug] A-Loss: -0.6985 | C-Loss: 0.0000 | Q-val: 0.0003 | Ent: 0.6927
+Recall: 0.000000
+Epoch 79 | Reward: 0.001294 | Alpha: 1.0048
+   [Debug] A-Loss: -0.6973 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6927
+Recall: 0.000000
+Epoch 80 | Reward: 0.001312 | Alpha: 1.0027
+   [Debug] A-Loss: -0.6963 | C-Loss: 0.0000 | Q-val: 0.0010 | Ent: 0.6927
+Recall: 0.000000
+Epoch 81 | Reward: 0.001271 | Alpha: 1.0006
+   [Debug] A-Loss: -0.6944 | C-Loss: 0.0000 | Q-val: 0.0005 | Ent: 0.6927
+Recall: 0.000000
+Epoch 82 | Reward: 0.001326 | Alpha: 0.9985
+   [Debug] A-Loss: -0.6931 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.6927
+Recall: 0.000000
+Epoch 83 | Reward: 0.001343 | Alpha: 0.9964
+   [Debug] A-Loss: -0.6916 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6927
+Recall: 0.000000
+Epoch 84 | Reward: 0.001296 | Alpha: 0.9943
+   [Debug] A-Loss: -0.6901 | C-Loss: 0.0000 | Q-val: 0.0005 | Ent: 0.6927
+Recall: 0.000000
+Epoch 85 | Reward: 0.001312 | Alpha: 0.9922
+   [Debug] A-Loss: -0.6887 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6927
+Recall: 0.000000
+Epoch 86 | Reward: 0.001312 | Alpha: 0.9902
+   [Debug] A-Loss: -0.6874 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.6927
+Recall: 0.000000
+Epoch 87 | Reward: 0.001332 | Alpha: 0.9881
+   [Debug] A-Loss: -0.6859 | C-Loss: 0.0000 | Q-val: 0.0007 | Ent: 0.6927
+Recall: 0.000000
+Epoch 88 | Reward: 0.001347 | Alpha: 0.9860
+   [Debug] A-Loss: -0.6844 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6927
+Recall: 0.000000
+Epoch 89 | Reward: 0.001339 | Alpha: 0.9840
+   [Debug] A-Loss: -0.6828 | C-Loss: 0.0000 | Q-val: 0.0005 | Ent: 0.6927
+Recall: 0.000000
+Epoch 90 | Reward: 0.001294 | Alpha: 0.9819
+   [Debug] A-Loss: -0.6814 | C-Loss: 0.0000 | Q-val: 0.0005 | Ent: 0.6927
+Recall: 0.000000
+Epoch 91 | Reward: 0.001286 | Alpha: 0.9798
+   [Debug] A-Loss: -0.6801 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6927
+Recall: 0.000000
+Epoch 92 | Reward: 0.001332 | Alpha: 0.9778
+   [Debug] A-Loss: -0.6786 | C-Loss: 0.0000 | Q-val: 0.0005 | Ent: 0.6928
+Recall: 0.000000
+Epoch 93 | Reward: 0.001285 | Alpha: 0.9757
+   [Debug] A-Loss: -0.6772 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6928
+Recall: 0.000000
+Epoch 94 | Reward: 0.001372 | Alpha: 0.9737
+   [Debug] A-Loss: -0.6757 | C-Loss: 0.0000 | Q-val: 0.0004 | Ent: 0.6928
+Recall: 0.000000
+Epoch 95 | Reward: 0.001274 | Alpha: 0.9716
+   [Debug] A-Loss: -0.6748 | C-Loss: 0.0000 | Q-val: 0.0009 | Ent: 0.6928
+Recall: 0.000000
+Epoch 96 | Reward: 0.001337 | Alpha: 0.9696
+   [Debug] A-Loss: -0.6729 | C-Loss: 0.0000 | Q-val: 0.0004 | Ent: 0.6928
+Recall: 0.000000
+Epoch 97 | Reward: 0.001320 | Alpha: 0.9676
+   [Debug] A-Loss: -0.6718 | C-Loss: 0.0000 | Q-val: 0.0008 | Ent: 0.6928
+Recall: 0.000000
+Epoch 98 | Reward: 0.001304 | Alpha: 0.9655
+   [Debug] A-Loss: -0.6698 | C-Loss: 0.0000 | Q-val: 0.0002 | Ent: 0.6928
+Recall: 0.000000
+Epoch 99 | Reward: 0.001356 | Alpha: 0.9635
+   [Debug] A-Loss: -0.6688 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6928
+Recall: 0.000000
+Epoch 100 | Reward: 0.001334 | Alpha: 0.9615
+   [Debug] A-Loss: -0.6674 | C-Loss: 0.0000 | Q-val: 0.0006 | Ent: 0.6928
+Recall: 0.000000
+
+sac_transformer
+
+Epoch 1 | Reward: 0.001365 | Alpha: 0.9985
+   [Debug] A-Loss: 0.0999 | C-Loss: 2.0733 | Q-val: -0.8389 | Ent: 0.6285
+Recall: 0.102564
+🔥 Best SAC model saved!
+Epoch 2 | Reward: 0.001289 | Alpha: 0.9964
+   [Debug] A-Loss: -0.3309 | C-Loss: 0.0237 | Q-val: -0.0504 | Ent: 0.6199
+Recall: 0.044872
+Epoch 3 | Reward: 0.001336 | Alpha: 0.9943
+   [Debug] A-Loss: -0.3366 | C-Loss: 0.0136 | Q-val: -0.0363 | Ent: 0.6250
+Recall: 0.044872
+Epoch 4 | Reward: 0.001358 | Alpha: 0.9922
+   [Debug] A-Loss: -0.3391 | C-Loss: 0.0093 | Q-val: -0.0297 | Ent: 0.6279
+Recall: 0.051282
+Epoch 5 | Reward: 0.001397 | Alpha: 0.9901
+   [Debug] A-Loss: -0.3409 | C-Loss: 0.0067 | Q-val: -0.0253 | Ent: 0.6302
+Recall: 0.012821
+Epoch 6 | Reward: 0.001608 | Alpha: 0.9881
+   [Debug] A-Loss: -0.3490 | C-Loss: 0.0049 | Q-val: -0.0219 | Ent: 0.6427
+Recall: 0.044872
+Epoch 7 | Reward: 0.001558 | Alpha: 0.9860
+   [Debug] A-Loss: -0.3542 | C-Loss: 0.0037 | Q-val: -0.0192 | Ent: 0.6509
+Recall: 0.032051
+Epoch 8 | Reward: 0.001577 | Alpha: 0.9839
+   [Debug] A-Loss: -0.3552 | C-Loss: 0.0029 | Q-val: -0.0170 | Ent: 0.6529
+Recall: 0.025641
+Epoch 9 | Reward: 0.001576 | Alpha: 0.9818
+   [Debug] A-Loss: -0.3555 | C-Loss: 0.0022 | Q-val: -0.0151 | Ent: 0.6538
+Recall: 0.044872
+Epoch 10 | Reward: 0.001567 | Alpha: 0.9797
+   [Debug] A-Loss: -0.3555 | C-Loss: 0.0018 | Q-val: -0.0135 | Ent: 0.6544
+Recall: 0.025641
+Epoch 11 | Reward: 0.001595 | Alpha: 0.9777
+   [Debug] A-Loss: -0.3553 | C-Loss: 0.0014 | Q-val: -0.0121 | Ent: 0.6548
+Recall: 0.025641
+Epoch 12 | Reward: 0.001605 | Alpha: 0.9756
+   [Debug] A-Loss: -0.3551 | C-Loss: 0.0011 | Q-val: -0.0108 | Ent: 0.6552
+Recall: 0.025641
+Epoch 13 | Reward: 0.001590 | Alpha: 0.9736
+   [Debug] A-Loss: -0.3548 | C-Loss: 0.0009 | Q-val: -0.0096 | Ent: 0.6555
+Recall: 0.025641
+Epoch 14 | Reward: 0.001596 | Alpha: 0.9715
+   [Debug] A-Loss: -0.3544 | C-Loss: 0.0007 | Q-val: -0.0087 | Ent: 0.6557
+Recall: 0.012821
+Epoch 15 | Reward: 0.001547 | Alpha: 0.9695
+   [Debug] A-Loss: -0.3540 | C-Loss: 0.0006 | Q-val: -0.0079 | Ent: 0.6559
+Recall: 0.012821
+Epoch 16 | Reward: 0.001629 | Alpha: 0.9674
+   [Debug] A-Loss: -0.3535 | C-Loss: 0.0005 | Q-val: -0.0071 | Ent: 0.6561
+Recall: 0.012821
+Epoch 17 | Reward: 0.001594 | Alpha: 0.9654
+   [Debug] A-Loss: -0.3530 | C-Loss: 0.0004 | Q-val: -0.0065 | Ent: 0.6563
+Recall: 0.012821
+Epoch 18 | Reward: 0.001564 | Alpha: 0.9634
+   [Debug] A-Loss: -0.3525 | C-Loss: 0.0004 | Q-val: -0.0059 | Ent: 0.6564
+Recall: 0.000000
+Epoch 19 | Reward: 0.001544 | Alpha: 0.9614
+   [Debug] A-Loss: -0.3520 | C-Loss: 0.0003 | Q-val: -0.0053 | Ent: 0.6566
+Recall: 0.000000
+Epoch 20 | Reward: 0.001564 | Alpha: 0.9594
+   [Debug] A-Loss: -0.3514 | C-Loss: 0.0003 | Q-val: -0.0049 | Ent: 0.6567
+Recall: 0.012821
+Epoch 21 | Reward: 0.001638 | Alpha: 0.9573
+   [Debug] A-Loss: -0.3508 | C-Loss: 0.0002 | Q-val: -0.0045 | Ent: 0.6568
+Recall: 0.000000
+Epoch 22 | Reward: 0.001554 | Alpha: 0.9553
+   [Debug] A-Loss: -0.3502 | C-Loss: 0.0002 | Q-val: -0.0041 | Ent: 0.6568
+Recall: 0.000000
+
+=====> Start DDQN Training <=====
+Epoch 1/100 | Reward: 0.001385
+Recall: 0.157692
+🔥 Best model saved!
+Epoch 2/100 | Reward: 0.001477
+Recall: 0.238462
+🔥 Best model saved!
+Epoch 3/100 | Reward: 0.001550
+Recall: 0.183333
+Epoch 4/100 | Reward: 0.001675
+Recall: 0.234615
+Epoch 5/100 | Reward: 0.001688
+Recall: 0.224359
+Epoch 6/100 | Reward: 0.001716
+Recall: 0.200000
+Epoch 7/100 | Reward: 0.001709
+Recall: 0.155128
+Epoch 8/100 | Reward: 0.001751
+Recall: 0.156410
+Epoch 9/100 | Reward: 0.001778
+Recall: 0.215385
+Epoch 10/100 | Reward: 0.001738
+Recall: 0.203846
+Epoch 11/100 | Reward: 0.001615
+Recall: 0.215385
+Epoch 12/100 | Reward: 0.001465
+Recall: 0.232051
+Epoch 13/100 | Reward: 0.001198
+Recall: 0.171795
+Epoch 14/100 | Reward: 0.000856
+Recall: 0.162821
+Epoch 15/100 | Reward: 0.000840
+Recall: 0.123077
+Epoch 16/100 | Reward: 0.001114
+Recall: 0.166667
+Epoch 17/100 | Reward: 0.000492
+Recall: 0.153846
+Epoch 18/100 | Reward: 0.000764
+Recall: 0.076923
+Epoch 19/100 | Reward: 0.000714
+Recall: 0.139744
+Epoch 20/100 | Reward: 0.002088
+Recall: 0.161538
+Epoch 21/100 | Reward: 0.008681
+Recall: 0.146154
+Epoch 22/100 | Reward: 0.006280
+Recall: 0.244872
+🔥 Best model saved!
+Epoch 23/100 | Reward: 0.008742
+Recall: 0.187179
+Epoch 24/100 | Reward: 0.010304
+Recall: 0.165385
+Epoch 25/100 | Reward: 0.009598
+Recall: 0.139744
+Epoch 26/100 | Reward: 0.009311
+Recall: 0.162821
+Epoch 27/100 | Reward: 0.009194
+Recall: 0.101282
+Epoch 28/100 | Reward: 0.008180
+Recall: 0.165385
+Epoch 29/100 | Reward: 0.007920
+Recall: 0.200000
+Epoch 30/100 | Reward: 0.006693
+Recall: 0.183333
+Epoch 31/100 | Reward: 0.006939
+Recall: 0.173077
+Epoch 32/100 | Reward: 0.007914
+Recall: 0.207692
+Epoch 33/100 | Reward: 0.006944
+Recall: 0.219231
+Epoch 34/100 | Reward: 0.007241
+Recall: 0.224359
+Epoch 35/100 | Reward: 0.010258
+Recall: 0.187179
+Epoch 36/100 | Reward: 0.012332
+Recall: 0.228205
+Epoch 37/100 | Reward: 0.013008
+Recall: 0.206410
+Epoch 38/100 | Reward: 0.012431
+Recall: 0.202564
+Epoch 39/100 | Reward: 0.012212
+Recall: 0.228205
+Epoch 40/100 | Reward: 0.011088
+Recall: 0.189744
+Epoch 41/100 | Reward: 0.011763
+Recall: 0.208974
+Epoch 42/100 | Reward: 0.011743
+Recall: 0.208974
+Epoch 43/100 | Reward: 0.011116
+Recall: 0.191026
+Epoch 44/100 | Reward: 0.011066
+Recall: 0.247436
+🔥 Best model saved!
+Epoch 45/100 | Reward: 0.010934
+Recall: 0.215385
+Epoch 46/100 | Reward: 0.011194
+Recall: 0.234615
+Epoch 47/100 | Reward: 0.009864
+Recall: 0.234615
+Epoch 48/100 | Reward: 0.009196
+Recall: 0.237179
+Epoch 49/100 | Reward: 0.009241
+Recall: 0.215385
+Epoch 50/100 | Reward: 0.008589
+Recall: 0.223077
+Epoch 51/100 | Reward: 0.009814
+Recall: 0.238462
+Epoch 52/100 | Reward: 0.009157
+Recall: 0.200000
+Epoch 53/100 | Reward: 0.009744
+Recall: 0.212821
+Epoch 54/100 | Reward: 0.008846
+Recall: 0.200000
+Epoch 55/100 | Reward: 0.007960
+Recall: 0.162821
+Epoch 56/100 | Reward: 0.006745
+Recall: 0.094872
+Epoch 57/100 | Reward: 0.005738
+Recall: 0.238462
+Epoch 58/100 | Reward: 0.005765
+Recall: 0.150000
+Epoch 59/100 | Reward: 0.005306
+Recall: 0.146154
+Epoch 60/100 | Reward: 0.005320
+Recall: 0.146154
+Epoch 61/100 | Reward: 0.004594
+Recall: 0.066667
+Epoch 62/100 | Reward: 0.004473
+Recall: 0.047436
+Epoch 63/100 | Reward: 0.004319
+Recall: 0.092308
+Epoch 64/100 | Reward: 0.003497
+Recall: 0.062821
+Epoch 65/100 | Reward: 0.003145
+Recall: 0.092308
+Epoch 66/100 | Reward: 0.002925
+Recall: 0.117949
+Epoch 67/100 | Reward: 0.003992
+Recall: 0.098718
+Epoch 68/100 | Reward: 0.003211
+Recall: 0.070513
+Epoch 69/100 | Reward: 0.003365
+Recall: 0.111538
+Epoch 70/100 | Reward: 0.002953
+Recall: 0.152564
+Epoch 71/100 | Reward: 0.002448
+Recall: 0.126923
+Epoch 72/100 | Reward: 0.002331
+Recall: 0.066667
+Epoch 73/100 | Reward: 0.002273
+Recall: 0.064103
+Epoch 74/100 | Reward: 0.002178
+Recall: 0.057692
+Epoch 75/100 | Reward: 0.002350
+Recall: 0.060256
+Epoch 76/100 | Reward: 0.002228
+Recall: 0.169231
+Epoch 77/100 | Reward: 0.002344
+Recall: 0.070513
+Epoch 78/100 | Reward: 0.002905
+Recall: 0.146154
+Epoch 79/100 | Reward: 0.003541
+Recall: 0.178205
+Epoch 80/100 | Reward: 0.005386
+Recall: 0.187179
+Epoch 81/100 | Reward: 0.006293
+Recall: 0.224359
+Epoch 82/100 | Reward: 0.008397
+Recall: 0.146154
+Epoch 83/100 | Reward: 0.006887
+Recall: 0.193590
+Epoch 84/100 | Reward: 0.005573
+Recall: 0.171795
+Epoch 85/100 | Reward: 0.004507
+Recall: 0.115385
+Epoch 86/100 | Reward: 0.005120
+Recall: 0.200000
+Epoch 87/100 | Reward: 0.004823
+Recall: 0.183333
+Epoch 88/100 | Reward: 0.003611
+Recall: 0.105128
+Epoch 89/100 | Reward: 0.002970
+Recall: 0.171795
+Epoch 90/100 | Reward: 0.003010
+Recall: 0.105128
+Epoch 91/100 | Reward: 0.002727
+Recall: 0.085897
+Epoch 92/100 | Reward: 0.002271
+Recall: 0.111538
+Epoch 93/100 | Reward: 0.002460
+Recall: 0.126923
+Epoch 94/100 | Reward: 0.002793
+Recall: 0.089744
+Epoch 95/100 | Reward: 0.002436
+Recall: 0.133333
+Epoch 96/100 | Reward: 0.002698
+Recall: 0.101282
+Epoch 97/100 | Reward: 0.002116
+Recall: 0.047436
+Epoch 98/100 | Reward: 0.002371
+Recall: 0.082051
+Epoch 99/100 | Reward: 0.268902
+Recall: 0.092308
+Epoch 100/100 | Reward: 0.498006
+Recall: 0.111538
+
+# total 225 | train 210 | test 15
+=====> Start DQN Training <=====
+Epoch 1/100 | Reward: 0.001441
+Recall: 0.228205
+🔥 Best model saved!
+Epoch 2/100 | Reward: 0.001460
+Recall: 0.215385
+Epoch 3/100 | Reward: 0.001548
+Recall: 0.256410
+🔥 Best model saved!
+Epoch 4/100 | Reward: 0.001652
+Recall: 0.193590
+Epoch 5/100 | Reward: 0.001739
+Recall: 0.192308
+Epoch 6/100 | Reward: 0.001762
+Recall: 0.234615
+Epoch 7/100 | Reward: 0.001801
+Recall: 0.251282
+Epoch 8/100 | Reward: 0.001955
+Recall: 0.206410
+Epoch 9/100 | Reward: 0.002258
+Recall: 0.244872
+Epoch 10/100 | Reward: 0.002314
+Recall: 0.178205
+Epoch 11/100 | Reward: 0.002859
+Recall: 0.192308
+Epoch 12/100 | Reward: 0.002564
+Recall: 0.105128
+Epoch 13/100 | Reward: 0.002616
+Recall: 0.161538
+Epoch 14/100 | Reward: 0.002237
+Recall: 0.057692
+Epoch 15/100 | Reward: 0.002342
+Recall: 0.117949
+Epoch 16/100 | Reward: 0.002534
+Recall: 0.057692
+Epoch 17/100 | Reward: 0.002617
+Recall: 0.076923
+Epoch 18/100 | Reward: 0.002286
+Recall: 0.057692
+Epoch 19/100 | Reward: 0.002047
+Recall: 0.057692
+Epoch 20/100 | Reward: 0.001892
+Recall: 0.044872
+Epoch 21/100 | Reward: 0.001929
+Recall: 0.070513
+Epoch 22/100 | Reward: 0.001894
+Recall: 0.057692
+Epoch 23/100 | Reward: 0.001709
+Recall: 0.096154
+Epoch 24/100 | Reward: 0.001457
+Recall: 0.098718
+Epoch 25/100 | Reward: 0.001755
+Recall: 0.130769
+Epoch 26/100 | Reward: 0.001736
+Recall: 0.133333
+Epoch 27/100 | Reward: 0.001910
+Recall: 0.082051
+Epoch 28/100 | Reward: 0.001197
+Recall: 0.126923
+Epoch 29/100 | Reward: 0.001639
+Recall: 0.219231
+Epoch 30/100 | Reward: 0.001403
+Recall: 0.176923
+Epoch 31/100 | Reward: 0.001333
+Recall: 0.111538
+Epoch 32/100 | Reward: 0.001227
+Recall: 0.187179
+Epoch 33/100 | Reward: 0.001209
+Recall: 0.094872
+Epoch 34/100 | Reward: 0.001454
+Recall: 0.120513
+Epoch 35/100 | Reward: 0.001262
+Recall: 0.079487
+Epoch 36/100 | Reward: 0.001060
+Recall: 0.073077
+Epoch 37/100 | Reward: 0.001085
+Recall: 0.101282
+Epoch 38/100 | Reward: 0.001549
+Recall: 0.051282
+Epoch 39/100 | Reward: 0.001591
+Recall: 0.064103
+Epoch 40/100 | Reward: 0.001654
+Recall: 0.032051
+Epoch 41/100 | Reward: 0.001214
+Recall: 0.096154
+Epoch 42/100 | Reward: 0.001254
+Recall: 0.108974
+Epoch 43/100 | Reward: 0.001031
+Recall: 0.060256
+Epoch 44/100 | Reward: 0.001426
+Recall: 0.070513
+Epoch 45/100 | Reward: 0.001902
+Recall: 0.096154
+Epoch 46/100 | Reward: 0.002749
+Recall: 0.130769
+Epoch 47/100 | Reward: 0.008980
+Recall: 0.193590
+Epoch 48/100 | Reward: 0.011569
+Recall: 0.193590
+Epoch 49/100 | Reward: 0.011460
+Recall: 0.187179
+Epoch 50/100 | Reward: 0.011186
+Recall: 0.174359
+Epoch 51/100 | Reward: 0.011368
+Recall: 0.243590
+Epoch 52/100 | Reward: 0.008222
+Recall: 0.120513
+Epoch 53/100 | Reward: 0.003290
+Recall: 0.146154
+Epoch 54/100 | Reward: 0.001846
+Recall: 0.143590
+Epoch 55/100 | Reward: 0.001522
+Recall: 0.117949
+Epoch 56/100 | Reward: 0.001535
+Recall: 0.120513
+Epoch 57/100 | Reward: 0.001959
+Recall: 0.101282
+Epoch 58/100 | Reward: 0.002143
+Recall: 0.047436
+Epoch 59/100 | Reward: 0.002295
+Recall: 0.088462
+Epoch 60/100 | Reward: 0.002784
+Recall: 0.119231
+Epoch 61/100 | Reward: 0.003233
+Recall: 0.088462
+Epoch 62/100 | Reward: 0.003808
+Recall: 0.148718
+Epoch 63/100 | Reward: 0.006546
+Recall: 0.097436
+Epoch 64/100 | Reward: 0.008576
+Recall: 0.129487
+Epoch 65/100 | Reward: 0.008172
+Recall: 0.155128
+Epoch 66/100 | Reward: 0.005598
+Recall: 0.161538
+Epoch 67/100 | Reward: 0.005304
+Recall: 0.129487
+Epoch 68/100 | Reward: 0.005114
+Recall: 0.110256
+Epoch 69/100 | Reward: 0.004905
+Recall: 0.173077
+Epoch 70/100 | Reward: 0.005338
+Recall: 0.088462
+Epoch 71/100 | Reward: 0.005642
+Recall: 0.167949
+Epoch 72/100 | Reward: 0.006042
+Recall: 0.119231
+Epoch 73/100 | Reward: 0.006407
+Recall: 0.170513
+Epoch 74/100 | Reward: 0.006001
+Recall: 0.110256
+Epoch 75/100 | Reward: 0.005633
+Recall: 0.151282
+Epoch 76/100 | Reward: 0.005606
+Recall: 0.176923
+Epoch 77/100 | Reward: 0.005352
+Recall: 0.116667
+Epoch 78/100 | Reward: 0.005626
+Recall: 0.165385
+Epoch 79/100 | Reward: 0.005776
+Recall: 0.139744
+Epoch 80/100 | Reward: 0.006648
+Recall: 0.142308
+Epoch 81/100 | Reward: 0.006472
+Recall: 0.126923
+Epoch 82/100 | Reward: 0.006787
+Recall: 0.019231
+Epoch 83/100 | Reward: 0.006640
+Recall: 0.143590
+Epoch 84/100 | Reward: 0.007073
+Recall: 0.114103
+Epoch 85/100 | Reward: 0.007344
+Recall: 0.142308
+Epoch 86/100 | Reward: 0.006459
+Recall: 0.142308
+Epoch 87/100 | Reward: 0.006786
+Recall: 0.085897
+Epoch 88/100 | Reward: 0.006554
+Recall: 0.148718
+Epoch 89/100 | Reward: 0.006554
+Recall: 0.174359
+Epoch 90/100 | Reward: 0.006709
+Recall: 0.156410
+Epoch 91/100 | Reward: 0.006319
+Recall: 0.191026
+Epoch 92/100 | Reward: 0.006324
+Recall: 0.137179
+Epoch 93/100 | Reward: 0.005960
+Recall: 0.143590
+Epoch 94/100 | Reward: 0.005589
+Recall: 0.141026
+Epoch 95/100 | Reward: 0.006125
+Recall: 0.070513
+Epoch 96/100 | Reward: 0.005785
+Recall: 0.158974
+Epoch 97/100 | Reward: 0.005419
+Recall: 0.156410
+Epoch 98/100 | Reward: 0.005878
+Recall: 0.137179
+Epoch 99/100 | Reward: 0.005705
+Recall: 0.161538
+Epoch 100/100 | Reward: 0.005323
+Recall: 0.156410
+
+=====> Start DUELING_DQN Training <=====
+Epoch 1/100 | Reward: 0.001446
+Recall: 0.193590
+🔥 Best model saved!
+Epoch 2/100 | Reward: 0.001539
+Recall: 0.097436
+Epoch 3/100 | Reward: 0.001621
+Recall: 0.156410
+Epoch 4/100 | Reward: 0.001775
+Recall: 0.105128
+Epoch 5/100 | Reward: 0.002017
+Recall: 0.155128
+Epoch 6/100 | Reward: 0.001919
+Recall: 0.260256
+🔥 Best model saved!
+Epoch 7/100 | Reward: 0.002243
+Recall: 0.161538
+Epoch 8/100 | Reward: 0.002652
+Recall: 0.142308
+Epoch 9/100 | Reward: 0.002929
+Recall: 0.191026
+Epoch 10/100 | Reward: 0.003552
+Recall: 0.202564
+Epoch 11/100 | Reward: 0.004486
+Recall: 0.133333
+Epoch 12/100 | Reward: 0.005861
+Recall: 0.137179
+Epoch 13/100 | Reward: 0.005850
+Recall: 0.200000
+Epoch 14/100 | Reward: 0.004443
+Recall: 0.126923
+Epoch 15/100 | Reward: 0.002518
+Recall: 0.107692
+Epoch 16/100 | Reward: 0.001032
+Recall: 0.057692
+Epoch 17/100 | Reward: 0.001895
+Recall: 0.070513
+Epoch 18/100 | Reward: 0.001289
+Recall: 0.124359
+Epoch 19/100 | Reward: 0.004870
+Recall: 0.088462
+Epoch 20/100 | Reward: 0.006825
+Recall: 0.096154
+Epoch 21/100 | Reward: 0.006188
+Recall: 0.057692
+Epoch 22/100 | Reward: 0.005657
+Recall: 0.057692
+Epoch 23/100 | Reward: 0.003970
+Recall: 0.057692
+Epoch 24/100 | Reward: 0.001511
+Recall: 0.057692
+Epoch 25/100 | Reward: 0.000505
+Recall: 0.057692
+Epoch 26/100 | Reward: 0.000452
+Recall: 0.057692
+Epoch 27/100 | Reward: 0.000470
+Recall: 0.057692
+Epoch 28/100 | Reward: 0.000393
+Recall: 0.057692
+Epoch 29/100 | Reward: 0.000332
+Recall: 0.057692
+Epoch 30/100 | Reward: 0.001124
+Recall: 0.044872
+Epoch 31/100 | Reward: 0.003755
+Recall: 0.070513
+Epoch 32/100 | Reward: 0.004388
+Recall: 0.070513
+Epoch 33/100 | Reward: 0.003561
+Recall: 0.051282
+Epoch 34/100 | Reward: 0.004014
+Recall: 0.051282
+Epoch 35/100 | Reward: 0.003807
+Recall: 0.051282
+Epoch 36/100 | Reward: 0.003084
+Recall: 0.076923
+Epoch 37/100 | Reward: 0.003059
+Recall: 0.066667
+Epoch 38/100 | Reward: 0.002766
+Recall: 0.094872
+Epoch 39/100 | Reward: 0.002617
+Recall: 0.094872
+Epoch 40/100 | Reward: 0.003847
+Recall: 0.114103
+Epoch 41/100 | Reward: 0.003308
+Recall: 0.114103
+Epoch 42/100 | Reward: 0.003140
+Recall: 0.114103
+Epoch 43/100 | Reward: 0.003025
+Recall: 0.114103
+Epoch 44/100 | Reward: 0.003210
+Recall: 0.133333
+Epoch 45/100 | Reward: 0.003531
+Recall: 0.092308
+Epoch 46/100 | Reward: 0.003427
+Recall: 0.146154
+Epoch 47/100 | Reward: 0.003308
+Recall: 0.133333
+Epoch 48/100 | Reward: 0.003207
+Recall: 0.146154
+Epoch 49/100 | Reward: 0.002964
+Recall: 0.133333
+Epoch 50/100 | Reward: 0.219929
+Recall: 0.175641
+Epoch 51/100 | Reward: 0.474442
+Recall: 0.094872
+Epoch 52/100 | Reward: 0.372192
+Recall: 0.088462
+Epoch 53/100 | Reward: 0.200006
+Recall: 0.101282
+Epoch 54/100 | Reward: 0.010576
+Recall: 0.085897
+Epoch 55/100 | Reward: 0.005057
+Recall: 0.085897
+Epoch 56/100 | Reward: 0.001940
+Recall: 0.079487
+Epoch 57/100 | Reward: 0.000759
+Recall: 0.079487
+Epoch 58/100 | Reward: 0.002547
+Recall: 0.101282
+Epoch 59/100 | Reward: 0.002950
+Recall: 0.126923
+Epoch 60/100 | Reward: 0.002029
+Recall: 0.062821
+Epoch 61/100 | Reward: 0.001738
+Recall: 0.046154
+Epoch 62/100 | Reward: 0.001679
+Recall: 0.043590
+Epoch 63/100 | Reward: 0.001193
+Recall: 0.034615
+Epoch 64/100 | Reward: 0.001113
+Recall: 0.061538
+Epoch 65/100 | Reward: 0.000814
+Recall: 0.061538
+Epoch 66/100 | Reward: 0.000893
+Recall: 0.058974
+Epoch 67/100 | Reward: 0.001714
+Recall: 0.069231
+Epoch 68/100 | Reward: 0.001912
+Recall: 0.056410
+Epoch 69/100 | Reward: 0.001938
+Recall: 0.129487
+Epoch 70/100 | Reward: 0.001883
+Recall: 0.088462
+Epoch 71/100 | Reward: 0.001901
+Recall: 0.129487
+Epoch 72/100 | Reward: 0.001904
+Recall: 0.056410
+Epoch 73/100 | Reward: 0.002227
+Recall: 0.135897
+Epoch 74/100 | Reward: 0.002030
+Recall: 0.107692
+Epoch 75/100 | Reward: 0.001796
+Recall: 0.101282
+Epoch 76/100 | Reward: 0.001801
+Recall: 0.132051
+Epoch 77/100 | Reward: 0.001608
+Recall: 0.133333
+Epoch 78/100 | Reward: 0.001592
+Recall: 0.126923
+Epoch 79/100 | Reward: 0.001655
+Recall: 0.088462
+Epoch 80/100 | Reward: 0.001502
+Recall: 0.088462
+Epoch 81/100 | Reward: 0.001488
+Recall: 0.120513
+Epoch 82/100 | Reward: 0.001578
+Recall: 0.110256
+Epoch 83/100 | Reward: 0.001579
+Recall: 0.101282
+Epoch 84/100 | Reward: 0.001503
+Recall: 0.167949
+Epoch 85/100 | Reward: 0.001588
+Recall: 0.108974
+Epoch 86/100 | Reward: 0.001427
+Recall: 0.135897
+Epoch 87/100 | Reward: 0.001446
+Recall: 0.101282
+Epoch 88/100 | Reward: 0.001203
+Recall: 0.146154
+Epoch 89/100 | Reward: 0.001232
+Recall: 0.101282
+Epoch 90/100 | Reward: 0.001268
+Recall: 0.120513
+Epoch 91/100 | Reward: 0.001209
+Recall: 0.073077
+Epoch 92/100 | Reward: 0.001166
+Recall: 0.098718
+Epoch 93/100 | Reward: 0.001290
+Recall: 0.124359
+Epoch 94/100 | Reward: 0.001118
+Recall: 0.165385
+Epoch 95/100 | Reward: 0.001228
+Recall: 0.111538
+Epoch 96/100 | Reward: 0.001263
+Recall: 0.082051
+Epoch 97/100 | Reward: 0.001262
+Recall: 0.146154
+Epoch 98/100 | Reward: 0.001441
+Recall: 0.115385
+Epoch 99/100 | Reward: 0.001400
+Recall: 0.015385
+Epoch 100/100 | Reward: 0.001487
+Recall: 0.137179
+
+=====> Start D3QN Training <=====
+Epoch 1/100 | Reward: 0.001377
+Recall: 0.132051
+🔥 Best model saved!
+Epoch 2/100 | Reward: 0.001482
+Recall: 0.141026
+🔥 Best model saved!
+Epoch 3/100 | Reward: 0.001614
+Recall: 0.079487
+Epoch 4/100 | Reward: 0.001762
+Recall: 0.135897
+Epoch 5/100 | Reward: 0.001763
+Recall: 0.165385
+🔥 Best model saved!
+Epoch 6/100 | Reward: 0.001998
+Recall: 0.183333
+🔥 Best model saved!
+Epoch 7/100 | Reward: 0.001991
+Recall: 0.120513
+Epoch 8/100 | Reward: 0.002191
+Recall: 0.123077
+Epoch 9/100 | Reward: 0.002338
+Recall: 0.143590
+Epoch 10/100 | Reward: 0.002760
+Recall: 0.212821
+🔥 Best model saved!
+Epoch 11/100 | Reward: 0.003157
+Recall: 0.201282
+Epoch 12/100 | Reward: 0.003556
+Recall: 0.161538
+Epoch 13/100 | Reward: 0.004201
+Recall: 0.214103
+🔥 Best model saved!
+Epoch 14/100 | Reward: 0.005842
+Recall: 0.176923
+Epoch 15/100 | Reward: 0.004850
+Recall: 0.139744
+Epoch 16/100 | Reward: 0.006836
+Recall: 0.135897
+Epoch 17/100 | Reward: 0.004261
+Recall: 0.047436
+Epoch 18/100 | Reward: 0.346406
+Recall: 0.321795
+🔥 Best model saved!
+Epoch 19/100 | Reward: 0.498006
+Recall: 0.238462
+Epoch 20/100 | Reward: 0.500384
+Recall: 0.247436
+Epoch 21/100 | Reward: 0.498007
+Recall: 0.200000
+Epoch 22/100 | Reward: 0.451457
+Recall: 0.234615
+Epoch 23/100 | Reward: 0.367171
+Recall: 0.234615
+Epoch 24/100 | Reward: 0.492540
+Recall: 0.123077
+Epoch 25/100 | Reward: 0.466727
+Recall: 0.103846
+Epoch 26/100 | Reward: 0.433976
+Recall: 0.103846
+Epoch 27/100 | Reward: 0.389949
+Recall: 0.088462
+Epoch 28/100 | Reward: 0.448773
+Recall: 0.088462
+Epoch 29/100 | Reward: 0.491728
+Recall: 0.088462
+Epoch 30/100 | Reward: 0.385737
+Recall: 0.107692
+Epoch 31/100 | Reward: 0.417151
+Recall: 0.107692
+Epoch 32/100 | Reward: 0.380563
+Recall: 0.107692
+Epoch 33/100 | Reward: 0.431821
+Recall: 0.107692
+Epoch 34/100 | Reward: 0.446611
+Recall: 0.107692
+Epoch 35/100 | Reward: 0.456354
+Recall: 0.094872
+Epoch 36/100 | Reward: 0.404625
+Recall: 0.107692
+Epoch 37/100 | Reward: 0.490636
+Recall: 0.107692
+Epoch 38/100 | Reward: 0.348173
+Recall: 0.094872
+Epoch 39/100 | Reward: 0.464833
+Recall: 0.094872
+Epoch 40/100 | Reward: 0.424045
+Recall: 0.094872
+Epoch 41/100 | Reward: 0.360397
+Recall: 0.094872
+Epoch 42/100 | Reward: 0.394822
+Recall: 0.094872
+Epoch 43/100 | Reward: 0.407874
+Recall: 0.107692
+Epoch 44/100 | Reward: 0.340677
+Recall: 0.107692
+Epoch 45/100 | Reward: 0.419586
+Recall: 0.133333
+Epoch 46/100 | Reward: 0.492873
+Recall: 0.146154
+Epoch 47/100 | Reward: 0.395375
+Recall: 0.174359
+Epoch 48/100 | Reward: 0.466783
+Recall: 0.178205
+Epoch 49/100 | Reward: 0.355129
+Recall: 0.169231
+Epoch 50/100 | Reward: 0.388804
+Recall: 0.167949
+Epoch 51/100 | Reward: 0.462682
+Recall: 0.152564
+Epoch 52/100 | Reward: 0.429512
+Recall: 0.094872
+Epoch 53/100 | Reward: 0.474332
+Recall: 0.094872
+Epoch 54/100 | Reward: 0.473027
+Recall: 0.135897
+Epoch 55/100 | Reward: 0.448881
+Recall: 0.135897
+Epoch 56/100 | Reward: 0.382631
+Recall: 0.107692
+Epoch 57/100 | Reward: 0.463966
+Recall: 0.079487
+Epoch 58/100 | Reward: 0.488484
+Recall: 0.092308
+Epoch 59/100 | Reward: 0.457053
+Recall: 0.107692
+Epoch 60/100 | Reward: 0.410556
+Recall: 0.135897
+Epoch 61/100 | Reward: 0.429905
+Recall: 0.215385
+Epoch 62/100 | Reward: 0.425381
+Recall: 0.183333
+Epoch 63/100 | Reward: 0.447231
+Recall: 0.187179
+Epoch 64/100 | Reward: 0.407832
+Recall: 0.135897
+Epoch 65/100 | Reward: 0.434388
+Recall: 0.142308
+Epoch 66/100 | Reward: 0.437491
+Recall: 0.153846
+Epoch 67/100 | Reward: 0.491863
+Recall: 0.123077
+Epoch 68/100 | Reward: 0.417166
+Recall: 0.047436
+Epoch 69/100 | Reward: 0.379163
+Recall: 0.058974
+Epoch 70/100 | Reward: 0.453517
+Recall: 0.119231
+Epoch 71/100 | Reward: 0.428648
+Recall: 0.078205
+Epoch 72/100 | Reward: 0.407258
+Recall: 0.093590
+Epoch 73/100 | Reward: 0.391254
+Recall: 0.050000
+Epoch 74/100 | Reward: 0.465388
+Recall: 0.078205
+Epoch 75/100 | Reward: 0.477766
+Recall: 0.062821
+Epoch 76/100 | Reward: 0.456993
+Recall: 0.050000
+Epoch 77/100 | Reward: 0.428236
+Recall: 0.078205
+Epoch 78/100 | Reward: 0.407028
+Recall: 0.075641
+Epoch 79/100 | Reward: 0.342262
+Recall: 0.246154
+Epoch 80/100 | Reward: 0.323775
+Recall: 0.034615
+Epoch 81/100 | Reward: 0.358639
+Recall: 0.091026
+Epoch 82/100 | Reward: 0.267655
+Recall: 0.110256
+Epoch 83/100 | Reward: 0.470661
+Recall: 0.075641
+Epoch 84/100 | Reward: 0.170806
+Recall: 0.148718
+Epoch 85/100 | Reward: 0.234197
+Recall: 0.091026
+Epoch 86/100 | Reward: 0.416192
+Recall: 0.125641
+Epoch 87/100 | Reward: 0.395610
+Recall: 0.110256
+Epoch 88/100 | Reward: 0.343666
+Recall: 0.123077
+Epoch 89/100 | Reward: 0.277709
+Recall: 0.167949
+Epoch 90/100 | Reward: 0.394976
+Recall: 0.103846
+Epoch 91/100 | Reward: 0.406200
+Recall: 0.148718
+Epoch 92/100 | Reward: 0.295963
+Recall: 0.119231
+Epoch 93/100 | Reward: 0.310913
+Recall: 0.148718
+Epoch 94/100 | Reward: 0.179964
+Recall: 0.148718
+Epoch 95/100 | Reward: 0.256956
+Recall: 0.161538
+Epoch 96/100 | Reward: 0.312846
+Recall: 0.180769
+Epoch 97/100 | Reward: 0.196040
+Recall: 0.116667
+Epoch 98/100 | Reward: 0.416304
+Recall: 0.148718
+Epoch 99/100 | Reward: 0.498006
+Recall: 0.103846
+Epoch 100/100 | Reward: 0.320256
+Recall: 0.180769
+
+=====> Start MARL-PPO training and Online Evaluate <=====
+epoch 1/100	 reward 0.19769644185335242	  cost 0.20765751600265503	
+0.5153846153846154
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/pretrained_best_model1_seed__marl_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/pretrained_best_model2_seed__marl_subject0_R1_R2.pth.tar
+[MARL] Heads saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/pretrained_best_marl_seed__marl_subject0_R1_R2.pth.tar
+epoch 2/100	 reward 0.46004744758208593	  cost 0.0036766447592526674	
+0.01282051282051282
+epoch 3/100	 reward 0.5229123636654445	  cost 0.01269047986716032	
+0.044871794871794865
+epoch 4/100	 reward 0.5262235542706081	  cost 0.015514012426137924	
+0.0641025641025641
+epoch 5/100	 reward 0.48047566994315094	  cost 0.2044810801744461	
+0.23076923076923078
+epoch 6/100	 reward 0.482435411299978	  cost 0.17902998626232147	
+0.3333333333333333
+epoch 7/100	 reward 0.44226324278683893	  cost 0.19258780777454376	
+0.1576923076923077
+epoch 8/100	 reward 0.4415166683707918	  cost 0.12427842617034912	
+0.23461538461538461
+epoch 9/100	 reward 0.41519104140145435	  cost 0.004330298863351345	
+0.2141025641025641
+epoch 10/100	 reward 0.40811297425201953	  cost 0.13902966678142548	
+0.2897435897435897
+epoch 11/100	 reward 0.4459841457718895	  cost 0.033754996955394745	
+0.33461538461538465
+epoch 12/100	 reward 0.5213493950026377	  cost 0.26320791244506836	
+0.15256410256410255
+epoch 13/100	 reward 0.5695141134375618	  cost 0.03276880830526352	
+0.07307692307692307
+epoch 14/100	 reward 0.5860107395194826	  cost 0.7000225782394409	
+0.2782051282051282
+epoch 15/100	 reward 0.6378101148207982	  cost 0.33145853877067566	
+0.3692307692307693
+epoch 16/100	 reward 0.5678682634660176	  cost 0.15970878303050995	
+0.27307692307692305
+epoch 17/100	 reward 0.5190392857241131	  cost 0.03918243199586868	
+0.2512820512820513
+epoch 18/100	 reward 0.5532674360275268	  cost 0.04539210721850395	
+0.3282051282051282
+epoch 19/100	 reward 0.5138878733771188	  cost 0.06350918114185333	
+0.3320512820512821
+epoch 20/100	 reward 0.5341264104559308	  cost 0.06128412112593651	
+0.0
+epoch 21/100	 reward 0.5295949234848931	  cost 0.07392070442438126	
+0.35128205128205126
+epoch 22/100	 reward 0.5442085121926806	  cost 0.056430380791425705	
+0.2730769230769231
+epoch 23/100	 reward 0.5181360627072198	  cost 0.16839654743671417	
+0.28205128205128205
+epoch 24/100	 reward 0.5808352646089736	  cost 0.29430219531059265	
+0.3538461538461538
+epoch 25/100	 reward 0.6066234409241449	  cost 0.26894035935401917	
+0.29615384615384616
+epoch 26/100	 reward 0.5474409391766503	  cost 0.09693995863199234	
+0.22307692307692306
+epoch 27/100	 reward 0.5870747715518588	  cost 0.21672454476356506	
+0.31794871794871793
+epoch 28/100	 reward 0.6200391088780903	  cost 0.15177437663078308	
+0.3076923076923077
+epoch 29/100	 reward 0.6540235155253186	  cost 0.1417350322008133	
+0.1935897435897436
+epoch 30/100	 reward 0.6615543876659303	  cost 0.1654902696609497	
+0.17435897435897435
+epoch 31/100	 reward 0.6530325608310245	  cost 0.09303350746631622	
+0.1717948717948718
+epoch 32/100	 reward 0.6347558813719522	  cost 0.03780507668852806	
+0.12051282051282051
+epoch 33/100	 reward 0.6562499954303105	  cost 0.06926761567592621	
+0.1782051282051282
+epoch 34/100	 reward 0.6858716962734859	  cost 0.0759081020951271	
+0.28846153846153844
+epoch 35/100	 reward 0.6815748786642438	  cost 0.10704261064529419	
+0.2512820512820513
+epoch 36/100	 reward 0.6820545484338487	  cost 0.05173063278198242	
+0.24358974358974358
+epoch 37/100	 reward 0.6682071601493018	  cost 0.09756430983543396	
+0.20512820512820512
+epoch 38/100	 reward 0.6801212800400598	  cost 0.03782297298312187	
+0.29743589743589743
+epoch 39/100	 reward 0.6734320974633806	  cost 0.02150849811732769	
+0.23846153846153847
+epoch 40/100	 reward 0.6750129756189528	  cost 0.012898369692265987	
+0.3166666666666667
+epoch 41/100	 reward 0.6669800727707998	  cost 0.054861944168806076	
+0.27564102564102566
+epoch 42/100	 reward 0.7000425986732755	  cost 0.05836551636457443	
+0.1897435897435897
+epoch 43/100	 reward 0.6707551540363402	  cost -0.007328147068619728	
+0.24615384615384617
+epoch 44/100	 reward 0.7058757522844132	  cost 0.06355950236320496	
+0.1935897435897436
+epoch 45/100	 reward 0.7147279178244728	  cost 0.044218726456165314	
+0.2487179487179487
+epoch 46/100	 reward 0.7163836770682107	  cost 0.04413335770368576	
+0.258974358974359
+epoch 47/100	 reward 0.7226799939359937	  cost 0.037492748349905014	
+0.23076923076923078
+epoch 48/100	 reward 0.7074623630160377	  cost 0.051715828478336334	
+0.2205128205128205
+epoch 49/100	 reward 0.7098712973367599	  cost 0.03361279517412186	
+0.2371794871794872
+epoch 50/100	 reward 0.7227458808535622	  cost 0.033611368387937546	
+0.18589743589743593
+epoch 51/100	 reward 0.6692389332680475	  cost -0.20240341126918793	
+0.3141025641025641
+epoch 52/100	 reward 0.5005597757441657	  cost -0.15067562460899353	
+0.24615384615384617
+epoch 53/100	 reward 0.5313971373155004	  cost -0.019855357706546783	
+0.11153846153846153
+epoch 54/100	 reward 0.5611746589342753	  cost -0.02594880945980549	
+0.12051282051282051
+epoch 55/100	 reward 0.5605289709568023	  cost -0.061360374093055725	
+0.09487179487179488
+epoch 56/100	 reward 0.563131208107585	  cost -0.038806017488241196	
+0.10512820512820513
+epoch 57/100	 reward 0.5689004988329752	  cost -0.03452075645327568	
+0.14615384615384613
+epoch 58/100	 reward 0.5770889946392604	  cost 0.06716060638427734	
+0.291025641025641
+epoch 59/100	 reward 0.6622711512020656	  cost 0.13002528250217438	
+0.308974358974359
+epoch 60/100	 reward 0.6639662008626122	  cost -0.005294925067573786	
+0.37692307692307686
+epoch 61/100	 reward 0.660800834156218	  cost 0.036063652485609055	
+0.3923076923076923
+epoch 62/100	 reward 0.6669548780009861	  cost 0.0646543875336647	
+0.3128205128205128
+epoch 63/100	 reward 0.6822295286258062	  cost 0.06728111952543259	
+0.33076923076923076
+epoch 64/100	 reward 0.6770310545819146	  cost 0.0945555567741394	
+0.3269230769230769
+epoch 65/100	 reward 0.697441820814496	  cost 0.06485044956207275	
+0.31794871794871793
+epoch 66/100	 reward 0.7155579989580882	  cost 0.05483436957001686	
+0.27692307692307694
+epoch 67/100	 reward 0.7298325429360072	  cost 0.03717201575636864	
+0.2538461538461539
+epoch 68/100	 reward 0.726525760661988	  cost 0.08241267502307892	
+0.3012820512820512
+epoch 69/100	 reward 0.7513491813341777	  cost 0.10767631977796555	
+0.27307692307692305
+epoch 70/100	 reward 0.7511073724144981	  cost 0.033385880291461945	
+0.22820512820512823
+epoch 71/100	 reward 0.7463184276932762	  cost 0.04014042764902115	
+0.3294871794871795
+epoch 72/100	 reward 0.7505749488160723	  cost 0.053136032074689865	
+0.2948717948717948
+epoch 73/100	 reward 0.7583045725879216	  cost 0.1041201576590538	
+0.29230769230769227
+epoch 74/100	 reward 0.7613552972248624	  cost 0.061249058693647385	
+0.28205128205128205
+epoch 75/100	 reward 0.7605982761439823	  cost 0.025541342794895172	
+0.2961538461538461
+epoch 76/100	 reward 0.768593658208847	  cost 0.04826744273304939	
+0.30512820512820515
+epoch 77/100	 reward 0.782387504975001	  cost 0.06240895390510559	
+0.2987179487179487
+epoch 78/100	 reward 0.7773435160091945	  cost 0.03622743487358093	
+0.24743589743589742
+epoch 79/100	 reward 0.7749966667379653	  cost 0.04553917795419693	
+0.2692307692307692
+epoch 80/100	 reward 0.7722599761826652	  cost 0.0307901781052351	
+0.2435897435897436
+epoch 81/100	 reward 0.7674238566273733	  cost 0.03795667365193367	
+0.25000000000000006
+epoch 82/100	 reward 0.7738369597423643	  cost 0.0036540073342621326	
+0.21538461538461537
+epoch 83/100	 reward 0.7759380003668014	  cost 0.02619750425219536	
+0.2
+epoch 84/100	 reward 0.779972013008027	  cost -0.0064715235494077206	
+0.2153846153846154
+epoch 85/100	 reward 0.7760708869071234	  cost 0.03470404073596001	
+0.24743589743589745
+epoch 86/100	 reward 0.7771780278853009	  cost 0.02493894100189209	
+0.29871794871794877
+epoch 87/100	 reward 0.7667207431793213	  cost 0.0008885394781827927	
+0.2371794871794872
+epoch 88/100	 reward 0.7762576078800928	  cost -0.007651284337043762	
+0.33589743589743587
+epoch 89/100	 reward 0.780022114941052	  cost 0.018378479406237602	
+0.2948717948717949
+epoch 90/100	 reward 0.775863684869948	  cost 0.04452921822667122	
+0.17948717948717946
+epoch 91/100	 reward 0.7776909279823304	  cost -0.007335937116295099	
+0.18333333333333332
+epoch 92/100	 reward 0.7769731231246675	  cost -0.001596000511199236	
+0.23076923076923078
+epoch 93/100	 reward 0.7750317486411048	  cost 0.0057370467111468315	
+0.21538461538461537
+epoch 94/100	 reward 0.7764687383174896	  cost -0.005450785160064697	
+0.2128205128205128
+epoch 95/100	 reward 0.7777346121697198	  cost 0.02335556223988533	
+0.16153846153846155
+epoch 96/100	 reward 0.7712013622976486	  cost 0.01351257972419262	
+0.15512820512820513
+epoch 97/100	 reward 0.7726303872608004	  cost -0.02291494607925415	
+0.19615384615384615
+epoch 98/100	 reward 0.7795746437708536	  cost 0.029075926169753075	
+0.19615384615384618
+epoch 99/100	 reward 0.7843872299648467	  cost 0.02102891355752945	
+0.21153846153846154
+epoch 100/100	 reward 0.776463397968383	  cost 0.008147167973220348	
+0.24743589743589745
+
+different rewards results:
+
+ normal baseline reward(authors):
+epoch 1/100	 reward 0.20851612802838818	  cost 0.14764738082885742	
+0.3333333333333333
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 2/100	 reward 0.4059631869196892	  cost 0.13508662581443787	
+0.3076923076923077
+epoch 3/100	 reward 0.22483479976654053	  cost 0.0024766381829977036	
+0.0
+epoch 4/100	 reward 0.22038796044531325	  cost 0.002490823855623603	
+0.0
+epoch 5/100	 reward 0.0	  cost 0.0024811364710330963	
+0.0
+epoch 6/100	 reward 0.38826543799468444	  cost 0.002836078405380249	
+0.28205128205128205
+epoch 7/100	 reward 0.40580323557768544	  cost 0.08811391890048981	
+0.0923076923076923
+epoch 8/100	 reward 0.004648981037594023	  cost 0.0024090190418064594	
+0.0
+epoch 9/100	 reward 0.14933195159548807	  cost 0.04988721013069153	
+0.31666666666666665
+epoch 10/100	 reward 0.4503869733356294	  cost 0.050241246819496155	
+0.35256410256410253
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 11/100	 reward 0.3806071699942861	  cost 0.05782235413789749	
+0.31794871794871793
+epoch 12/100	 reward 0.44780488229933235	  cost 0.06812075525522232	
+0.25512820512820517
+epoch 13/100	 reward 0.40035037287643976	  cost 0.006614997982978821	
+0.0
+epoch 14/100	 reward 0.42975700557231905	  cost 0.04589628428220749	
+0.34102564102564104
+epoch 15/100	 reward 0.4105399980431511	  cost 0.06713269650936127	
+0.44487179487179496
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 16/100	 reward 0.43565992074353355	  cost 0.06095479056239128	
+0.4397435897435897
+epoch 17/100	 reward 0.41247459698291056	  cost 0.05513637885451317	
+0.45641025641025634
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 18/100	 reward 0.47567997782003313	  cost 0.08560521900653839	
+0.4179487179487179
+epoch 19/100	 reward 0.4666658490896225	  cost 0.05909041315317154	
+0.38461538461538464
+epoch 20/100	 reward 0.4620272516068958	  cost 0.08653007447719574	
+0.45128205128205123
+epoch 21/100	 reward 0.46181007317134315	  cost 0.07301397621631622	
+0.35128205128205126
+epoch 22/100	 reward 0.45934095008032666	  cost 0.053125396370887756	
+0.3576923076923077
+epoch 23/100	 reward 0.47060854239123207	  cost 0.0395805761218071	
+0.3807692307692308
+epoch 24/100	 reward 0.46251984445821664	  cost 0.02845020778477192	
+0.36794871794871786
+epoch 25/100	 reward 0.48070741684663865	  cost 0.04497634619474411	
+0.3384615384615384
+epoch 26/100	 reward 0.5003141813051133	  cost 0.03742993250489235	
+0.45641025641025634
+epoch 27/100	 reward 0.525584748333436	  cost 0.03949352726340294	
+0.2153846153846154
+epoch 28/100	 reward 0.5781315250624389	  cost 0.03157771751284599	
+0.13205128205128205
+epoch 29/100	 reward 0.5621246363719304	  cost 0.020321059972047806	
+0.08846153846153845
+epoch 30/100	 reward 0.5316547903844289	  cost 0.009758681058883667	
+0.3128205128205128
+epoch 31/100	 reward 0.4957446092651004	  cost 0.014702585525810719	
+0.34102564102564104
+epoch 32/100	 reward 0.4963250251611073	  cost 0.012049181386828423	
+0.31025641025641026
+epoch 33/100	 reward 0.2904423533636949	  cost 0.002494355197995901	
+0.0
+epoch 34/100	 reward 1.3058576666300164e-08	  cost 0.002374126808717847	
+0.0
+epoch 35/100	 reward 0.2400078769742123	  cost 0.04336472228169441	
+0.3282051282051282
+epoch 36/100	 reward 0.505488554920469	  cost 0.07334378361701965	
+0.38974358974358975
+epoch 37/100	 reward 0.5162175504366976	  cost 0.0358545184135437	
+0.3423076923076923
+epoch 38/100	 reward 0.5383862903572265	  cost 0.031734950840473175	
+0.36538461538461536
+epoch 39/100	 reward 0.5293896384234786	  cost 0.01555844396352768	
+0.1641025641025641
+epoch 40/100	 reward 0.547645197453953	  cost 0.05847201496362686	
+0.22051282051282048
+epoch 41/100	 reward 0.596586176845295	  cost 0.01650482788681984	
+0.2269230769230769
+epoch 42/100	 reward 0.6126703634148553	  cost 0.031503237783908844	
+0.31025641025641026
+epoch 43/100	 reward 0.6322242641590906	  cost 0.018480930477380753	
+0.13333333333333333
+epoch 44/100	 reward 0.6453831920506495	  cost 0.04201968014240265	
+0.12307692307692307
+epoch 45/100	 reward 0.6429590862854113	  cost 0.020267311483621597	
+0.04743589743589744
+epoch 46/100	 reward 0.6381099200816382	  cost 0.01229406613856554	
+0.29615384615384616
+epoch 47/100	 reward 0.6204494557673911	  cost 0.00811773631721735	
+0.27051282051282055
+epoch 48/100	 reward 0.628514754885957	  cost -0.02762220799922943	
+0.03461538461538462
+epoch 49/100	 reward 0.61782635634862	  cost 0.0034606708213686943	
+0.317948717948718
+epoch 50/100	 reward 0.6334649832050245	  cost 0.03375077620148659	
+0.28974358974358977
+epoch 51/100	 reward 0.6352981867357403	  cost -0.006927371956408024	
+0.2512820512820513
+epoch 52/100	 reward 0.6092218535829487	  cost 0.006368459668010473	
+0.31794871794871793
+epoch 53/100	 reward 0.63699420497531	  cost 0.00545138493180275	
+0.06282051282051282
+epoch 54/100	 reward 0.6283911622989745	  cost 0.0032354947179555893	
+0.03461538461538462
+epoch 55/100	 reward 0.6280946918328604	  cost 0.0028706949669867754	
+0.10128205128205128
+epoch 56/100	 reward 0.6175962869468189	  cost 0.003008434781804681	
+0.03076923076923077
+epoch 57/100	 reward 0.6231550212417344	  cost -0.003291128668934107	
+0.3320512820512821
+epoch 58/100	 reward 0.6327014272553592	  cost 0.0018957320135086775	
+0.15256410256410255
+epoch 59/100	 reward 0.6167689731291363	  cost 0.0031919796019792557	
+0.28205128205128205
+epoch 60/100	 reward 0.6344065264293443	  cost 0.004126526415348053	
+0.1487179487179487
+epoch 61/100	 reward 0.6545719024423715	  cost 0.01799938827753067	
+0.29230769230769227
+epoch 62/100	 reward 0.6745493381364004	  cost 0.009772922843694687	
+0.27307692307692305
+epoch 63/100	 reward 0.665233786918592	  cost 0.003637841437011957	
+0.2705128205128205
+epoch 64/100	 reward 0.6506853154590109	  cost -0.009135086089372635	
+0.317948717948718
+epoch 65/100	 reward 0.6683630107981817	  cost 0.005013421177864075	
+0.23846153846153845
+epoch 66/100	 reward 0.6683628653060905	  cost -0.010272045619785786	
+0.06025641025641025
+epoch 67/100	 reward 0.6596289613133407	  cost 0.0005717031890526414	
+0.2576923076923077
+epoch 68/100	 reward 0.6656460311157362	  cost -0.0036804568953812122	
+0.31538461538461543
+epoch 69/100	 reward 0.6875312787578236	  cost 0.012604624032974243	
+0.29615384615384616
+epoch 70/100	 reward 0.6772389587050393	  cost -0.006851101294159889	
+0.1487179487179487
+epoch 71/100	 reward 0.6694446992310557	  cost 0.006128290202468634	
+0.1487179487179487
+epoch 72/100	 reward 0.6717496679865183	  cost 0.0025099702179431915	
+0.1512820512820513
+epoch 73/100	 reward 0.6737325171771504	  cost 0.00023929867893457413	
+0.21538461538461537
+epoch 74/100	 reward 0.6734095046633766	  cost 0.005592980422079563	
+0.24102564102564103
+epoch 75/100	 reward 0.6921934510980358	  cost 0.0022461977787315845	
+0.12948717948717947
+epoch 76/100	 reward 0.7110238796756381	  cost 0.003911307547241449	
+0.3243589743589744
+epoch 77/100	 reward 0.6704918216523671	  cost 0.01613627001643181	
+0.3269230769230769
+epoch 78/100	 reward 0.7129649325779507	  cost 0.0015334570780396461	
+0.2769230769230769
+epoch 79/100	 reward 0.7071431822152557	  cost 0.007930236868560314	
+0.34615384615384615
+epoch 80/100	 reward 0.6942988192467462	  cost 0.0046988497488200665	
+0.06025641025641025
+epoch 81/100	 reward 0.7244441905191966	  cost 0.006493214052170515	
+0.16153846153846155
+epoch 82/100	 reward 0.7388493100802104	  cost 0.0037895001005381346	
+0.09102564102564102
+epoch 83/100	 reward 0.7412760206631251	  cost 0.0016652096528559923	
+0.12307692307692308
+epoch 84/100	 reward 0.751139027433736	  cost 0.005898476578295231	
+0.25384615384615383
+epoch 85/100	 reward 0.76121437782333	  cost -0.007992728613317013	
+0.3294871794871795
+epoch 86/100	 reward 0.7508396544911169	  cost 0.005059858318418264	
+0.18333333333333332
+epoch 87/100	 reward 0.7717347908020211	  cost 0.0027485170867294073	
+0.27564102564102566
+epoch 88/100	 reward 0.7755918943314327	  cost 0.006022587884217501	
+0.07564102564102565
+epoch 89/100	 reward 0.7709932368142274	  cost 0.009810062125325203	
+0.33589743589743587
+epoch 90/100	 reward 0.7720742278297743	  cost -0.017903689295053482	
+0.16153846153846155
+epoch 91/100	 reward 0.8027499641690935	  cost 0.005838342942297459	
+0.2435897435897436
+epoch 92/100	 reward 0.7902090670665105	  cost 0.009998471476137638	
+0.34487179487179487
+epoch 93/100	 reward 0.7960962172349294	  cost -0.0004799517337232828	
+0.22820512820512817
+epoch 94/100	 reward 0.8063700883161454	  cost 0.005524219013750553	
+0.22820512820512823
+epoch 95/100	 reward 0.8135974001316797	  cost 0.0013997801579535007	
+0.31666666666666665
+epoch 96/100	 reward 0.8168701051530385	  cost 0.00845074187964201	
+0.07564102564102565
+epoch 97/100	 reward 0.8201188885030293	  cost 0.0032400996424257755	
+0.2692307692307692
+epoch 98/100	 reward 0.823468073038828	  cost 0.0024441471323370934	
+0.12307692307692308
+epoch 99/100	 reward 0.8453891626426152	  cost 0.003531479509547353	
+0.07307692307692307
+epoch 100/100	 reward 0.8323099859555563	  cost -0.005975095089524984	
+0.18974358974358976), rewrad function 1: Model size: 0.23690M
+Model size: 0.69171M
+==================================================
+=====> Start DRL training and Online Evaluate <=====
+Reward Function : r1
+Reward Description: Coverage + Diversity + Low Redundancy Reward
+==================================================
+epoch 1/100	 reward 5.0	  cost 0.002537000458687544	
+0.19615384615384615
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 2/100	 reward 5.0	  cost 0.002528371289372444	
+0.31923076923076926
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 3/100	 reward 5.0	  cost 0.0027558638248592615	
+0.3076923076923077
+epoch 4/100	 reward 5.0	  cost 0.002850133692845702	
+0.458974358974359
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 5/100	 reward 5.0	  cost 0.0025432307738810778	
+0.36538461538461536
+epoch 6/100	 reward 5.0	  cost 0.0025630476884543896	
+0.30769230769230765
+epoch 7/100	 reward 5.0	  cost 0.002555486047640443	
+0.3282051282051282
+epoch 8/100	 reward 5.0	  cost 0.0025507176760584116	
+0.2525641025641026
+epoch 9/100	 reward 5.0	  cost 0.0025527868419885635	
+0.2769230769230769
+epoch 10/100	 reward 5.0	  cost 0.06629709154367447	
+0.37820512820512814
+epoch 11/100	 reward 4.882140752701532	  cost 0.0026378543116152287	
+0.2756410256410256
+epoch 12/100	 reward 4.200078020777021	  cost 0.22904565930366516	
+0.4217948717948718
+epoch 13/100	 reward 3.6529821137019565	  cost 0.0025055729784071445	
+0.2602564102564103
+epoch 14/100	 reward 3.3913902525674726	  cost 0.002371295588091016	
+0.24358974358974358
+epoch 15/100	 reward 3.1454667043685913	  cost 0.0019012117991223931	
+0.27564102564102566
+epoch 16/100	 reward 2.4836032566543493	  cost -0.1335795819759369	
+0.019230769230769232
+epoch 17/100	 reward 2.3004302721436227	  cost -0.024968788027763367	
+0.3333333333333333
+epoch 18/100	 reward 2.649058231172108	  cost -0.03795647248625755	
+0.48589743589743584
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 19/100	 reward 3.355745584851219	  cost 0.5259457230567932	
+0.39487179487179486
+epoch 20/100	 reward 3.4280761668795634	  cost 0.18953901529312134	
+0.31025641025641026
+epoch 21/100	 reward 3.479317903972807	  cost 0.3596394956111908	
+0.35769230769230764
+epoch 22/100	 reward 3.573741392408099	  cost 0.4818296432495117	
+0.2653846153846154
+epoch 23/100	 reward 3.6969743326732094	  cost 0.7488788962364197	
+0.3038461538461539
+epoch 24/100	 reward 3.8770023491619425	  cost 0.39257073402404785	
+0.23205128205128206
+epoch 25/100	 reward 3.9416297646292615	  cost 0.2518368363380432	
+0.2974358974358974
+epoch 26/100	 reward 3.9772368820508324	  cost 0.3376251757144928	
+0.3141025641025641
+epoch 27/100	 reward 3.9920183143161596	  cost 0.33433064818382263	
+0.3294871794871795
+epoch 28/100	 reward 4.059396375588008	  cost 0.22099097073078156	
+0.28205128205128205
+epoch 29/100	 reward 4.1762330149012685	  cost 0.21994750201702118	
+0.26282051282051283
+epoch 30/100	 reward 4.1543191248968725	  cost 0.2665696442127228	
+0.3192307692307692
+epoch 31/100	 reward 4.209996609353416	  cost 0.6027523279190063	
+0.29999999999999993
+epoch 32/100	 reward 4.2484701669783815	  cost 0.3195638060569763	
+0.26666666666666666
+epoch 33/100	 reward 4.259299459074224	  cost 0.26529213786125183	
+0.3038461538461538
+epoch 34/100	 reward 4.310948327836536	  cost 0.29225414991378784	
+0.2192307692307692
+epoch 35/100	 reward 4.305526192495599	  cost 0.1942869871854782	
+0.2756410256410256
+epoch 36/100	 reward 4.363778683260261	  cost 0.23993125557899475	
+0.2756410256410256
+epoch 37/100	 reward 4.3711919728347235	  cost 0.0715579241514206	
+0.18974358974358976
+epoch 38/100	 reward 4.366003043718326	  cost 0.2209377884864807	
+0.23717948717948717
+epoch 39/100	 reward 4.425095870385023	  cost 0.26058581471443176	
+0.28846153846153844
+epoch 40/100	 reward 4.506079813034407	  cost 0.33586275577545166	
+0.3269230769230769
+epoch 41/100	 reward 4.530212706760282	  cost 0.08719079196453094	
+0.27307692307692305
+epoch 42/100	 reward 4.535679149820159	  cost 0.17680472135543823	
+0.27948717948717944
+epoch 43/100	 reward 4.51190558463335	  cost 0.22119054198265076	
+0.3423076923076923
+epoch 44/100	 reward 4.593047423362732	  cost 0.18826395273208618	
+0.2564102564102564
+epoch 45/100	 reward 4.568386791204573	  cost 0.12858276069164276	
+0.3141025641025641
+epoch 46/100	 reward 4.573923210467495	  cost 0.012285846285521984	
+0.28461538461538455
+epoch 47/100	 reward 4.587110211026101	  cost -0.06261526048183441	
+0.2948717948717948
+epoch 48/100	 reward 4.575338575796978	  cost 0.08458266407251358	
+0.2948717948717948
+epoch 49/100	 reward 4.666585542985371	  cost 0.15549485385417938	
+0.3589743589743589
+epoch 50/100	 reward 4.587678482035796	  cost 0.10104967653751373	
+0.2948717948717948
+epoch 51/100	 reward 4.647549447541436	  cost 0.03437742963433266	
+0.2948717948717948
+epoch 52/100	 reward 4.675655776971863	  cost -0.18886247277259827	
+0.3358974358974359
+epoch 53/100	 reward 4.669568519322644	  cost 0.10670165717601776	
+0.36153846153846153
+epoch 54/100	 reward 4.727993610387756	  cost 0.15719985961914062	
+0.27948717948717944
+epoch 55/100	 reward 4.700333422960248	  cost 0.05317333713173866	
+0.2794871794871795
+epoch 56/100	 reward 4.736668785469872	  cost 0.05588816851377487	
+0.31153846153846154
+epoch 57/100	 reward 4.748718941381999	  cost -0.04561479762196541	
+0.241025641025641
+epoch 58/100	 reward 4.697188005901519	  cost 0.11291390657424927	
+0.34615384615384615
+epoch 59/100	 reward 4.719235933930392	  cost 0.05921294540166855	
+0.2602564102564103
+epoch 60/100	 reward 4.789585632369632	  cost 0.057549238204956055	
+0.23461538461538461
+epoch 61/100	 reward 4.861625857353211	  cost 0.032285384833812714	
+0.33076923076923076
+epoch 62/100	 reward 4.818805171989259	  cost 0.023992888629436493	
+0.2602564102564103
+epoch 63/100	 reward 4.865090821811131	  cost 0.08373130857944489	
+0.2987179487179487
+epoch 64/100	 reward 4.861634530339923	  cost 0.04289877414703369	
+0.317948717948718
+epoch 65/100	 reward 4.8732471480823705	  cost 0.010362768545746803	
+0.3051282051282051
+epoch 66/100	 reward 4.877990218117124	  cost 0.0428040586411953	
+0.35641025641025637
+epoch 67/100	 reward 4.901265790121896	  cost 0.03707954287528992	
+0.29230769230769227
+epoch 68/100	 reward 4.894786748886108	  cost 0.049895383417606354	
+0.3435897435897436
+epoch 69/100	 reward 4.896495346114748	  cost 0.06667011976242065	
+0.2961538461538461
+epoch 70/100	 reward 4.866919145357041	  cost 0.012052374891936779	
+0.36666666666666675
+epoch 71/100	 reward 4.897245129346848	  cost 0.012931977398693562	
+0.3192307692307692
+epoch 72/100	 reward 4.886054374376933	  cost 0.023723777383565903	
+0.33076923076923076
+epoch 73/100	 reward 4.900624713443574	  cost 0.017910804599523544	
+0.2641025641025641
+epoch 74/100	 reward 4.895359574045454	  cost 0.028144247829914093	
+0.2769230769230769
+epoch 75/100	 reward 4.9127921372368215	  cost 0.08152072876691818	
+0.26666666666666666
+epoch 76/100	 reward 4.920323913665045	  cost 0.03653554618358612	
+0.3051282051282051
+epoch 77/100	 reward 4.894715431531271	  cost 0.041028767824172974	
+0.24487179487179486
+epoch 78/100	 reward 4.920025084813436	  cost -0.020114269107580185	
+0.28076923076923077
+epoch 79/100	 reward 4.939397751944407	  cost 0.03937800973653793	
+0.3269230769230769
+epoch 80/100	 reward 4.926438775289626	  cost 0.01577453874051571	
+0.2641025641025641
+epoch 81/100	 reward 4.938863771075293	  cost 0.02705736830830574	
+0.24871794871794872
+epoch 82/100	 reward 4.940999699547177	  cost 0.02869601920247078	
+0.2705128205128205
+epoch 83/100	 reward 4.948871462231591	  cost 0.08036062121391296	
+0.267948717948718
+epoch 84/100	 reward 4.948849658511934	  cost 0.01374408695846796	
+0.29230769230769227
+epoch 85/100	 reward 4.949969474474589	  cost 0.004665937274694443	
+0.24871794871794872
+epoch 86/100	 reward 4.9571739964258095	  cost 0.024921253323554993	
+0.28076923076923077
+epoch 87/100	 reward 4.951645491009668	  cost 0.021230822429060936	
+0.3128205128205128
+epoch 88/100	 reward 4.953370949654352	  cost 0.0398968905210495	
+0.30000000000000004
+epoch 89/100	 reward 4.951382984433855	  cost -0.002490685787051916	
+0.2858974358974359
+epoch 90/100	 reward 4.957315239225114	  cost 0.01035110093653202	
+0.30000000000000004
+epoch 91/100	 reward 4.960226842789424	  cost 0.01055430993437767	
+0.2961538461538461
+epoch 92/100	 reward 4.953511324382964	  cost -0.035089801996946335	
+0.30000000000000004
+epoch 93/100	 reward 4.957038174810863	  cost 0.06430761516094208	
+0.33205128205128204
+epoch 94/100	 reward 4.963593257722401	  cost 0.008666806854307652	
+0.30000000000000004
+epoch 95/100	 reward 4.964099632898967	  cost 0.0062540872022509575	
+0.28076923076923077
+epoch 96/100	 reward 4.970172476087297	  cost 0.015920327976346016	
+0.2358974358974359
+epoch 97/100	 reward 4.966988399142311	  cost 0.005697969812899828	
+0.308974358974359
+epoch 98/100	 reward 4.956837130047026	  cost 0.0027629651594907045	
+0.2743589743589744
+epoch 99/100	 reward 4.959896190507072	  cost -0.01256723701953888	
+0.28076923076923077
+epoch 100/100	 reward 4.963924869809831	  cost -0.05639391392469406	
+0.3217948717948718), r2:Model size: 0.23690M
+Model size: 0.69171M
+==================================================
+=====> Start DRL training and Online Evaluate <=====
+Reward Function : r2
+Reward Description: Boundary / Transition-Aware Reward
+==================================================
+epoch 1/100	 reward 5.0	  cost 0.002520929556339979	
+0.3487179487179487
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r2/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r2/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 2/100	 reward 5.0	  cost 0.0025988752022385597	
+0.43589743589743585
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r2/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r2/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 3/100	 reward 5.0	  cost 0.002622073283419013	
+0.30512820512820515
+epoch 4/100	 reward 2.085714285714286	  cost 0.0024999429006129503	
+0.0
+epoch 5/100	 reward -1.0	  cost 0.0024997389409691095	
+0.0
+epoch 6/100	 reward -1.0	  cost 0.0024999999441206455	
+0.0
+epoch 7/100	 reward -1.0	  cost 0.0024913563393056393	
+0.0
+epoch 8/100	 reward -0.9144453384762717	  cost 4.090768814086914	
+0.15897435897435896
+epoch 9/100	 reward 5.0	  cost 3.376570224761963	
+0.3384615384615385
+epoch 10/100	 reward 5.0	  cost 0.08451593667268753	
+0.2
+epoch 11/100	 reward 5.0	  cost 0.053887754678726196	
+0.21538461538461537
+epoch 12/100	 reward 5.0	  cost 0.0987929180264473	
+0.2
+epoch 13/100	 reward 5.0	  cost 0.0038848952390253544	
+0.1871794871794872
+epoch 14/100	 reward 5.0	  cost 0.08092214167118073	
+0.22564102564102567
+epoch 15/100	 reward 5.0	  cost 0.006409072782844305	
+0.25
+epoch 16/100	 reward 5.0	  cost 0.0030570062808692455	
+0.2
+epoch 17/100	 reward 5.0	  cost 0.0029803530778735876	
+0.1871794871794872
+epoch 18/100	 reward 5.0	  cost 0.03156773000955582	
+0.13333333333333333
+epoch 19/100	 reward 5.0	  cost 0.0031121987849473953	
+0.17435897435897435
+epoch 20/100	 reward 5.0	  cost 0.0026616498362272978	
+0.20256410256410257
+epoch 21/100	 reward 5.0	  cost 0.0382973849773407	
+0.1769230769230769
+epoch 22/100	 reward 5.0	  cost 0.030608586966991425	
+0.1897435897435897
+epoch 23/100	 reward 5.0	  cost 0.002514747204259038	
+0.1769230769230769
+epoch 24/100	 reward 5.0	  cost 0.031004054471850395	
+0.1897435897435897
+epoch 25/100	 reward 5.0	  cost 0.017401784658432007	
+0.291025641025641
+epoch 26/100	 reward 5.0	  cost 0.002525576390326023	
+0.1769230769230769
+epoch 27/100	 reward 5.0	  cost 0.01221688836812973	
+0.11666666666666667
+epoch 28/100	 reward 5.0	  cost 0.003216246608644724	
+0.1641025641025641
+epoch 29/100	 reward 5.0	  cost 0.01114329881966114	
+0.24743589743589745
+epoch 30/100	 reward 5.0	  cost 0.008061063475906849	
+0.40384615384615385
+epoch 31/100	 reward 5.0	  cost 0.002602281281724572	
+0.17307692307692307
+epoch 32/100	 reward 5.0	  cost 0.002506543416529894	
+0.1897435897435897
+epoch 33/100	 reward 5.0	  cost 0.002541144611313939	
+0.3166666666666667
+epoch 34/100	 reward 5.0	  cost 0.0026280975434929132	
+0.2769230769230769
+epoch 35/100	 reward 5.0	  cost 0.0025851959362626076	
+0.35
+epoch 36/100	 reward 5.0	  cost 0.002547107171267271	
+0.35
+epoch 37/100	 reward 5.0	  cost 0.14090383052825928	
+0.35
+epoch 38/100	 reward 5.0	  cost 0.07890873402357101	
+0.36153846153846153
+epoch 39/100	 reward 5.0	  cost 0.042482227087020874	
+0.2692307692307692
+epoch 40/100	 reward 5.0	  cost 0.005061340518295765	
+0.3
+epoch 41/100	 reward 5.0	  cost 0.007678505498915911	
+0.3230769230769231
+epoch 42/100	 reward 5.0	  cost 0.004090853501111269	
+0.2564102564102564
+epoch 43/100	 reward 5.0	  cost 0.041503287851810455	
+0.3128205128205128
+epoch 44/100	 reward 5.0	  cost 0.0626932829618454	
+0.3230769230769231
+epoch 45/100	 reward 5.0	  cost 0.08556258678436279	
+0.4115384615384615
+epoch 46/100	 reward 5.0	  cost 0.11934126913547516	
+0.3384615384615385
+epoch 47/100	 reward 5.0	  cost 0.15082001686096191	
+0.35512820512820514
+epoch 48/100	 reward 4.991386673336937	  cost 0.09874184429645538	
+0.3871794871794872
+epoch 49/100	 reward 4.987799136752174	  cost 0.07254861295223236	
+0.341025641025641
+epoch 50/100	 reward 4.996009197689238	  cost 0.09479434788227081	
+0.3641025641025641
+epoch 51/100	 reward 4.997233405794416	  cost 0.07978257536888123	
+0.3615384615384615
+epoch 52/100	 reward 4.965166831697737	  cost 0.11628299951553345	
+0.29615384615384616
+epoch 53/100	 reward 4.962047829855056	  cost 0.09843950718641281	
+0.3
+epoch 54/100	 reward 4.9959390890030635	  cost 0.06127096712589264	
+0.29230769230769227
+epoch 55/100	 reward 4.998354583013625	  cost 0.05627460032701492	
+0.34102564102564104
+epoch 56/100	 reward 4.9919823714665	  cost 0.04811479523777962	
+0.44358974358974357
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r2/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r2/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 57/100	 reward 4.987992582775297	  cost 0.05595067888498306	
+0.4179487179487179
+epoch 58/100	 reward 4.986417882556007	  cost 0.04576169699430466	
+0.3923076923076923
+epoch 59/100	 reward 4.97125397000994	  cost 0.014247670769691467	
+0.3705128205128205
+epoch 60/100	 reward 4.919234439759027	  cost -0.3315485417842865	
+0.36666666666666675
+epoch 61/100	 reward 4.846653409685407	  cost -0.014194288291037083	
+0.28717948717948716
+epoch 62/100	 reward 4.870339748745873	  cost -0.008927559480071068	
+0.3128205128205128
+epoch 63/100	 reward 4.913128614879789	  cost 0.057617686688899994	
+0.3448717948717949
+epoch 64/100	 reward 4.938958961395991	  cost 0.011768421158194542	
+0.36666666666666675
+epoch 65/100	 reward 4.942273140861875	  cost 0.0038575236685574055	
+0.36666666666666675
+epoch 66/100	 reward 4.950466954367501	  cost 0.038423411548137665	
+0.3820512820512821
+epoch 67/100	 reward 4.94565246400379	  cost 0.00966007448732853	
+0.37179487179487186
+epoch 68/100	 reward 4.955491631371634	  cost 0.004392750561237335	
+0.41282051282051285
+epoch 69/100	 reward 4.965182289850145	  cost 0.074213407933712	
+0.40256410256410263
+epoch 70/100	 reward 4.971719671885172	  cost 0.024735737591981888	
+0.4153846153846154
+epoch 71/100	 reward 4.970794642766316	  cost 0.007314479909837246	
+0.3679487179487179
+epoch 72/100	 reward 4.9779833348592115	  cost 0.0065187434665858746	
+0.33333333333333337
+epoch 73/100	 reward 4.961607136045184	  cost 0.012725611217319965	
+0.3294871794871795
+epoch 74/100	 reward 4.961164270582652	  cost -0.0006575938314199448	
+0.2948717948717948
+epoch 75/100	 reward 4.965239147004627	  cost 0.008491292595863342	
+0.2948717948717949
+epoch 76/100	 reward 4.96832723890032	  cost 0.01286392379552126	
+0.3230769230769231
+epoch 77/100	 reward 4.971102965218679	  cost 0.2414408177137375	
+0.3038461538461539
+epoch 78/100	 reward 4.983754012698219	  cost 0.004262932110577822	
+0.36410256410256403
+epoch 79/100	 reward 4.977511824653261	  cost -0.007103733718395233	
+0.38974358974358975
+epoch 80/100	 reward 4.977047642299107	  cost 0.0032796633895486593	
+0.36025641025641025
+epoch 81/100	 reward 4.985328934987386	  cost 0.003910579718649387	
+0.3756410256410256
+epoch 82/100	 reward 4.984908855529058	  cost 0.0033722228836268187	
+0.3987179487179487
+epoch 83/100	 reward 4.984136216754004	  cost 0.00491704884916544	
+0.3705128205128205
+epoch 84/100	 reward 4.982617306028093	  cost 0.002507189754396677	
+0.35769230769230764
+epoch 85/100	 reward 4.976404523395357	  cost 0.0022970291320234537	
+0.39615384615384613
+epoch 86/100	 reward 4.980616573152089	  cost 0.0022521617356687784	
+0.38333333333333325
+epoch 87/100	 reward 4.97856440180824	  cost 0.1074710264801979	
+0.33205128205128204
+epoch 88/100	 reward 4.984123439788817	  cost 0.004115569870918989	
+0.3794871794871794
+epoch 89/100	 reward 4.983918225878761	  cost 0.001562710152938962	
+0.38333333333333336
+epoch 90/100	 reward 4.9827681768508185	  cost 0.001611871412023902	
+0.3987179487179487
+epoch 91/100	 reward 4.98109821228754	  cost 0.00806485116481781	
+0.38333333333333336
+epoch 92/100	 reward 4.99272994086856	  cost 0.0018851188942790031	
+0.3858974358974359
+epoch 93/100	 reward 4.988396772202991	  cost 0.015856212005019188	
+0.38333333333333336
+epoch 94/100	 reward 4.980564565658568	  cost 0.0019939676858484745	
+0.4102564102564103
+epoch 95/100	 reward 4.985784550621396	  cost 0.0017170130740851164	
+0.38461538461538464
+epoch 96/100	 reward 4.984848150525774	  cost 0.02868596464395523	
+0.3692307692307692
+epoch 97/100	 reward 4.9871960031418565	  cost 0.006610173732042313	
+0.3692307692307692
+epoch 98/100	 reward 4.987650412150792	  cost 0.0011665979400277138	
+0.3679487179487179
+epoch 99/100	 reward 4.98960067431132	  cost 0.0021378484088927507	
+0.3807692307692307
+epoch 100/100	 reward 4.993860269274031	  cost 0.001297625945881009	
+0.3807692307692307),Model size: 0.23690M
+Model size: 0.69171M
+==================================================
+=====> Start DRL training and Online Evaluate <=====
+Reward Function : r3
+Reward Description: Compactness + Separation Reward
+==================================================
+epoch 1/100	 reward 4.474726895526761	  cost 1.3925678730010986	
+0.3576923076923077
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 2/100	 reward 4.9999729347229005	  cost 1.9505864381790161	
+0.22179487179487178
+epoch 3/100	 reward 4.904230249949864	  cost 1.1844056844711304	
+0.23205128205128206
+epoch 4/100	 reward 4.942421251932781	  cost 0.868584394454956	
+0.17435897435897435
+epoch 5/100	 reward 4.731057079860142	  cost 0.5247682929039001	
+0.3384615384615384
+epoch 6/100	 reward 4.7965193050248285	  cost 0.7054325938224792	
+0.2846153846153846
+epoch 7/100	 reward 4.996987162090483	  cost 1.2675117254257202	
+0.3282051282051282
+epoch 8/100	 reward 4.818379745710464	  cost 1.743721842765808	
+0.26666666666666666
+epoch 9/100	 reward 4.709188152409735	  cost 0.29924994707107544	
+0.12692307692307692
+epoch 10/100	 reward 4.946728963624864	  cost 0.5252354741096497	
+0.3756410256410256
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 11/100	 reward 4.964066221600487	  cost 0.42722752690315247	
+0.30128205128205127
+epoch 12/100	 reward 4.978154226938884	  cost 0.24048130214214325	
+0.4012820512820513
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 13/100	 reward 5.0	  cost 0.27524709701538086	
+0.3871794871794872
+epoch 14/100	 reward 4.977142857142858	  cost 0.3681703805923462	
+0.3948717948717949
+epoch 15/100	 reward 4.96651215348925	  cost -0.6248749494552612	
+0.27564102564102566
+epoch 16/100	 reward 4.885035300368354	  cost 0.3195781707763672	
+0.35256410256410253
+epoch 17/100	 reward 4.948934440385727	  cost 0.31856074929237366	
+0.31025641025641026
+epoch 18/100	 reward 4.962633588427589	  cost 0.2072521150112152	
+0.2576923076923077
+epoch 19/100	 reward 5.0	  cost 0.1333705633878708	
+0.2602564102564103
+epoch 20/100	 reward 4.998461785543533	  cost 0.3002367913722992	
+0.29743589743589743
+epoch 21/100	 reward 4.969845508847917	  cost 0.1539284884929657	
+0.38846153846153847
+epoch 22/100	 reward 4.9769802032198225	  cost 0.289905309677124	
+0.2705128205128205
+epoch 23/100	 reward 4.988859614871797	  cost 0.2003183364868164	
+0.35384615384615387
+epoch 24/100	 reward 4.999579525448027	  cost 0.11083085834980011	
+0.3628205128205128
+epoch 25/100	 reward 5.0	  cost 0.06673387438058853	
+0.3025641025641026
+epoch 26/100	 reward 4.998965410959153	  cost 0.15723443031311035	
+0.291025641025641
+epoch 27/100	 reward 5.0	  cost 0.08664857596158981	
+0.31666666666666665
+epoch 28/100	 reward 4.999971110480172	  cost 0.07516975700855255	
+0.35128205128205126
+epoch 29/100	 reward 5.0	  cost 0.09405174851417542	
+0.35512820512820514
+epoch 30/100	 reward 5.0	  cost 0.045081134885549545	
+0.2717948717948718
+epoch 31/100	 reward 4.999899064472744	  cost 0.0732724517583847	
+0.291025641025641
+epoch 32/100	 reward 4.997358177275884	  cost 0.04646182060241699	
+0.26282051282051283
+epoch 33/100	 reward 4.999957010178338	  cost 0.06610560417175293	
+0.31410256410256415
+epoch 34/100	 reward 4.988142269225348	  cost 0.03736292943358421	
+0.18589743589743588
+epoch 35/100	 reward 5.0	  cost 0.0463123619556427	
+0.27564102564102566
+epoch 36/100	 reward 4.997030127843221	  cost 0.056780505925416946	
+0.291025641025641
+epoch 37/100	 reward 4.99721828097389	  cost 0.041383031755685806	
+0.32948717948717954
+epoch 38/100	 reward 4.998491828101021	  cost 0.02963804081082344	
+0.3756410256410257
+epoch 39/100	 reward 4.99306068670182	  cost 0.0459483377635479	
+0.3628205128205128
+epoch 40/100	 reward 4.999841087432134	  cost 0.041664037853479385	
+0.3538461538461538
+epoch 41/100	 reward 5.0	  cost 0.056705035269260406	
+0.30128205128205127
+epoch 42/100	 reward 4.99998769850958	  cost 0.047594428062438965	
+0.33333333333333337
+epoch 43/100	 reward 4.999214937573387	  cost 0.050857819616794586	
+0.26282051282051283
+epoch 44/100	 reward 4.99647889727638	  cost 0.03648997098207474	
+0.34615384615384615
+epoch 45/100	 reward 4.9964209265936	  cost 0.043572522699832916	
+0.35000000000000003
+epoch 46/100	 reward 4.996820009322393	  cost 0.03254096955060959	
+0.24358974358974358
+epoch 47/100	 reward 4.994197371346609	  cost 0.038019899278879166	
+0.2794871794871795
+epoch 48/100	 reward 4.996309778122675	  cost 0.02588234283030033	
+0.33076923076923076
+epoch 49/100	 reward 4.996179310934884	  cost 0.021021852269768715	
+0.37179487179487175
+epoch 50/100	 reward 4.998897475288028	  cost 0.02052963338792324	
+0.2948717948717949
+epoch 51/100	 reward 4.998698408036005	  cost 0.014305461198091507	
+0.31666666666666665
+epoch 52/100	 reward 4.998957520439511	  cost 0.014985792338848114	
+0.291025641025641
+epoch 53/100	 reward 4.996731980641683	  cost 0.026188094168901443	
+0.291025641025641
+epoch 54/100	 reward 4.997791095461164	  cost 0.012836985290050507	
+0.3038461538461539
+epoch 55/100	 reward 4.998407416116624	  cost 0.01195981353521347	
+0.3423076923076923
+epoch 56/100	 reward 4.997062701270694	  cost 0.015590498223900795	
+0.35769230769230764
+epoch 57/100	 reward 4.999437920706613	  cost 0.01576521433889866	
+0.3294871794871795
+epoch 58/100	 reward 4.999261837913877	  cost 0.01446558441966772	
+0.3294871794871795
+epoch 59/100	 reward 4.9974105807713105	  cost 0.01724056340754032	
+0.34615384615384615
+epoch 60/100	 reward 4.996700496673585	  cost 0.007246349938213825	
+0.31794871794871793
+epoch 61/100	 reward 4.999866653624035	  cost 0.011117817834019661	
+0.3243589743589744
+epoch 62/100	 reward 4.998844338825772	  cost 0.00736659113317728	
+0.35
+epoch 63/100	 reward 4.998028902780442	  cost 0.00692535936832428	
+0.3423076923076923
+epoch 64/100	 reward 4.997905508223034	  cost 0.021647341549396515	
+0.37692307692307697
+epoch 65/100	 reward 4.996042036783127	  cost 0.005795072764158249	
+0.4525641025641026
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 66/100	 reward 4.992733971732003	  cost -0.12428326904773712	
+0.3807692307692308
+epoch 67/100	 reward 4.980818776176089	  cost 0.007551839575171471	
+0.4423076923076923
+epoch 68/100	 reward 4.979254431951613	  cost -0.004048253875225782	
+0.23333333333333336
+epoch 69/100	 reward 4.993162464414325	  cost 0.002017104532569647	
+0.29871794871794877
+epoch 70/100	 reward 4.994604084832328	  cost 0.0021759518422186375	
+0.39487179487179486
+epoch 71/100	 reward 4.995044772284371	  cost 0.0026097549125552177	
+0.4256410256410256
+epoch 72/100	 reward 4.992331637882052	  cost 0.002802326111122966	
+0.45128205128205123
+epoch 73/100	 reward 4.996397134690057	  cost 0.003798896912485361	
+0.4051282051282051
+epoch 74/100	 reward 4.995954151153565	  cost 0.004033918958157301	
+0.4230769230769231
+epoch 75/100	 reward 4.996579866409301	  cost -0.033967163413763046	
+0.3974358974358974
+epoch 76/100	 reward 4.995730323791504	  cost -0.022922491654753685	
+0.4858974358974359
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 77/100	 reward 4.995626142592657	  cost 0.0031951111741364002	
+0.4
+epoch 78/100	 reward 4.995998605092367	  cost 0.0019402919569984078	
+0.38461538461538464
+epoch 79/100	 reward 4.994333500635057	  cost -0.002104882849380374	
+0.44487179487179485
+epoch 80/100	 reward 4.996043992269606	  cost 0.0017290274845436215	
+0.4705128205128204
+epoch 81/100	 reward 4.9951398554302395	  cost 0.008523156866431236	
+0.44487179487179485
+epoch 82/100	 reward 4.994134921119326	  cost -0.004451928660273552	
+0.41923076923076924
+epoch 83/100	 reward 4.99516965956915	  cost 0.003664571326225996	
+0.41025641025641024
+epoch 84/100	 reward 4.9956438427879695	  cost 0.001891100313514471	
+0.4512820512820512
+epoch 85/100	 reward 4.9957989184061695	  cost -0.002600242616608739	
+0.44487179487179485
+epoch 86/100	 reward 4.994447315761021	  cost 0.0018654820742085576	
+0.4641025641025641
+epoch 87/100	 reward 4.993576779592604	  cost 0.001548212836496532	
+0.45128205128205123
+epoch 88/100	 reward 4.996337073644002	  cost 0.0027689451817423105	
+0.3871794871794872
+epoch 89/100	 reward 4.995015205655779	  cost 0.0014829448191449046	
+0.45769230769230773
+epoch 90/100	 reward 4.99487146014259	  cost 0.0017978913383558393	
+0.46794871794871784
+epoch 91/100	 reward 4.9927069868360245	  cost 0.0015541112516075373	
+0.423076923076923
+epoch 92/100	 reward 4.996528044201079	  cost 0.0018985526403412223	
+0.44230769230769224
+epoch 93/100	 reward 4.996714561553229	  cost 0.0018958915024995804	
+0.43589743589743585
+epoch 94/100	 reward 4.993858894166491	  cost 0.0050827739760279655	
+0.3564102564102564
+epoch 95/100	 reward 4.996589218775432	  cost 0.0016558980569243431	
+0.3948717948717949
+epoch 96/100	 reward 4.995417497725714	  cost 0.002499611349776387	
+0.38846153846153847
+epoch 97/100	 reward 4.99673002243042	  cost 0.0018814497161656618	
+0.41410256410256413
+epoch 98/100	 reward 4.995298585437593	  cost 0.0017521490808576345	
+0.41410256410256413
+epoch 99/100	 reward 4.995491476967222	  cost 0.002439525444060564	
+0.3948717948717949
+epoch 100/100	 reward 4.996351589021229	  cost -0.010907941497862339	
+0.41025641025641024), Model size: 0.23690M
+Model size: 0.69171M
+==================================================
+=====> Start DRL training and Online Evaluate <=====
+Reward Function : r4
+Reward Description: Temporal Smoothness + Contiguity Reward
+==================================================
+epoch 1/100	 reward 0.46641175585056077	  cost 0.0025103832595050335	
+0.32051282051282054
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 2/100	 reward 1.2252171180929456	  cost 0.0025271382182836533	
+0.3192307692307692
+epoch 3/100	 reward 1.2216146528153191	  cost 0.002507510595023632	
+0.3679487179487179
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 4/100	 reward 1.2174203444662548	  cost 0.002671528374776244	
+0.41666666666666663
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 5/100	 reward 1.2227496763638088	  cost 0.0025848669465631247	
+0.38974358974358975
+epoch 6/100	 reward 1.2221864398320517	  cost 0.00280541880056262	
+0.44358974358974357
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 7/100	 reward 1.2205396790163858	  cost 0.0025329780764877796	
+0.30512820512820515
+epoch 8/100	 reward 1.2178580391974676	  cost 0.002537476597353816	
+0.30512820512820515
+epoch 9/100	 reward 1.2055041363125756	  cost 0.0025345042813569307	
+0.24743589743589745
+epoch 10/100	 reward 1.1868622425624302	  cost 0.002886584959924221	
+0.24743589743589745
+epoch 11/100	 reward 1.1281740475836253	  cost 0.00254416954703629	
+0.1935897435897436
+epoch 12/100	 reward 1.0188164510613396	  cost 0.0025970882270485163	
+0.21025641025641026
+epoch 13/100	 reward 0.9689211121343432	  cost 0.0025192671455442905	
+0.17051282051282052
+epoch 14/100	 reward 0.953279095235325	  cost 0.002529305638745427	
+0.19230769230769232
+epoch 15/100	 reward 0.9486772795518239	  cost 0.002501941053196788	
+0.15256410256410252
+epoch 16/100	 reward 0.9401575940563565	  cost 0.002504772739484906	
+0.08846153846153845
+epoch 17/100	 reward 0.9376365257161005	  cost 0.002525446703657508	
+0.22435897435897434
+epoch 18/100	 reward 0.9347321832747686	  cost 0.002523103030398488	
+0.17307692307692307
+epoch 19/100	 reward 0.9327178690547036	  cost 0.0025000569876283407	
+0.09487179487179485
+epoch 20/100	 reward 0.9317535138981682	  cost 0.0025005859788507223	
+0.09487179487179485
+epoch 21/100	 reward 0.9319357761314937	  cost 0.0025006895884871483	
+0.11410256410256409
+epoch 22/100	 reward 0.9321981926475251	  cost 0.002510920399799943	
+0.23333333333333334
+epoch 23/100	 reward 0.9308938835064571	  cost 0.0025021014735102654	
+0.18589743589743588
+epoch 24/100	 reward 0.9307962094034468	  cost 0.0025028290692716837	
+0.16025641025641027
+epoch 25/100	 reward 0.930837554136912	  cost 0.002500745700672269	
+0.11025641025641024
+epoch 26/100	 reward 0.9311167467491969	  cost 0.0029164289589971304	
+0.2269230769230769
+epoch 27/100	 reward 0.9301877498059046	  cost 0.002505435375496745	
+0.09487179487179485
+epoch 28/100	 reward 0.9307090611117227	  cost 0.0025008153170347214	
+0.22435897435897434
+epoch 29/100	 reward 0.930427871743838	  cost 0.00250305887311697	
+0.20512820512820512
+epoch 30/100	 reward 0.9303856067146574	  cost 0.0025013640988618135	
+0.20512820512820512
+epoch 31/100	 reward 0.9301527228241875	  cost 0.002501917304471135	
+0.2012820512820513
+epoch 32/100	 reward 0.9301279595068522	  cost 0.002505058888345957	
+0.2141025641025641
+epoch 33/100	 reward 0.9303132006100245	  cost 0.002505417913198471	
+0.19230769230769232
+epoch 34/100	 reward 0.9296778384560631	  cost 0.002503978554159403	
+0.2012820512820513
+epoch 35/100	 reward 0.9301440070640472	  cost 0.0025020460598170757	
+0.2012820512820513
+epoch 36/100	 reward 0.9294941338754835	  cost 0.0025085441302508116	
+0.21666666666666667
+epoch 37/100	 reward 0.9306277334690094	  cost 0.002504737814888358	
+0.2141025641025641
+epoch 38/100	 reward 0.9285368279616039	  cost 0.002500151051208377	
+0.09487179487179485
+epoch 39/100	 reward 0.9302262844925836	  cost 0.002500997157767415	
+0.1897435897435897
+epoch 40/100	 reward 0.9279793201741717	  cost 0.002500033937394619	
+0.08846153846153845
+epoch 41/100	 reward 0.9302948354255586	  cost 0.002500070258975029	
+0.20769230769230768
+epoch 42/100	 reward 0.9293718647105353	  cost 0.0025015128776431084	
+0.12307692307692307
+epoch 43/100	 reward 0.9299537901083628	  cost 0.0025058083701878786	
+0.2294871794871795
+epoch 44/100	 reward 0.9284810203029995	  cost 0.002500334056094289	
+0.10769230769230767
+epoch 45/100	 reward 0.9299557991538729	  cost 0.002500378992408514	
+0.1512820512820513
+epoch 46/100	 reward 0.929497649470965	  cost 0.0025034102145582438	
+0.21794871794871795
+epoch 47/100	 reward 0.9296521497056598	  cost 0.0025038928724825382	
+0.13205128205128205
+epoch 48/100	 reward 0.9291847607635315	  cost 0.002499900059774518	
+0.20512820512820512
+epoch 49/100	 reward 0.9285676949364798	  cost 0.002499875146895647	
+0.12692307692307692
+epoch 50/100	 reward 0.9295340995277677	  cost 0.0025001419708132744	
+0.17692307692307693
+epoch 51/100	 reward 0.9290989825271424	  cost 0.0024999307934194803	
+0.09487179487179485
+epoch 52/100	 reward 0.929509046389943	  cost 0.00250044884160161	
+0.14102564102564102
+epoch 53/100	 reward 0.9280462213357289	  cost 0.0025008595548570156	
+0.1948717948717949
+epoch 54/100	 reward 0.9298605675924391	  cost 0.002502662595361471	
+0.19999999999999998
+epoch 55/100	 reward 0.9293735847586677	  cost 0.002499128459021449	
+0.2294871794871795
+epoch 56/100	 reward 0.928437390582902	  cost 0.0024995077401399612	
+0.21410256410256412
+epoch 57/100	 reward 0.9298483035110291	  cost 0.0024992963299155235	
+0.16025641025641027
+epoch 58/100	 reward 0.9294141355582646	  cost 0.002500733593478799	
+0.14102564102564102
+epoch 59/100	 reward 0.9290695467165538	  cost 0.002499479567632079	
+0.2012820512820513
+epoch 60/100	 reward 0.9285058891205561	  cost 0.002500596921890974	
+0.23589743589743592
+epoch 61/100	 reward 0.928876078015282	  cost 0.002499547554180026	
+0.21025641025641026
+epoch 62/100	 reward 0.929308176636696	  cost 0.002500492613762617	
+0.12051282051282051
+epoch 63/100	 reward 0.9293322503566742	  cost 0.002499908674508333	
+0.20256410256410257
+epoch 64/100	 reward 0.9287911234583174	  cost 0.002501550130546093	
+0.23333333333333334
+epoch 65/100	 reward 0.9282363257521674	  cost 0.002499550813809037	
+0.25256410256410255
+epoch 66/100	 reward 0.9291292293298812	  cost 0.0024995561689138412	
+0.19487179487179487
+epoch 67/100	 reward 0.9282111233188992	  cost 0.002500429516658187	
+0.21794871794871795
+epoch 68/100	 reward 0.930088653876668	  cost 0.0024993366096168756	
+0.22435897435897434
+epoch 69/100	 reward 0.9281916730460666	  cost 0.00249946815893054	
+0.1487179487179487
+epoch 70/100	 reward 0.929626661056564	  cost 0.002499446738511324	
+0.09487179487179485
+epoch 71/100	 reward 0.9296960670323599	  cost 0.0024994162376970053	
+0.10384615384615384
+epoch 72/100	 reward 0.9283015405847913	  cost 0.00249915337190032	
+0.14487179487179486
+epoch 73/100	 reward 0.9292737436578388	  cost 0.002567549468949437	
+0.21410256410256412
+epoch 74/100	 reward 0.9292896980047227	  cost 0.0024991484824568033	
+0.17307692307692307
+epoch 75/100	 reward 0.9288008221841993	  cost 0.002377716824412346	
+0.14102564102564102
+epoch 76/100	 reward 0.9293241772481373	  cost 0.0024992884136736393	
+0.12051282051282051
+epoch 77/100	 reward 0.9288383498078301	  cost 0.002500321250408888	
+0.2269230769230769
+epoch 78/100	 reward 0.9297277689263935	  cost 0.0024997531436383724	
+0.21410256410256412
+epoch 79/100	 reward 0.9288178004821143	  cost 0.002499324269592762	
+0.07564102564102565
+epoch 80/100	 reward 0.9293325558730535	  cost 0.0025020272005349398	
+0.10769230769230768
+epoch 81/100	 reward 0.9302929150206702	  cost 0.0025018530432134867	
+0.1794871794871795
+epoch 82/100	 reward 0.9288877428713299	  cost 0.002502480521798134	
+0.16666666666666666
+epoch 83/100	 reward 0.929346792783056	  cost 0.0024987130891531706	
+0.2012820512820513
+epoch 84/100	 reward 0.9288931292579288	  cost 0.00249916547909379	
+0.20897435897435895
+epoch 85/100	 reward 0.9288916816597893	  cost 0.002499266294762492	
+0.1474358974358974
+epoch 86/100	 reward 0.9283611929700487	  cost -0.01332265418022871	
+0.14487179487179486
+epoch 87/100	 reward 0.9297967922971363	  cost 0.0024992332328110933	
+0.19487179487179487
+epoch 88/100	 reward 0.9288365381672268	  cost 0.002503403229638934	
+0.16666666666666666
+epoch 89/100	 reward 0.9288166819016139	  cost 0.002499004825949669	
+0.19487179487179487
+epoch 90/100	 reward 0.9283419445298967	  cost 0.0024993261322379112	
+0.2141025641025641
+epoch 91/100	 reward 0.9288074806758336	  cost 0.002499254420399666	
+0.17307692307692307
+epoch 92/100	 reward 0.9282535970211029	  cost 0.0024615838192403316	
+0.2141025641025641
+epoch 93/100	 reward 0.9296453960168929	  cost 0.0024999985471367836	
+0.2294871794871795
+epoch 94/100	 reward 0.9292151153939111	  cost 0.0025016001891344786	
+0.19871794871794873
+epoch 95/100	 reward 0.9282430152098338	  cost 0.0024993447586894035	
+0.1948717948717949
+epoch 96/100	 reward 0.928189899013156	  cost 0.0024993785191327333	
+0.2012820512820513
+epoch 97/100	 reward 0.928650782306989	  cost 0.002499278401955962	
+0.19487179487179487
+epoch 98/100	 reward 0.9295900443338212	  cost 0.0024798407685011625	
+0.18846153846153843
+epoch 99/100	 reward 0.9276643932717188	  cost 0.0025007938966155052	
+0.10128205128205128
+epoch 100/100	 reward 0.9305350606782097	  cost 0.0026334691792726517	
+0.2012820512820513)
+
+different rewards results:
+
+ normal baseline reward(authors):
+epoch 1/100	 reward 0.20851612802838818	  cost 0.14764738082885742	
+0.3333333333333333
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 2/100	 reward 0.4059631869196892	  cost 0.13508662581443787	
+0.3076923076923077
+epoch 3/100	 reward 0.22483479976654053	  cost 0.0024766381829977036	
+0.0
+epoch 4/100	 reward 0.22038796044531325	  cost 0.002490823855623603	
+0.0
+epoch 5/100	 reward 0.0	  cost 0.0024811364710330963	
+0.0
+epoch 6/100	 reward 0.38826543799468444	  cost 0.002836078405380249	
+0.28205128205128205
+epoch 7/100	 reward 0.40580323557768544	  cost 0.08811391890048981	
+0.0923076923076923
+epoch 8/100	 reward 0.004648981037594023	  cost 0.0024090190418064594	
+0.0
+epoch 9/100	 reward 0.14933195159548807	  cost 0.04988721013069153	
+0.31666666666666665
+epoch 10/100	 reward 0.4503869733356294	  cost 0.050241246819496155	
+0.35256410256410253
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 11/100	 reward 0.3806071699942861	  cost 0.05782235413789749	
+0.31794871794871793
+epoch 12/100	 reward 0.44780488229933235	  cost 0.06812075525522232	
+0.25512820512820517
+epoch 13/100	 reward 0.40035037287643976	  cost 0.006614997982978821	
+0.0
+epoch 14/100	 reward 0.42975700557231905	  cost 0.04589628428220749	
+0.34102564102564104
+epoch 15/100	 reward 0.4105399980431511	  cost 0.06713269650936127	
+0.44487179487179496
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 16/100	 reward 0.43565992074353355	  cost 0.06095479056239128	
+0.4397435897435897
+epoch 17/100	 reward 0.41247459698291056	  cost 0.05513637885451317	
+0.45641025641025634
+Model saved to /content/checkpoints/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/checkpoints/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 18/100	 reward 0.47567997782003313	  cost 0.08560521900653839	
+0.4179487179487179
+epoch 19/100	 reward 0.4666658490896225	  cost 0.05909041315317154	
+0.38461538461538464
+epoch 20/100	 reward 0.4620272516068958	  cost 0.08653007447719574	
+0.45128205128205123
+epoch 21/100	 reward 0.46181007317134315	  cost 0.07301397621631622	
+0.35128205128205126
+epoch 22/100	 reward 0.45934095008032666	  cost 0.053125396370887756	
+0.3576923076923077
+epoch 23/100	 reward 0.47060854239123207	  cost 0.0395805761218071	
+0.3807692307692308
+epoch 24/100	 reward 0.46251984445821664	  cost 0.02845020778477192	
+0.36794871794871786
+epoch 25/100	 reward 0.48070741684663865	  cost 0.04497634619474411	
+0.3384615384615384
+epoch 26/100	 reward 0.5003141813051133	  cost 0.03742993250489235	
+0.45641025641025634
+epoch 27/100	 reward 0.525584748333436	  cost 0.03949352726340294	
+0.2153846153846154
+epoch 28/100	 reward 0.5781315250624389	  cost 0.03157771751284599	
+0.13205128205128205
+epoch 29/100	 reward 0.5621246363719304	  cost 0.020321059972047806	
+0.08846153846153845
+epoch 30/100	 reward 0.5316547903844289	  cost 0.009758681058883667	
+0.3128205128205128
+epoch 31/100	 reward 0.4957446092651004	  cost 0.014702585525810719	
+0.34102564102564104
+epoch 32/100	 reward 0.4963250251611073	  cost 0.012049181386828423	
+0.31025641025641026
+epoch 33/100	 reward 0.2904423533636949	  cost 0.002494355197995901	
+0.0
+epoch 34/100	 reward 1.3058576666300164e-08	  cost 0.002374126808717847	
+0.0
+epoch 35/100	 reward 0.2400078769742123	  cost 0.04336472228169441	
+0.3282051282051282
+epoch 36/100	 reward 0.505488554920469	  cost 0.07334378361701965	
+0.38974358974358975
+epoch 37/100	 reward 0.5162175504366976	  cost 0.0358545184135437	
+0.3423076923076923
+epoch 38/100	 reward 0.5383862903572265	  cost 0.031734950840473175	
+0.36538461538461536
+epoch 39/100	 reward 0.5293896384234786	  cost 0.01555844396352768	
+0.1641025641025641
+epoch 40/100	 reward 0.547645197453953	  cost 0.05847201496362686	
+0.22051282051282048
+epoch 41/100	 reward 0.596586176845295	  cost 0.01650482788681984	
+0.2269230769230769
+epoch 42/100	 reward 0.6126703634148553	  cost 0.031503237783908844	
+0.31025641025641026
+epoch 43/100	 reward 0.6322242641590906	  cost 0.018480930477380753	
+0.13333333333333333
+epoch 44/100	 reward 0.6453831920506495	  cost 0.04201968014240265	
+0.12307692307692307
+epoch 45/100	 reward 0.6429590862854113	  cost 0.020267311483621597	
+0.04743589743589744
+epoch 46/100	 reward 0.6381099200816382	  cost 0.01229406613856554	
+0.29615384615384616
+epoch 47/100	 reward 0.6204494557673911	  cost 0.00811773631721735	
+0.27051282051282055
+epoch 48/100	 reward 0.628514754885957	  cost -0.02762220799922943	
+0.03461538461538462
+epoch 49/100	 reward 0.61782635634862	  cost 0.0034606708213686943	
+0.317948717948718
+epoch 50/100	 reward 0.6334649832050245	  cost 0.03375077620148659	
+0.28974358974358977
+epoch 51/100	 reward 0.6352981867357403	  cost -0.006927371956408024	
+0.2512820512820513
+epoch 52/100	 reward 0.6092218535829487	  cost 0.006368459668010473	
+0.31794871794871793
+epoch 53/100	 reward 0.63699420497531	  cost 0.00545138493180275	
+0.06282051282051282
+epoch 54/100	 reward 0.6283911622989745	  cost 0.0032354947179555893	
+0.03461538461538462
+epoch 55/100	 reward 0.6280946918328604	  cost 0.0028706949669867754	
+0.10128205128205128
+epoch 56/100	 reward 0.6175962869468189	  cost 0.003008434781804681	
+0.03076923076923077
+epoch 57/100	 reward 0.6231550212417344	  cost -0.003291128668934107	
+0.3320512820512821
+epoch 58/100	 reward 0.6327014272553592	  cost 0.0018957320135086775	
+0.15256410256410255
+epoch 59/100	 reward 0.6167689731291363	  cost 0.0031919796019792557	
+0.28205128205128205
+epoch 60/100	 reward 0.6344065264293443	  cost 0.004126526415348053	
+0.1487179487179487
+epoch 61/100	 reward 0.6545719024423715	  cost 0.01799938827753067	
+0.29230769230769227
+epoch 62/100	 reward 0.6745493381364004	  cost 0.009772922843694687	
+0.27307692307692305
+epoch 63/100	 reward 0.665233786918592	  cost 0.003637841437011957	
+0.2705128205128205
+epoch 64/100	 reward 0.6506853154590109	  cost -0.009135086089372635	
+0.317948717948718
+epoch 65/100	 reward 0.6683630107981817	  cost 0.005013421177864075	
+0.23846153846153845
+epoch 66/100	 reward 0.6683628653060905	  cost -0.010272045619785786	
+0.06025641025641025
+epoch 67/100	 reward 0.6596289613133407	  cost 0.0005717031890526414	
+0.2576923076923077
+epoch 68/100	 reward 0.6656460311157362	  cost -0.0036804568953812122	
+0.31538461538461543
+epoch 69/100	 reward 0.6875312787578236	  cost 0.012604624032974243	
+0.29615384615384616
+epoch 70/100	 reward 0.6772389587050393	  cost -0.006851101294159889	
+0.1487179487179487
+epoch 71/100	 reward 0.6694446992310557	  cost 0.006128290202468634	
+0.1487179487179487
+epoch 72/100	 reward 0.6717496679865183	  cost 0.0025099702179431915	
+0.1512820512820513
+epoch 73/100	 reward 0.6737325171771504	  cost 0.00023929867893457413	
+0.21538461538461537
+epoch 74/100	 reward 0.6734095046633766	  cost 0.005592980422079563	
+0.24102564102564103
+epoch 75/100	 reward 0.6921934510980358	  cost 0.0022461977787315845	
+0.12948717948717947
+epoch 76/100	 reward 0.7110238796756381	  cost 0.003911307547241449	
+0.3243589743589744
+epoch 77/100	 reward 0.6704918216523671	  cost 0.01613627001643181	
+0.3269230769230769
+epoch 78/100	 reward 0.7129649325779507	  cost 0.0015334570780396461	
+0.2769230769230769
+epoch 79/100	 reward 0.7071431822152557	  cost 0.007930236868560314	
+0.34615384615384615
+epoch 80/100	 reward 0.6942988192467462	  cost 0.0046988497488200665	
+0.06025641025641025
+epoch 81/100	 reward 0.7244441905191966	  cost 0.006493214052170515	
+0.16153846153846155
+epoch 82/100	 reward 0.7388493100802104	  cost 0.0037895001005381346	
+0.09102564102564102
+epoch 83/100	 reward 0.7412760206631251	  cost 0.0016652096528559923	
+0.12307692307692308
+epoch 84/100	 reward 0.751139027433736	  cost 0.005898476578295231	
+0.25384615384615383
+epoch 85/100	 reward 0.76121437782333	  cost -0.007992728613317013	
+0.3294871794871795
+epoch 86/100	 reward 0.7508396544911169	  cost 0.005059858318418264	
+0.18333333333333332
+epoch 87/100	 reward 0.7717347908020211	  cost 0.0027485170867294073	
+0.27564102564102566
+epoch 88/100	 reward 0.7755918943314327	  cost 0.006022587884217501	
+0.07564102564102565
+epoch 89/100	 reward 0.7709932368142274	  cost 0.009810062125325203	
+0.33589743589743587
+epoch 90/100	 reward 0.7720742278297743	  cost -0.017903689295053482	
+0.16153846153846155
+epoch 91/100	 reward 0.8027499641690935	  cost 0.005838342942297459	
+0.2435897435897436
+epoch 92/100	 reward 0.7902090670665105	  cost 0.009998471476137638	
+0.34487179487179487
+epoch 93/100	 reward 0.7960962172349294	  cost -0.0004799517337232828	
+0.22820512820512817
+epoch 94/100	 reward 0.8063700883161454	  cost 0.005524219013750553	
+0.22820512820512823
+epoch 95/100	 reward 0.8135974001316797	  cost 0.0013997801579535007	
+0.31666666666666665
+epoch 96/100	 reward 0.8168701051530385	  cost 0.00845074187964201	
+0.07564102564102565
+epoch 97/100	 reward 0.8201188885030293	  cost 0.0032400996424257755	
+0.2692307692307692
+epoch 98/100	 reward 0.823468073038828	  cost 0.0024441471323370934	
+0.12307692307692308
+epoch 99/100	 reward 0.8453891626426152	  cost 0.003531479509547353	
+0.07307692307692307
+epoch 100/100	 reward 0.8323099859555563	  cost -0.005975095089524984	
+0.18974358974358976), rewrad function 1: Model size: 0.23690M
+Model size: 0.69171M
+==================================================
+=====> Start DRL training and Online Evaluate <=====
+Reward Function : r1
+Reward Description: Coverage + Diversity + Low Redundancy Reward
+==================================================
+epoch 1/100	 reward 5.0	  cost 0.002537000458687544	
+0.19615384615384615
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 2/100	 reward 5.0	  cost 0.002528371289372444	
+0.31923076923076926
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 3/100	 reward 5.0	  cost 0.0027558638248592615	
+0.3076923076923077
+epoch 4/100	 reward 5.0	  cost 0.002850133692845702	
+0.458974358974359
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 5/100	 reward 5.0	  cost 0.0025432307738810778	
+0.36538461538461536
+epoch 6/100	 reward 5.0	  cost 0.0025630476884543896	
+0.30769230769230765
+epoch 7/100	 reward 5.0	  cost 0.002555486047640443	
+0.3282051282051282
+epoch 8/100	 reward 5.0	  cost 0.0025507176760584116	
+0.2525641025641026
+epoch 9/100	 reward 5.0	  cost 0.0025527868419885635	
+0.2769230769230769
+epoch 10/100	 reward 5.0	  cost 0.06629709154367447	
+0.37820512820512814
+epoch 11/100	 reward 4.882140752701532	  cost 0.0026378543116152287	
+0.2756410256410256
+epoch 12/100	 reward 4.200078020777021	  cost 0.22904565930366516	
+0.4217948717948718
+epoch 13/100	 reward 3.6529821137019565	  cost 0.0025055729784071445	
+0.2602564102564103
+epoch 14/100	 reward 3.3913902525674726	  cost 0.002371295588091016	
+0.24358974358974358
+epoch 15/100	 reward 3.1454667043685913	  cost 0.0019012117991223931	
+0.27564102564102566
+epoch 16/100	 reward 2.4836032566543493	  cost -0.1335795819759369	
+0.019230769230769232
+epoch 17/100	 reward 2.3004302721436227	  cost -0.024968788027763367	
+0.3333333333333333
+epoch 18/100	 reward 2.649058231172108	  cost -0.03795647248625755	
+0.48589743589743584
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r1/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 19/100	 reward 3.355745584851219	  cost 0.5259457230567932	
+0.39487179487179486
+epoch 20/100	 reward 3.4280761668795634	  cost 0.18953901529312134	
+0.31025641025641026
+epoch 21/100	 reward 3.479317903972807	  cost 0.3596394956111908	
+0.35769230769230764
+epoch 22/100	 reward 3.573741392408099	  cost 0.4818296432495117	
+0.2653846153846154
+epoch 23/100	 reward 3.6969743326732094	  cost 0.7488788962364197	
+0.3038461538461539
+epoch 24/100	 reward 3.8770023491619425	  cost 0.39257073402404785	
+0.23205128205128206
+epoch 25/100	 reward 3.9416297646292615	  cost 0.2518368363380432	
+0.2974358974358974
+epoch 26/100	 reward 3.9772368820508324	  cost 0.3376251757144928	
+0.3141025641025641
+epoch 27/100	 reward 3.9920183143161596	  cost 0.33433064818382263	
+0.3294871794871795
+epoch 28/100	 reward 4.059396375588008	  cost 0.22099097073078156	
+0.28205128205128205
+epoch 29/100	 reward 4.1762330149012685	  cost 0.21994750201702118	
+0.26282051282051283
+epoch 30/100	 reward 4.1543191248968725	  cost 0.2665696442127228	
+0.3192307692307692
+epoch 31/100	 reward 4.209996609353416	  cost 0.6027523279190063	
+0.29999999999999993
+epoch 32/100	 reward 4.2484701669783815	  cost 0.3195638060569763	
+0.26666666666666666
+epoch 33/100	 reward 4.259299459074224	  cost 0.26529213786125183	
+0.3038461538461538
+epoch 34/100	 reward 4.310948327836536	  cost 0.29225414991378784	
+0.2192307692307692
+epoch 35/100	 reward 4.305526192495599	  cost 0.1942869871854782	
+0.2756410256410256
+epoch 36/100	 reward 4.363778683260261	  cost 0.23993125557899475	
+0.2756410256410256
+epoch 37/100	 reward 4.3711919728347235	  cost 0.0715579241514206	
+0.18974358974358976
+epoch 38/100	 reward 4.366003043718326	  cost 0.2209377884864807	
+0.23717948717948717
+epoch 39/100	 reward 4.425095870385023	  cost 0.26058581471443176	
+0.28846153846153844
+epoch 40/100	 reward 4.506079813034407	  cost 0.33586275577545166	
+0.3269230769230769
+epoch 41/100	 reward 4.530212706760282	  cost 0.08719079196453094	
+0.27307692307692305
+epoch 42/100	 reward 4.535679149820159	  cost 0.17680472135543823	
+0.27948717948717944
+epoch 43/100	 reward 4.51190558463335	  cost 0.22119054198265076	
+0.3423076923076923
+epoch 44/100	 reward 4.593047423362732	  cost 0.18826395273208618	
+0.2564102564102564
+epoch 45/100	 reward 4.568386791204573	  cost 0.12858276069164276	
+0.3141025641025641
+epoch 46/100	 reward 4.573923210467495	  cost 0.012285846285521984	
+0.28461538461538455
+epoch 47/100	 reward 4.587110211026101	  cost -0.06261526048183441	
+0.2948717948717948
+epoch 48/100	 reward 4.575338575796978	  cost 0.08458266407251358	
+0.2948717948717948
+epoch 49/100	 reward 4.666585542985371	  cost 0.15549485385417938	
+0.3589743589743589
+epoch 50/100	 reward 4.587678482035796	  cost 0.10104967653751373	
+0.2948717948717948
+epoch 51/100	 reward 4.647549447541436	  cost 0.03437742963433266	
+0.2948717948717948
+epoch 52/100	 reward 4.675655776971863	  cost -0.18886247277259827	
+0.3358974358974359
+epoch 53/100	 reward 4.669568519322644	  cost 0.10670165717601776	
+0.36153846153846153
+epoch 54/100	 reward 4.727993610387756	  cost 0.15719985961914062	
+0.27948717948717944
+epoch 55/100	 reward 4.700333422960248	  cost 0.05317333713173866	
+0.2794871794871795
+epoch 56/100	 reward 4.736668785469872	  cost 0.05588816851377487	
+0.31153846153846154
+epoch 57/100	 reward 4.748718941381999	  cost -0.04561479762196541	
+0.241025641025641
+epoch 58/100	 reward 4.697188005901519	  cost 0.11291390657424927	
+0.34615384615384615
+epoch 59/100	 reward 4.719235933930392	  cost 0.05921294540166855	
+0.2602564102564103
+epoch 60/100	 reward 4.789585632369632	  cost 0.057549238204956055	
+0.23461538461538461
+epoch 61/100	 reward 4.861625857353211	  cost 0.032285384833812714	
+0.33076923076923076
+epoch 62/100	 reward 4.818805171989259	  cost 0.023992888629436493	
+0.2602564102564103
+epoch 63/100	 reward 4.865090821811131	  cost 0.08373130857944489	
+0.2987179487179487
+epoch 64/100	 reward 4.861634530339923	  cost 0.04289877414703369	
+0.317948717948718
+epoch 65/100	 reward 4.8732471480823705	  cost 0.010362768545746803	
+0.3051282051282051
+epoch 66/100	 reward 4.877990218117124	  cost 0.0428040586411953	
+0.35641025641025637
+epoch 67/100	 reward 4.901265790121896	  cost 0.03707954287528992	
+0.29230769230769227
+epoch 68/100	 reward 4.894786748886108	  cost 0.049895383417606354	
+0.3435897435897436
+epoch 69/100	 reward 4.896495346114748	  cost 0.06667011976242065	
+0.2961538461538461
+epoch 70/100	 reward 4.866919145357041	  cost 0.012052374891936779	
+0.36666666666666675
+epoch 71/100	 reward 4.897245129346848	  cost 0.012931977398693562	
+0.3192307692307692
+epoch 72/100	 reward 4.886054374376933	  cost 0.023723777383565903	
+0.33076923076923076
+epoch 73/100	 reward 4.900624713443574	  cost 0.017910804599523544	
+0.2641025641025641
+epoch 74/100	 reward 4.895359574045454	  cost 0.028144247829914093	
+0.2769230769230769
+epoch 75/100	 reward 4.9127921372368215	  cost 0.08152072876691818	
+0.26666666666666666
+epoch 76/100	 reward 4.920323913665045	  cost 0.03653554618358612	
+0.3051282051282051
+epoch 77/100	 reward 4.894715431531271	  cost 0.041028767824172974	
+0.24487179487179486
+epoch 78/100	 reward 4.920025084813436	  cost -0.020114269107580185	
+0.28076923076923077
+epoch 79/100	 reward 4.939397751944407	  cost 0.03937800973653793	
+0.3269230769230769
+epoch 80/100	 reward 4.926438775289626	  cost 0.01577453874051571	
+0.2641025641025641
+epoch 81/100	 reward 4.938863771075293	  cost 0.02705736830830574	
+0.24871794871794872
+epoch 82/100	 reward 4.940999699547177	  cost 0.02869601920247078	
+0.2705128205128205
+epoch 83/100	 reward 4.948871462231591	  cost 0.08036062121391296	
+0.267948717948718
+epoch 84/100	 reward 4.948849658511934	  cost 0.01374408695846796	
+0.29230769230769227
+epoch 85/100	 reward 4.949969474474589	  cost 0.004665937274694443	
+0.24871794871794872
+epoch 86/100	 reward 4.9571739964258095	  cost 0.024921253323554993	
+0.28076923076923077
+epoch 87/100	 reward 4.951645491009668	  cost 0.021230822429060936	
+0.3128205128205128
+epoch 88/100	 reward 4.953370949654352	  cost 0.0398968905210495	
+0.30000000000000004
+epoch 89/100	 reward 4.951382984433855	  cost -0.002490685787051916	
+0.2858974358974359
+epoch 90/100	 reward 4.957315239225114	  cost 0.01035110093653202	
+0.30000000000000004
+epoch 91/100	 reward 4.960226842789424	  cost 0.01055430993437767	
+0.2961538461538461
+epoch 92/100	 reward 4.953511324382964	  cost -0.035089801996946335	
+0.30000000000000004
+epoch 93/100	 reward 4.957038174810863	  cost 0.06430761516094208	
+0.33205128205128204
+epoch 94/100	 reward 4.963593257722401	  cost 0.008666806854307652	
+0.30000000000000004
+epoch 95/100	 reward 4.964099632898967	  cost 0.0062540872022509575	
+0.28076923076923077
+epoch 96/100	 reward 4.970172476087297	  cost 0.015920327976346016	
+0.2358974358974359
+epoch 97/100	 reward 4.966988399142311	  cost 0.005697969812899828	
+0.308974358974359
+epoch 98/100	 reward 4.956837130047026	  cost 0.0027629651594907045	
+0.2743589743589744
+epoch 99/100	 reward 4.959896190507072	  cost -0.01256723701953888	
+0.28076923076923077
+epoch 100/100	 reward 4.963924869809831	  cost -0.05639391392469406	
+0.3217948717948718), r2:Model size: 0.23690M
+Model size: 0.69171M
+==================================================
+=====> Start DRL training and Online Evaluate <=====
+Reward Function : r2
+Reward Description: Boundary / Transition-Aware Reward
+==================================================
+epoch 1/100	 reward 5.0	  cost 0.002520929556339979	
+0.3487179487179487
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r2/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r2/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 2/100	 reward 5.0	  cost 0.0025988752022385597	
+0.43589743589743585
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r2/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r2/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 3/100	 reward 5.0	  cost 0.002622073283419013	
+0.30512820512820515
+epoch 4/100	 reward 2.085714285714286	  cost 0.0024999429006129503	
+0.0
+epoch 5/100	 reward -1.0	  cost 0.0024997389409691095	
+0.0
+epoch 6/100	 reward -1.0	  cost 0.0024999999441206455	
+0.0
+epoch 7/100	 reward -1.0	  cost 0.0024913563393056393	
+0.0
+epoch 8/100	 reward -0.9144453384762717	  cost 4.090768814086914	
+0.15897435897435896
+epoch 9/100	 reward 5.0	  cost 3.376570224761963	
+0.3384615384615385
+epoch 10/100	 reward 5.0	  cost 0.08451593667268753	
+0.2
+epoch 11/100	 reward 5.0	  cost 0.053887754678726196	
+0.21538461538461537
+epoch 12/100	 reward 5.0	  cost 0.0987929180264473	
+0.2
+epoch 13/100	 reward 5.0	  cost 0.0038848952390253544	
+0.1871794871794872
+epoch 14/100	 reward 5.0	  cost 0.08092214167118073	
+0.22564102564102567
+epoch 15/100	 reward 5.0	  cost 0.006409072782844305	
+0.25
+epoch 16/100	 reward 5.0	  cost 0.0030570062808692455	
+0.2
+epoch 17/100	 reward 5.0	  cost 0.0029803530778735876	
+0.1871794871794872
+epoch 18/100	 reward 5.0	  cost 0.03156773000955582	
+0.13333333333333333
+epoch 19/100	 reward 5.0	  cost 0.0031121987849473953	
+0.17435897435897435
+epoch 20/100	 reward 5.0	  cost 0.0026616498362272978	
+0.20256410256410257
+epoch 21/100	 reward 5.0	  cost 0.0382973849773407	
+0.1769230769230769
+epoch 22/100	 reward 5.0	  cost 0.030608586966991425	
+0.1897435897435897
+epoch 23/100	 reward 5.0	  cost 0.002514747204259038	
+0.1769230769230769
+epoch 24/100	 reward 5.0	  cost 0.031004054471850395	
+0.1897435897435897
+epoch 25/100	 reward 5.0	  cost 0.017401784658432007	
+0.291025641025641
+epoch 26/100	 reward 5.0	  cost 0.002525576390326023	
+0.1769230769230769
+epoch 27/100	 reward 5.0	  cost 0.01221688836812973	
+0.11666666666666667
+epoch 28/100	 reward 5.0	  cost 0.003216246608644724	
+0.1641025641025641
+epoch 29/100	 reward 5.0	  cost 0.01114329881966114	
+0.24743589743589745
+epoch 30/100	 reward 5.0	  cost 0.008061063475906849	
+0.40384615384615385
+epoch 31/100	 reward 5.0	  cost 0.002602281281724572	
+0.17307692307692307
+epoch 32/100	 reward 5.0	  cost 0.002506543416529894	
+0.1897435897435897
+epoch 33/100	 reward 5.0	  cost 0.002541144611313939	
+0.3166666666666667
+epoch 34/100	 reward 5.0	  cost 0.0026280975434929132	
+0.2769230769230769
+epoch 35/100	 reward 5.0	  cost 0.0025851959362626076	
+0.35
+epoch 36/100	 reward 5.0	  cost 0.002547107171267271	
+0.35
+epoch 37/100	 reward 5.0	  cost 0.14090383052825928	
+0.35
+epoch 38/100	 reward 5.0	  cost 0.07890873402357101	
+0.36153846153846153
+epoch 39/100	 reward 5.0	  cost 0.042482227087020874	
+0.2692307692307692
+epoch 40/100	 reward 5.0	  cost 0.005061340518295765	
+0.3
+epoch 41/100	 reward 5.0	  cost 0.007678505498915911	
+0.3230769230769231
+epoch 42/100	 reward 5.0	  cost 0.004090853501111269	
+0.2564102564102564
+epoch 43/100	 reward 5.0	  cost 0.041503287851810455	
+0.3128205128205128
+epoch 44/100	 reward 5.0	  cost 0.0626932829618454	
+0.3230769230769231
+epoch 45/100	 reward 5.0	  cost 0.08556258678436279	
+0.4115384615384615
+epoch 46/100	 reward 5.0	  cost 0.11934126913547516	
+0.3384615384615385
+epoch 47/100	 reward 5.0	  cost 0.15082001686096191	
+0.35512820512820514
+epoch 48/100	 reward 4.991386673336937	  cost 0.09874184429645538	
+0.3871794871794872
+epoch 49/100	 reward 4.987799136752174	  cost 0.07254861295223236	
+0.341025641025641
+epoch 50/100	 reward 4.996009197689238	  cost 0.09479434788227081	
+0.3641025641025641
+epoch 51/100	 reward 4.997233405794416	  cost 0.07978257536888123	
+0.3615384615384615
+epoch 52/100	 reward 4.965166831697737	  cost 0.11628299951553345	
+0.29615384615384616
+epoch 53/100	 reward 4.962047829855056	  cost 0.09843950718641281	
+0.3
+epoch 54/100	 reward 4.9959390890030635	  cost 0.06127096712589264	
+0.29230769230769227
+epoch 55/100	 reward 4.998354583013625	  cost 0.05627460032701492	
+0.34102564102564104
+epoch 56/100	 reward 4.9919823714665	  cost 0.04811479523777962	
+0.44358974358974357
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r2/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r2/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 57/100	 reward 4.987992582775297	  cost 0.05595067888498306	
+0.4179487179487179
+epoch 58/100	 reward 4.986417882556007	  cost 0.04576169699430466	
+0.3923076923076923
+epoch 59/100	 reward 4.97125397000994	  cost 0.014247670769691467	
+0.3705128205128205
+epoch 60/100	 reward 4.919234439759027	  cost -0.3315485417842865	
+0.36666666666666675
+epoch 61/100	 reward 4.846653409685407	  cost -0.014194288291037083	
+0.28717948717948716
+epoch 62/100	 reward 4.870339748745873	  cost -0.008927559480071068	
+0.3128205128205128
+epoch 63/100	 reward 4.913128614879789	  cost 0.057617686688899994	
+0.3448717948717949
+epoch 64/100	 reward 4.938958961395991	  cost 0.011768421158194542	
+0.36666666666666675
+epoch 65/100	 reward 4.942273140861875	  cost 0.0038575236685574055	
+0.36666666666666675
+epoch 66/100	 reward 4.950466954367501	  cost 0.038423411548137665	
+0.3820512820512821
+epoch 67/100	 reward 4.94565246400379	  cost 0.00966007448732853	
+0.37179487179487186
+epoch 68/100	 reward 4.955491631371634	  cost 0.004392750561237335	
+0.41282051282051285
+epoch 69/100	 reward 4.965182289850145	  cost 0.074213407933712	
+0.40256410256410263
+epoch 70/100	 reward 4.971719671885172	  cost 0.024735737591981888	
+0.4153846153846154
+epoch 71/100	 reward 4.970794642766316	  cost 0.007314479909837246	
+0.3679487179487179
+epoch 72/100	 reward 4.9779833348592115	  cost 0.0065187434665858746	
+0.33333333333333337
+epoch 73/100	 reward 4.961607136045184	  cost 0.012725611217319965	
+0.3294871794871795
+epoch 74/100	 reward 4.961164270582652	  cost -0.0006575938314199448	
+0.2948717948717948
+epoch 75/100	 reward 4.965239147004627	  cost 0.008491292595863342	
+0.2948717948717949
+epoch 76/100	 reward 4.96832723890032	  cost 0.01286392379552126	
+0.3230769230769231
+epoch 77/100	 reward 4.971102965218679	  cost 0.2414408177137375	
+0.3038461538461539
+epoch 78/100	 reward 4.983754012698219	  cost 0.004262932110577822	
+0.36410256410256403
+epoch 79/100	 reward 4.977511824653261	  cost -0.007103733718395233	
+0.38974358974358975
+epoch 80/100	 reward 4.977047642299107	  cost 0.0032796633895486593	
+0.36025641025641025
+epoch 81/100	 reward 4.985328934987386	  cost 0.003910579718649387	
+0.3756410256410256
+epoch 82/100	 reward 4.984908855529058	  cost 0.0033722228836268187	
+0.3987179487179487
+epoch 83/100	 reward 4.984136216754004	  cost 0.00491704884916544	
+0.3705128205128205
+epoch 84/100	 reward 4.982617306028093	  cost 0.002507189754396677	
+0.35769230769230764
+epoch 85/100	 reward 4.976404523395357	  cost 0.0022970291320234537	
+0.39615384615384613
+epoch 86/100	 reward 4.980616573152089	  cost 0.0022521617356687784	
+0.38333333333333325
+epoch 87/100	 reward 4.97856440180824	  cost 0.1074710264801979	
+0.33205128205128204
+epoch 88/100	 reward 4.984123439788817	  cost 0.004115569870918989	
+0.3794871794871794
+epoch 89/100	 reward 4.983918225878761	  cost 0.001562710152938962	
+0.38333333333333336
+epoch 90/100	 reward 4.9827681768508185	  cost 0.001611871412023902	
+0.3987179487179487
+epoch 91/100	 reward 4.98109821228754	  cost 0.00806485116481781	
+0.38333333333333336
+epoch 92/100	 reward 4.99272994086856	  cost 0.0018851188942790031	
+0.3858974358974359
+epoch 93/100	 reward 4.988396772202991	  cost 0.015856212005019188	
+0.38333333333333336
+epoch 94/100	 reward 4.980564565658568	  cost 0.0019939676858484745	
+0.4102564102564103
+epoch 95/100	 reward 4.985784550621396	  cost 0.0017170130740851164	
+0.38461538461538464
+epoch 96/100	 reward 4.984848150525774	  cost 0.02868596464395523	
+0.3692307692307692
+epoch 97/100	 reward 4.9871960031418565	  cost 0.006610173732042313	
+0.3692307692307692
+epoch 98/100	 reward 4.987650412150792	  cost 0.0011665979400277138	
+0.3679487179487179
+epoch 99/100	 reward 4.98960067431132	  cost 0.0021378484088927507	
+0.3807692307692307
+epoch 100/100	 reward 4.993860269274031	  cost 0.001297625945881009	
+0.3807692307692307),Model size: 0.23690M
+Model size: 0.69171M
+==================================================
+=====> Start DRL training and Online Evaluate <=====
+Reward Function : r3
+Reward Description: Compactness + Separation Reward
+==================================================
+epoch 1/100	 reward 4.474726895526761	  cost 1.3925678730010986	
+0.3576923076923077
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 2/100	 reward 4.9999729347229005	  cost 1.9505864381790161	
+0.22179487179487178
+epoch 3/100	 reward 4.904230249949864	  cost 1.1844056844711304	
+0.23205128205128206
+epoch 4/100	 reward 4.942421251932781	  cost 0.868584394454956	
+0.17435897435897435
+epoch 5/100	 reward 4.731057079860142	  cost 0.5247682929039001	
+0.3384615384615384
+epoch 6/100	 reward 4.7965193050248285	  cost 0.7054325938224792	
+0.2846153846153846
+epoch 7/100	 reward 4.996987162090483	  cost 1.2675117254257202	
+0.3282051282051282
+epoch 8/100	 reward 4.818379745710464	  cost 1.743721842765808	
+0.26666666666666666
+epoch 9/100	 reward 4.709188152409735	  cost 0.29924994707107544	
+0.12692307692307692
+epoch 10/100	 reward 4.946728963624864	  cost 0.5252354741096497	
+0.3756410256410256
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 11/100	 reward 4.964066221600487	  cost 0.42722752690315247	
+0.30128205128205127
+epoch 12/100	 reward 4.978154226938884	  cost 0.24048130214214325	
+0.4012820512820513
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 13/100	 reward 5.0	  cost 0.27524709701538086	
+0.3871794871794872
+epoch 14/100	 reward 4.977142857142858	  cost 0.3681703805923462	
+0.3948717948717949
+epoch 15/100	 reward 4.96651215348925	  cost -0.6248749494552612	
+0.27564102564102566
+epoch 16/100	 reward 4.885035300368354	  cost 0.3195781707763672	
+0.35256410256410253
+epoch 17/100	 reward 4.948934440385727	  cost 0.31856074929237366	
+0.31025641025641026
+epoch 18/100	 reward 4.962633588427589	  cost 0.2072521150112152	
+0.2576923076923077
+epoch 19/100	 reward 5.0	  cost 0.1333705633878708	
+0.2602564102564103
+epoch 20/100	 reward 4.998461785543533	  cost 0.3002367913722992	
+0.29743589743589743
+epoch 21/100	 reward 4.969845508847917	  cost 0.1539284884929657	
+0.38846153846153847
+epoch 22/100	 reward 4.9769802032198225	  cost 0.289905309677124	
+0.2705128205128205
+epoch 23/100	 reward 4.988859614871797	  cost 0.2003183364868164	
+0.35384615384615387
+epoch 24/100	 reward 4.999579525448027	  cost 0.11083085834980011	
+0.3628205128205128
+epoch 25/100	 reward 5.0	  cost 0.06673387438058853	
+0.3025641025641026
+epoch 26/100	 reward 4.998965410959153	  cost 0.15723443031311035	
+0.291025641025641
+epoch 27/100	 reward 5.0	  cost 0.08664857596158981	
+0.31666666666666665
+epoch 28/100	 reward 4.999971110480172	  cost 0.07516975700855255	
+0.35128205128205126
+epoch 29/100	 reward 5.0	  cost 0.09405174851417542	
+0.35512820512820514
+epoch 30/100	 reward 5.0	  cost 0.045081134885549545	
+0.2717948717948718
+epoch 31/100	 reward 4.999899064472744	  cost 0.0732724517583847	
+0.291025641025641
+epoch 32/100	 reward 4.997358177275884	  cost 0.04646182060241699	
+0.26282051282051283
+epoch 33/100	 reward 4.999957010178338	  cost 0.06610560417175293	
+0.31410256410256415
+epoch 34/100	 reward 4.988142269225348	  cost 0.03736292943358421	
+0.18589743589743588
+epoch 35/100	 reward 5.0	  cost 0.0463123619556427	
+0.27564102564102566
+epoch 36/100	 reward 4.997030127843221	  cost 0.056780505925416946	
+0.291025641025641
+epoch 37/100	 reward 4.99721828097389	  cost 0.041383031755685806	
+0.32948717948717954
+epoch 38/100	 reward 4.998491828101021	  cost 0.02963804081082344	
+0.3756410256410257
+epoch 39/100	 reward 4.99306068670182	  cost 0.0459483377635479	
+0.3628205128205128
+epoch 40/100	 reward 4.999841087432134	  cost 0.041664037853479385	
+0.3538461538461538
+epoch 41/100	 reward 5.0	  cost 0.056705035269260406	
+0.30128205128205127
+epoch 42/100	 reward 4.99998769850958	  cost 0.047594428062438965	
+0.33333333333333337
+epoch 43/100	 reward 4.999214937573387	  cost 0.050857819616794586	
+0.26282051282051283
+epoch 44/100	 reward 4.99647889727638	  cost 0.03648997098207474	
+0.34615384615384615
+epoch 45/100	 reward 4.9964209265936	  cost 0.043572522699832916	
+0.35000000000000003
+epoch 46/100	 reward 4.996820009322393	  cost 0.03254096955060959	
+0.24358974358974358
+epoch 47/100	 reward 4.994197371346609	  cost 0.038019899278879166	
+0.2794871794871795
+epoch 48/100	 reward 4.996309778122675	  cost 0.02588234283030033	
+0.33076923076923076
+epoch 49/100	 reward 4.996179310934884	  cost 0.021021852269768715	
+0.37179487179487175
+epoch 50/100	 reward 4.998897475288028	  cost 0.02052963338792324	
+0.2948717948717949
+epoch 51/100	 reward 4.998698408036005	  cost 0.014305461198091507	
+0.31666666666666665
+epoch 52/100	 reward 4.998957520439511	  cost 0.014985792338848114	
+0.291025641025641
+epoch 53/100	 reward 4.996731980641683	  cost 0.026188094168901443	
+0.291025641025641
+epoch 54/100	 reward 4.997791095461164	  cost 0.012836985290050507	
+0.3038461538461539
+epoch 55/100	 reward 4.998407416116624	  cost 0.01195981353521347	
+0.3423076923076923
+epoch 56/100	 reward 4.997062701270694	  cost 0.015590498223900795	
+0.35769230769230764
+epoch 57/100	 reward 4.999437920706613	  cost 0.01576521433889866	
+0.3294871794871795
+epoch 58/100	 reward 4.999261837913877	  cost 0.01446558441966772	
+0.3294871794871795
+epoch 59/100	 reward 4.9974105807713105	  cost 0.01724056340754032	
+0.34615384615384615
+epoch 60/100	 reward 4.996700496673585	  cost 0.007246349938213825	
+0.31794871794871793
+epoch 61/100	 reward 4.999866653624035	  cost 0.011117817834019661	
+0.3243589743589744
+epoch 62/100	 reward 4.998844338825772	  cost 0.00736659113317728	
+0.35
+epoch 63/100	 reward 4.998028902780442	  cost 0.00692535936832428	
+0.3423076923076923
+epoch 64/100	 reward 4.997905508223034	  cost 0.021647341549396515	
+0.37692307692307697
+epoch 65/100	 reward 4.996042036783127	  cost 0.005795072764158249	
+0.4525641025641026
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 66/100	 reward 4.992733971732003	  cost -0.12428326904773712	
+0.3807692307692308
+epoch 67/100	 reward 4.980818776176089	  cost 0.007551839575171471	
+0.4423076923076923
+epoch 68/100	 reward 4.979254431951613	  cost -0.004048253875225782	
+0.23333333333333336
+epoch 69/100	 reward 4.993162464414325	  cost 0.002017104532569647	
+0.29871794871794877
+epoch 70/100	 reward 4.994604084832328	  cost 0.0021759518422186375	
+0.39487179487179486
+epoch 71/100	 reward 4.995044772284371	  cost 0.0026097549125552177	
+0.4256410256410256
+epoch 72/100	 reward 4.992331637882052	  cost 0.002802326111122966	
+0.45128205128205123
+epoch 73/100	 reward 4.996397134690057	  cost 0.003798896912485361	
+0.4051282051282051
+epoch 74/100	 reward 4.995954151153565	  cost 0.004033918958157301	
+0.4230769230769231
+epoch 75/100	 reward 4.996579866409301	  cost -0.033967163413763046	
+0.3974358974358974
+epoch 76/100	 reward 4.995730323791504	  cost -0.022922491654753685	
+0.4858974358974359
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r3/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 77/100	 reward 4.995626142592657	  cost 0.0031951111741364002	
+0.4
+epoch 78/100	 reward 4.995998605092367	  cost 0.0019402919569984078	
+0.38461538461538464
+epoch 79/100	 reward 4.994333500635057	  cost -0.002104882849380374	
+0.44487179487179485
+epoch 80/100	 reward 4.996043992269606	  cost 0.0017290274845436215	
+0.4705128205128204
+epoch 81/100	 reward 4.9951398554302395	  cost 0.008523156866431236	
+0.44487179487179485
+epoch 82/100	 reward 4.994134921119326	  cost -0.004451928660273552	
+0.41923076923076924
+epoch 83/100	 reward 4.99516965956915	  cost 0.003664571326225996	
+0.41025641025641024
+epoch 84/100	 reward 4.9956438427879695	  cost 0.001891100313514471	
+0.4512820512820512
+epoch 85/100	 reward 4.9957989184061695	  cost -0.002600242616608739	
+0.44487179487179485
+epoch 86/100	 reward 4.994447315761021	  cost 0.0018654820742085576	
+0.4641025641025641
+epoch 87/100	 reward 4.993576779592604	  cost 0.001548212836496532	
+0.45128205128205123
+epoch 88/100	 reward 4.996337073644002	  cost 0.0027689451817423105	
+0.3871794871794872
+epoch 89/100	 reward 4.995015205655779	  cost 0.0014829448191449046	
+0.45769230769230773
+epoch 90/100	 reward 4.99487146014259	  cost 0.0017978913383558393	
+0.46794871794871784
+epoch 91/100	 reward 4.9927069868360245	  cost 0.0015541112516075373	
+0.423076923076923
+epoch 92/100	 reward 4.996528044201079	  cost 0.0018985526403412223	
+0.44230769230769224
+epoch 93/100	 reward 4.996714561553229	  cost 0.0018958915024995804	
+0.43589743589743585
+epoch 94/100	 reward 4.993858894166491	  cost 0.0050827739760279655	
+0.3564102564102564
+epoch 95/100	 reward 4.996589218775432	  cost 0.0016558980569243431	
+0.3948717948717949
+epoch 96/100	 reward 4.995417497725714	  cost 0.002499611349776387	
+0.38846153846153847
+epoch 97/100	 reward 4.99673002243042	  cost 0.0018814497161656618	
+0.41410256410256413
+epoch 98/100	 reward 4.995298585437593	  cost 0.0017521490808576345	
+0.41410256410256413
+epoch 99/100	 reward 4.995491476967222	  cost 0.002439525444060564	
+0.3948717948717949
+epoch 100/100	 reward 4.996351589021229	  cost -0.010907941497862339	
+0.41025641025641024), Model size: 0.23690M
+Model size: 0.69171M
+==================================================
+=====> Start DRL training and Online Evaluate <=====
+Reward Function : r4
+Reward Description: Temporal Smoothness + Contiguity Reward
+==================================================
+epoch 1/100	 reward 0.46641175585056077	  cost 0.0025103832595050335	
+0.32051282051282054
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 2/100	 reward 1.2252171180929456	  cost 0.0025271382182836533	
+0.3192307692307692
+epoch 3/100	 reward 1.2216146528153191	  cost 0.002507510595023632	
+0.3679487179487179
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 4/100	 reward 1.2174203444662548	  cost 0.002671528374776244	
+0.41666666666666663
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 5/100	 reward 1.2227496763638088	  cost 0.0025848669465631247	
+0.38974358974358975
+epoch 6/100	 reward 1.2221864398320517	  cost 0.00280541880056262	
+0.44358974358974357
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model1_seed_subject0_R1_R2.pth.tar
+Model saved to /content/drive/MyDrive/last_repication_of_TASNET_MARL/checkpoints/r4/pretrained_best_model2_seed_subject0_R1_R2.pth.tar
+epoch 7/100	 reward 1.2205396790163858	  cost 0.0025329780764877796	
+0.30512820512820515
+epoch 8/100	 reward 1.2178580391974676	  cost 0.002537476597353816	
+0.30512820512820515
+epoch 9/100	 reward 1.2055041363125756	  cost 0.0025345042813569307	
+0.24743589743589745
+epoch 10/100	 reward 1.1868622425624302	  cost 0.002886584959924221	
+0.24743589743589745
+epoch 11/100	 reward 1.1281740475836253	  cost 0.00254416954703629	
+0.1935897435897436
+epoch 12/100	 reward 1.0188164510613396	  cost 0.0025970882270485163	
+0.21025641025641026
+epoch 13/100	 reward 0.9689211121343432	  cost 0.0025192671455442905	
+0.17051282051282052
+epoch 14/100	 reward 0.953279095235325	  cost 0.002529305638745427	
+0.19230769230769232
+epoch 15/100	 reward 0.9486772795518239	  cost 0.002501941053196788	
+0.15256410256410252
+epoch 16/100	 reward 0.9401575940563565	  cost 0.002504772739484906	
+0.08846153846153845
+epoch 17/100	 reward 0.9376365257161005	  cost 0.002525446703657508	
+0.22435897435897434
+epoch 18/100	 reward 0.9347321832747686	  cost 0.002523103030398488	
+0.17307692307692307
+epoch 19/100	 reward 0.9327178690547036	  cost 0.0025000569876283407	
+0.09487179487179485
+epoch 20/100	 reward 0.9317535138981682	  cost 0.0025005859788507223	
+0.09487179487179485
+epoch 21/100	 reward 0.9319357761314937	  cost 0.0025006895884871483	
+0.11410256410256409
+epoch 22/100	 reward 0.9321981926475251	  cost 0.002510920399799943	
+0.23333333333333334
+epoch 23/100	 reward 0.9308938835064571	  cost 0.0025021014735102654	
+0.18589743589743588
+epoch 24/100	 reward 0.9307962094034468	  cost 0.0025028290692716837	
+0.16025641025641027
+epoch 25/100	 reward 0.930837554136912	  cost 0.002500745700672269	
+0.11025641025641024
+epoch 26/100	 reward 0.9311167467491969	  cost 0.0029164289589971304	
+0.2269230769230769
+epoch 27/100	 reward 0.9301877498059046	  cost 0.002505435375496745	
+0.09487179487179485
+epoch 28/100	 reward 0.9307090611117227	  cost 0.0025008153170347214	
+0.22435897435897434
+epoch 29/100	 reward 0.930427871743838	  cost 0.00250305887311697	
+0.20512820512820512
+epoch 30/100	 reward 0.9303856067146574	  cost 0.0025013640988618135	
+0.20512820512820512
+epoch 31/100	 reward 0.9301527228241875	  cost 0.002501917304471135	
+0.2012820512820513
+epoch 32/100	 reward 0.9301279595068522	  cost 0.002505058888345957	
+0.2141025641025641
+epoch 33/100	 reward 0.9303132006100245	  cost 0.002505417913198471	
+0.19230769230769232
+epoch 34/100	 reward 0.9296778384560631	  cost 0.002503978554159403	
+0.2012820512820513
+epoch 35/100	 reward 0.9301440070640472	  cost 0.0025020460598170757	
+0.2012820512820513
+epoch 36/100	 reward 0.9294941338754835	  cost 0.0025085441302508116	
+0.21666666666666667
+epoch 37/100	 reward 0.9306277334690094	  cost 0.002504737814888358	
+0.2141025641025641
+epoch 38/100	 reward 0.9285368279616039	  cost 0.002500151051208377	
+0.09487179487179485
+epoch 39/100	 reward 0.9302262844925836	  cost 0.002500997157767415	
+0.1897435897435897
+epoch 40/100	 reward 0.9279793201741717	  cost 0.002500033937394619	
+0.08846153846153845
+epoch 41/100	 reward 0.9302948354255586	  cost 0.002500070258975029	
+0.20769230769230768
+epoch 42/100	 reward 0.9293718647105353	  cost 0.0025015128776431084	
+0.12307692307692307
+epoch 43/100	 reward 0.9299537901083628	  cost 0.0025058083701878786	
+0.2294871794871795
+epoch 44/100	 reward 0.9284810203029995	  cost 0.002500334056094289	
+0.10769230769230767
+epoch 45/100	 reward 0.9299557991538729	  cost 0.002500378992408514	
+0.1512820512820513
+epoch 46/100	 reward 0.929497649470965	  cost 0.0025034102145582438	
+0.21794871794871795
+epoch 47/100	 reward 0.9296521497056598	  cost 0.0025038928724825382	
+0.13205128205128205
+epoch 48/100	 reward 0.9291847607635315	  cost 0.002499900059774518	
+0.20512820512820512
+epoch 49/100	 reward 0.9285676949364798	  cost 0.002499875146895647	
+0.12692307692307692
+epoch 50/100	 reward 0.9295340995277677	  cost 0.0025001419708132744	
+0.17692307692307693
+epoch 51/100	 reward 0.9290989825271424	  cost 0.0024999307934194803	
+0.09487179487179485
+epoch 52/100	 reward 0.929509046389943	  cost 0.00250044884160161	
+0.14102564102564102
+epoch 53/100	 reward 0.9280462213357289	  cost 0.0025008595548570156	
+0.1948717948717949
+epoch 54/100	 reward 0.9298605675924391	  cost 0.002502662595361471	
+0.19999999999999998
+epoch 55/100	 reward 0.9293735847586677	  cost 0.002499128459021449	
+0.2294871794871795
+epoch 56/100	 reward 0.928437390582902	  cost 0.0024995077401399612	
+0.21410256410256412
+epoch 57/100	 reward 0.9298483035110291	  cost 0.0024992963299155235	
+0.16025641025641027
+epoch 58/100	 reward 0.9294141355582646	  cost 0.002500733593478799	
+0.14102564102564102
+epoch 59/100	 reward 0.9290695467165538	  cost 0.002499479567632079	
+0.2012820512820513
+epoch 60/100	 reward 0.9285058891205561	  cost 0.002500596921890974	
+0.23589743589743592
+epoch 61/100	 reward 0.928876078015282	  cost 0.002499547554180026	
+0.21025641025641026
+epoch 62/100	 reward 0.929308176636696	  cost 0.002500492613762617	
+0.12051282051282051
+epoch 63/100	 reward 0.9293322503566742	  cost 0.002499908674508333	
+0.20256410256410257
+epoch 64/100	 reward 0.9287911234583174	  cost 0.002501550130546093	
+0.23333333333333334
+epoch 65/100	 reward 0.9282363257521674	  cost 0.002499550813809037	
+0.25256410256410255
+epoch 66/100	 reward 0.9291292293298812	  cost 0.0024995561689138412	
+0.19487179487179487
+epoch 67/100	 reward 0.9282111233188992	  cost 0.002500429516658187	
+0.21794871794871795
+epoch 68/100	 reward 0.930088653876668	  cost 0.0024993366096168756	
+0.22435897435897434
+epoch 69/100	 reward 0.9281916730460666	  cost 0.00249946815893054	
+0.1487179487179487
+epoch 70/100	 reward 0.929626661056564	  cost 0.002499446738511324	
+0.09487179487179485
+epoch 71/100	 reward 0.9296960670323599	  cost 0.0024994162376970053	
+0.10384615384615384
+epoch 72/100	 reward 0.9283015405847913	  cost 0.00249915337190032	
+0.14487179487179486
+epoch 73/100	 reward 0.9292737436578388	  cost 0.002567549468949437	
+0.21410256410256412
+epoch 74/100	 reward 0.9292896980047227	  cost 0.0024991484824568033	
+0.17307692307692307
+epoch 75/100	 reward 0.9288008221841993	  cost 0.002377716824412346	
+0.14102564102564102
+epoch 76/100	 reward 0.9293241772481373	  cost 0.0024992884136736393	
+0.12051282051282051
+epoch 77/100	 reward 0.9288383498078301	  cost 0.002500321250408888	
+0.2269230769230769
+epoch 78/100	 reward 0.9297277689263935	  cost 0.0024997531436383724	
+0.21410256410256412
+epoch 79/100	 reward 0.9288178004821143	  cost 0.002499324269592762	
+0.07564102564102565
+epoch 80/100	 reward 0.9293325558730535	  cost 0.0025020272005349398	
+0.10769230769230768
+epoch 81/100	 reward 0.9302929150206702	  cost 0.0025018530432134867	
+0.1794871794871795
+epoch 82/100	 reward 0.9288877428713299	  cost 0.002502480521798134	
+0.16666666666666666
+epoch 83/100	 reward 0.929346792783056	  cost 0.0024987130891531706	
+0.2012820512820513
+epoch 84/100	 reward 0.9288931292579288	  cost 0.00249916547909379	
+0.20897435897435895
+epoch 85/100	 reward 0.9288916816597893	  cost 0.002499266294762492	
+0.1474358974358974
+epoch 86/100	 reward 0.9283611929700487	  cost -0.01332265418022871	
+0.14487179487179486
+epoch 87/100	 reward 0.9297967922971363	  cost 0.0024992332328110933	
+0.19487179487179487
+epoch 88/100	 reward 0.9288365381672268	  cost 0.002503403229638934	
+0.16666666666666666
+epoch 89/100	 reward 0.9288166819016139	  cost 0.002499004825949669	
+0.19487179487179487
+epoch 90/100	 reward 0.9283419445298967	  cost 0.0024993261322379112	
+0.2141025641025641
+epoch 91/100	 reward 0.9288074806758336	  cost 0.002499254420399666	
+0.17307692307692307
+epoch 92/100	 reward 0.9282535970211029	  cost 0.0024615838192403316	
+0.2141025641025641
+epoch 93/100	 reward 0.9296453960168929	  cost 0.0024999985471367836	
+0.2294871794871795
+epoch 94/100	 reward 0.9292151153939111	  cost 0.0025016001891344786	
+0.19871794871794873
+epoch 95/100	 reward 0.9282430152098338	  cost 0.0024993447586894035	
+0.1948717948717949
+epoch 96/100	 reward 0.928189899013156	  cost 0.0024993785191327333	
+0.2012820512820513
+epoch 97/100	 reward 0.928650782306989	  cost 0.002499278401955962	
+0.19487179487179487
+epoch 98/100	 reward 0.9295900443338212	  cost 0.0024798407685011625	
+0.18846153846153843
+epoch 99/100	 reward 0.9276643932717188	  cost 0.0025007938966155052	
+0.10128205128205128
+epoch 100/100	 reward 0.9305350606782097	  cost 0.0026334691792726517	
+0.2012820512820513)
+
+
+% Baseline (Authors)Reward function vs  Recall (100 Points)
+\addplot +[no markers, thick, blue] coordinates {
+(1,0.3333) (2,0.3077) (3,0.0000) (4,0.0000) (5,0.0000) (6,0.2821) (7,0.0923) (8,0.0000) (9,0.3167) (10,0.3526) (11,0.3179) (12,0.2551) (13,0.0000) (14,0.3410) (15,0.4449) (16,0.4397) (17,0.4564) (18,0.4179) (19,0.3846) (20,0.4513) (21,0.3513) (22,0.3577) (23,0.3808) (24,0.3679) (25,0.3385) (26,0.4564) (27,0.2154) (28,0.1321) (29,0.0885) (30,0.3128) (31,0.3410) (32,0.3103) (33,0.0000) (34,0.0000) (35,0.3282) (36,0.3897) (37,0.3423) (38,0.3654) (39,0.1641) (40,0.2205) (41,0.2269) (42,0.3103) (43,0.1333) (44,0.1231) (45,0.0474) (46,0.2962) (47,0.2705) (48,0.0346) (49,0.3179) (50,0.2897) (51,0.2513) (52,0.3179) (53,0.0628) (54,0.0346) (55,0.1013) (56,0.0308) (57,0.3321) (58,0.1526) (59,0.2821) (60,0.1487) (61,0.2923) (62,0.2731) (63,0.2705) (64,0.3179) (65,0.2385) (66,0.0603) (67,0.2577) (68,0.3154) (69,0.2962) (70,0.1487) (71,0.1487) (72,0.1513) (73,0.2154) (74,0.2410) (75,0.1295) (76,0.3244) (77,0.3269) (78,0.2769) (79,0.3462) (80,0.0603) (81,0.1615) (82,0.0910) (83,0.1231) (84,0.2538) (85,0.3295) (86,0.1833) (87,0.2756) (88,0.0756) (89,0.3359) (90,0.1615) (91,0.2436) (92,0.3449) (93,0.2282) (94,0.2282) (95,0.3167) (96,0.0756) (97,0.2692) (98,0.1231) (99,0.0731) (100,0.1897)
+}; \addlegendentry{Baseline (Authors) Recall}
+
+% Reward Function r1 Recall (100 Points)
+\addplot +[no markers, thick, blue] coordinates {
+(1,0.1962) (2,0.3192) (3,0.3077) (4,0.4590) (5,0.3654) (6,0.3077) (7,0.3282) (8,0.2526) (9,0.2769) (10,0.3782) (11,0.2756) (12,0.4218) (13,0.2603) (14,0.2436) (15,0.2756) (16,0.0192) (17,0.3333) (18,0.4859) (19,0.3949) (20,0.3103) (21,0.3577) (22,0.2654) (23,0.3038) (24,0.2321) (25,0.2974) (26,0.3141) (27,0.3295) (28,0.2821) (29,0.2628) (30,0.3192) (31,0.3000) (32,0.2667) (33,0.3038) (34,0.2192) (35,0.2756) (36,0.2756) (37,0.1897) (38,0.2372) (39,0.2885) (40,0.3269) (41,0.2731) (42,0.2795) (43,0.3423) (44,0.2564) (45,0.3141) (46,0.2846) (47,0.2949) (48,0.2949) (49,0.3590) (50,0.2949) (51,0.2949) (52,0.3359) (53,0.3615) (54,0.2795) (55,0.2795) (56,0.3115) (57,0.2410) (58,0.3462) (59,0.2603) (60,0.2346) (61,0.3308) (62,0.2603) (63,0.2987) (64,0.3179) (65,0.3051) (66,0.3564) (67,0.2923) (68,0.3436) (69,0.2962) (70,0.3667) (71,0.3192) (72,0.3308) (73,0.2641) (74,0.2769) (75,0.2667) (76,0.3051) (77,0.2449) (78,0.2808) (79,0.3269) (80,0.2641) (81,0.2487) (82,0.2705) (83,0.2679) (84,0.2923) (85,0.2487) (86,0.2808) (87,0.3128) (88,0.3000) (89,0.2859) (90,0.3000) (91,0.2962) (92,0.3000) (93,0.3321) (94,0.3000) (95,0.2808) (96,0.2359) (97,0.3090) (98,0.2744) (99,0.2808) (100,0.3218)
+}; \addlegendentry{r1 Recall}
+
+% Reward Function r2 Recall (100 Points)
+\addplot +[no markers, thick, teal] coordinates {
+(1,0.3487) (2,0.4359) (3,0.3051) (4,0.0000) (5,0.0000) (6,0.0000) (7,0.0000) (8,0.1590) (9,0.3385) (10,0.2000) (11,0.2154) (12,0.2000) (13,0.1872) (14,0.2256) (15,0.2500) (16,0.2000) (17,0.1872) (18,0.1333) (19,0.1744) (20,0.2026) (21,0.1769) (22,0.1897) (23,0.1769) (24,0.1897) (25,0.2910) (26,0.1769) (27,0.1167) (28,0.1641) (29,0.2474) (30,0.4038) (31,0.1731) (32,0.1897) (33,0.3167) (34,0.2769) (35,0.3500) (36,0.3500) (37,0.3500) (38,0.3615) (39,0.2692) (40,0.3000) (41,0.3231) (42,0.2564) (43,0.3128) (44,0.3231) (45,0.4115) (46,0.3385) (47,0.3551) (48,0.3872) (49,0.3410) (50,0.3641) (51,0.3615) (52,0.2962) (53,0.3000) (54,0.2923) (55,0.3410) (56,0.4436) (57,0.4179) (58,0.3923) (59,0.3705) (60,0.3667) (61,0.2872) (62,0.3128) (63,0.3449) (64,0.3667) (65,0.3667) (66,0.3821) (67,0.3718) (68,0.4128) (69,0.4026) (70,0.4154) (71,0.3679) (72,0.3333) (73,0.3295) (74,0.2949) (75,0.2949) (76,0.3231) (77,0.3038) (78,0.3641) (79,0.3897) (80,0.3603) (81,0.3756) (82,0.3987) (83,0.3705) (84,0.3577) (85,0.3962) (86,0.3833) (87,0.3321) (88,0.3795) (89,0.3833) (90,0.3987) (91,0.3833) (92,0.3859) (93,0.3833) (94,0.4103) (95,0.3846) (96,0.3692) (97,0.3692) (98,0.3679) (99,0.3808) (100,0.3808)
+}; \addlegendentry{r2 Recall}
+
+% Reward Function r3 Recall (100 Points)
+\addplot +[no markers, thick, orange] coordinates {
+(1,0.3577) (2,0.2218) (3,0.2321) (4,0.1744) (5,0.3385) (6,0.2846) (7,0.3282) (8,0.2667) (9,0.1269) (10,0.3756) (11,0.3013) (12,0.4013) (13,0.3872) (14,0.3949) (15,0.2756) (16,0.3526) (17,0.3103) (18,0.2577) (19,0.2603) (20,0.2974) (21,0.3885) (22,0.2705) (23,0.3538) (24,0.3628) (25,0.3026) (26,0.2910) (27,0.3167) (28,0.3513) (29,0.3551) (30,0.2718) (31,0.2910) (32,0.2628) (33,0.3141) (34,0.1859) (35,0.2756) (36,0.2910) (37,0.3295) (38,0.3756) (39,0.3628) (40,0.3538) (41,0.3013) (42,0.3333) (43,0.2628) (44,0.3462) (45,0.3500) (46,0.2436) (47,0.2795) (48,0.3308) (49,0.3718) (50,0.2949) (51,0.3167) (52,0.2910) (53,0.2910) (54,0.3038) (55,0.3423) (56,0.3577) (57,0.3295) (58,0.3295) (59,0.3462) (60,0.3179) (61,0.3244) (62,0.3500) (63,0.3423) (64,0.3769) (65,0.4526) (66,0.3808) (67,0.4423) (68,0.2333) (69,0.2987) (70,0.3949) (71,0.4256) (72,0.4513) (73,0.4051) (74,0.4231) (75,0.3974) (76,0.4859) (77,0.4000) (78,0.3846) (79,0.4449) (80,0.4705) (81,0.4449) (82,0.4192) (83,0.4103) (84,0.4513) (85,0.4449) (86,0.4641) (87,0.4513) (88,0.3872) (89,0.4577) (90,0.4679) (91,0.4231) (92,0.4423) (93,0.4359) (94,0.3564) (95,0.3949) (96,0.3885) (97,0.4141) (98,0.4141) (99,0.3949) (100,0.4103)
+}; \addlegendentry{r3 Recall}
+
+% Reward Function r4 Recall (100 Points)
+\addplot +[no markers, thick, purple] coordinates {
+(1,0.3205) (2,0.3192) (3,0.3679) (4,0.4167) (5,0.3897) (6,0.4436) (7,0.3051) (8,0.3051) (9,0.2474) (10,0.2474) (11,0.1936) (12,0.2103) (13,0.1705) (14,0.1923) (15,0.1526) (16,0.0885) (17,0.2244) (18,0.1731) (19,0.0949) (20,0.0949) (21,0.1141) (22,0.2333) (23,0.1859) (24,0.1603) (25,0.1103) (26,0.2269) (27,0.0949) (28,0.2244) (29,0.2051) (30,0.2051) (31,0.2013) (32,0.2141) (33,0.1923) (34,0.2013) (35,0.2013) (36,0.2167) (37,0.2141) (38,0.0949) (39,0.1897) (40,0.0885) (41,0.2077) (42,0.1231) (43,0.2295) (44,0.1077) (45,0.1513) (46,0.2179) (47,0.1321) (48,0.2051) (49,0.1269) (50,0.1769) (51,0.0949) (52,0.1410) (53,0.1949) (54,0.2000) (55,0.2295) (56,0.2141) (57,0.1603) (58,0.1410) (59,0.2013) (60,0.2359) (61,0.2103) (62,0.1205) (63,0.2026) (64,0.2333) (65,0.2526) (66,0.1949) (67,0.2179) (68,0.2244) (69,0.1487) (70,0.0949) (71,0.1038) (72,0.1449) (73,0.2141) (74,0.1731) (75,0.1410) (76,0.1205) (77,0.2269) (78,0.2141) (79,0.0756) (80,0.1077) (81,0.1795) (82,0.1667) (83,0.2013) (84,0.2090) (85,0.1474) (86,0.1449) (87,0.1949) (88,0.1667) (89,0.1949) (90,0.2141) (91,0.1731) (92,0.2141) (93,0.2295) (94,0.1987) (95,0.1949) (96,0.2013) (97,0.1949) (98,0.1885) (99,0.1013) (100,0.2013)
+}; \addlegendentry{r4 Recall}
