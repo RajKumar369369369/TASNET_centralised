@@ -8,7 +8,7 @@ import math
 from scipy.io import savemat
 DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
-def evaluate(args, model1, model2, dataset, test_keys):
+def evaluate(args, model1, model2, dataset, test_keys, marl_net=None):
 
     with torch.no_grad():
         model1.eval()
@@ -61,7 +61,13 @@ def evaluate(args, model1, model2, dataset, test_keys):
             seq_graph0 = torch.add(seq, local_graphs0)
             seq_graph0 = seq_graph0.unsqueeze(dim=0)
 
-            sig_probs = model2(seq_graph0)
+            # ── MARL-aware forward ──────────────────────────────────────────
+            if marl_net is not None:
+                dsn_hidden, _ = model2.rnn(seq_graph0)   # (1, seq_len, hid_dim*2)
+                sig_probs = marl_net(dsn_hidden)          # (1, seq_len, 1)
+            else:
+                sig_probs = model2(seq_graph0)
+            # ────────────────────────────────────────────────────────────────
 
             probs_importance = sig_probs.data.cpu().squeeze().numpy()
 
@@ -92,4 +98,7 @@ def evaluate(args, model1, model2, dataset, test_keys):
                             break
                 local_recall = n_t / len(local_label)
                 local_recalls.append(local_recall)
+    if len(local_recalls) == 0:
+        print("[evaluate] WARNING: no valid test trials found – returning 0.0")
+        return 0.0
     return np.mean(local_recalls, axis=0)

@@ -1,11 +1,6 @@
 import torch
-import h5py
-import os
-from tabulate import tabulate
 import numpy as np
-import random
 import math
-from scipy.io import savemat
 DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 def evaluate(args, model1, model2, dataset, test_keys):
@@ -38,34 +33,34 @@ def evaluate(args, model1, model2, dataset, test_keys):
             gt = torch.from_numpy(gt)
             label_idx = key_idx
             local_label = local_labels[label_idx]
-            seq = torch.from_numpy(seq)  # input shape (seq_len, dim)
+            seq = torch.from_numpy(seq).float()  # ensure float32, input shape (seq_len, dim)
             seq = seq.to(DEVICE)
 
             local_graphs0 = None
             for n in range(math.ceil(seq.shape[0] / (args.fragment_length * 2))):
-                if n != math.ceil(seq.shape[0] / (args.fragment_length * 2)) - 1:
-                    data0 = seq[(args.fragment_length * 2) * n:(args.fragment_length * 2) * (n + 1), :]
-                    sub_graph0, _ = model1(data0)
+                data0 = seq[(args.fragment_length * 2) * n:(args.fragment_length * 2) * (n + 1), :]
+                if data0.shape[0] <= 1:
+                    sub_graph0 = data0  # skip GNN for single-frame chunks
                 else:
-                    data0 = seq[(args.fragment_length * 2) * n:, :]
-                    if data0.shape[0] == 1:
-                        sub_graph0 = data0
-                    else:
-                        sub_graph0, _ = model1(data0)
+                    sub_graph0, _ = model1(data0)
 
                 if local_graphs0 is not None:
                     local_graphs0 = torch.cat((local_graphs0, sub_graph0), dim=0)
                 else:
                     local_graphs0 = sub_graph0
-            #
+
             seq_graph0 = torch.add(seq, local_graphs0)
             seq_graph0 = seq_graph0.unsqueeze(dim=0)
 
             sig_probs = model2.get_action_probs(seq_graph0)
 
+            # Ensure probs_importance is always 1-D (handles single-frame sequences)
             probs_importance = sig_probs.data.cpu().squeeze().numpy()
+            if probs_importance.ndim == 0:
+                probs_importance = probs_importance.reshape(1)
 
-            limits = args.num_fragment
+            # Clamp limits to actual sequence length to prevent IndexError
+            limits = min(args.num_fragment, len(probs_importance))
             order = np.argsort(probs_importance)[::-1]
 
             n_t = 0
@@ -92,4 +87,7 @@ def evaluate(args, model1, model2, dataset, test_keys):
                             break
                 local_recall = n_t / len(local_label)
                 local_recalls.append(local_recall)
-    return np.mean(local_recalls, axis=0)
+    if len(local_recalls) == 0:
+        print("Warning: No valid trials found for evaluation (all test keys may be empty-label trials).")
+        return 0.0
+    return float(np.mean(local_recalls))

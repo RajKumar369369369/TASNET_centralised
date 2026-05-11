@@ -355,7 +355,6 @@ if __name__ == '__main__':
         test_keys = all_keys[15 * args.subject_id:15 * (args.subject_id + 1)]
 
         print("# test videos {}.".format(len(test_keys)))
-        print("# test videos {}.".format(len(test_keys)))
         model1 = ClassifierGNN(in_features=args.n_feature, edge_features=args.edge_features, out_features=args.n_feature, device=DEVICE).to(DEVICE)
         
         if args.rl_algo == 'ppo':
@@ -365,11 +364,11 @@ if __name__ == '__main__':
             use_dueling = (args.rl_algo in ['dueling_dqn', 'd3qn'])
             model2 = DQNetwork(in_dim=args.n_feature, hid_dim=args.hid_dim, num_layers=1, cell='gru', dueling=use_dueling).to(DEVICE)
 
-        checkpoint_path1 = osp.join(args.save_path, f'best_model1_subj{args.subject_id}.pth.tar')
-        checkpoint_path2 = osp.join(args.save_path, f'best_model2_subj{args.subject_id}.pth.tar')
+        checkpoint_path1 = osp.join(args.save_path, f'best_model1_subj{args.subject_id}.pth')
+        checkpoint_path2 = osp.join(args.save_path, f'best_model2_subj{args.subject_id}.pth')
         
-        model1.load_state_dict(torch.load(checkpoint_path1, map_location=DEVICE)['state_dict'])
-        model2.load_state_dict(torch.load(checkpoint_path2, map_location=DEVICE)['state_dict'])
+        model1.load_state_dict(torch.load(checkpoint_path1, map_location=DEVICE))
+        model2.load_state_dict(torch.load(checkpoint_path2, map_location=DEVICE))
 
         with torch.no_grad():
             model1.eval()
@@ -411,8 +410,15 @@ if __name__ == '__main__':
                 sub_graphs = torch.cat(sub_graphs, dim=0)
                 seq_graph = torch.add(seq, sub_graphs).unsqueeze(0)
                 
-                sig_probs, _ = model2(seq_graph)
-                probs_importance = sig_probs.data.cpu().squeeze().numpy()
+                if args.rl_algo != 'ppo':
+                    # DQN returns a single tensor (1, T, 2) — use softmax select-prob as importance score
+                    q_values = model2(seq_graph)
+                    probs_importance = torch.softmax(q_values, dim=-1)[0, :, 1].data.cpu().numpy()
+                else:
+                    # PPO/DSN returns (probs, values) tuple
+                    res = model2(seq_graph)
+                    sig_probs = res[0] if isinstance(res, tuple) else res
+                    probs_importance = sig_probs.data.cpu().squeeze().numpy()
 
                 limits = args.num_fragment
                 order = np.argsort(probs_importance)[::-1]

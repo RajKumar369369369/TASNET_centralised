@@ -1,0 +1,449 @@
+# PPO-Based Temporal Affective Segment Localization Using Reinforcement Learning
+
+## Proximal Policy Optimization for Temporal Segment Selection
+
+### Overview
+
+The proposed framework formulates temporal affective segment localization as a sequential decision-making problem and optimizes the selection policy using Proximal Policy Optimization (PPO). The objective of the reinforcement learning agent is to identify emotionally informative temporal segments from EEG-derived feature sequences while maximizing diversity and representativeness of the selected frames.
+
+The architecture consists of two major components:
+
+1. Graph-based feature enhancement network (ClassifierGNN)
+2. Deep Summarization Network (DSN) trained with PPO
+
+The graph network extracts local relational representations between neighboring temporal fragments, while the DSN learns a stochastic frame-selection policy.
+
+---
+
+# PPO Configuration
+
+The PPO configuration used in the experiments is summarized below.
+
+| Hyperparameter      | Value                       |
+| ------------------- | --------------------------- |
+| Optimizer           | Adam                        |
+| Learning Rate       | 1e-4                        |
+| Weight Decay        | 1e-5                        |
+| PPO Clip Ratio (ε)  | 0.2                         |
+| Discount Factor (γ) | 0.99                        |
+| GAE Lambda (λ)      | 0.95                        |
+| PPO Update Epochs   | 4                           |
+| Gradient Clipping   | 5.0                         |
+| Entropy Coefficient | 0.02                        |
+| Batch Strategy      | Per-video trajectory update |
+| Training Epochs     | 100                         |
+| Random Seed         | 27                          |
+
+---
+
+# Graph-Based Feature Enhancement
+
+Let:
+
+[
+X = {x_1, x_2, ..., x_T}, \quad x_t \in \mathbb{R}^d
+]
+
+represent the sequence of EEG feature vectors extracted from a trial.
+
+The temporal sequence is partitioned into local fragments and processed using a graph neural network:
+
+[
+G_t = \text{ClassifierGNN}(X_t)
+]
+
+where:
+
+* (X_t) denotes the local temporal fragment
+* (G_t) represents graph-enhanced contextual features
+
+The enhanced sequence representation is computed as:
+
+[
+\hat{X} = X + G
+]
+
+where:
+
+[
+G = {G_1, G_2, ..., G_T}
+]
+
+This residual fusion improves contextual temporal modeling prior to reinforcement learning.
+
+---
+
+# Policy Network
+
+The DSN network receives the graph-enhanced sequence:
+
+[
+\hat{X} \in \mathbb{R}^{T \times d}
+]
+
+and outputs:
+
+1. Frame-selection probabilities
+2. State-value estimates
+
+Formally:
+
+[
+\pi_\theta(a_t|s_t), \quad V_\phi(s_t)
+]
+
+where:
+
+* (a_t \in {0,1}) represents whether frame (t) is selected
+* (\pi_\theta) denotes the policy network
+* (V_\phi) denotes the critic network
+
+Actions are sampled from a Bernoulli distribution:
+
+[
+a_t \sim \text{Bernoulli}(p_t)
+]
+
+where:
+
+[
+p_t = \pi_\theta(a_t=1|s_t)
+]
+
+---
+
+# Reward Function
+
+The proposed reward function combines:
+
+1. Diversity reward
+2. Representativeness reward
+
+The final reward is distributed densely across selected temporal frames.
+
+---
+
+## Diversity Reward
+
+The diversity reward encourages the selected frames to be dissimilar from each other.
+
+First, feature vectors are L2 normalized:
+
+[
+\tilde{x}_i = \frac{x_i}{||x_i||_2}
+]
+
+Cosine similarity between selected frames is computed as:
+
+[
+S_{ij} = \tilde{x}_i^T \tilde{x}_j
+]
+
+The average similarity among selected frames is:
+
+[
+R_{sim} = \frac{\sum_{i,j} S_{ij} - N}{N(N-1)}
+]
+
+where:
+
+* (N) denotes the number of selected frames
+* diagonal self-similarity terms are removed
+
+The diversity reward is then defined as:
+
+[
+R_{div} = 1 - R_{sim}
+]
+
+A higher diversity reward indicates that the selected frames contain complementary emotional information.
+
+---
+
+## Representativeness Reward
+
+Representativeness encourages the selected frames to cover the global temporal structure.
+
+Pairwise Euclidean distances are computed as:
+
+[
+D_{ij} = ||x_i - x_j||_2^2
+]
+
+For each frame, the minimum distance to any selected frame is computed:
+
+[
+D_i^{min} = \min_{j \in S} D_{ij}
+]
+
+where:
+
+* (S) denotes the set of selected frames
+
+The representativeness reward is defined as:
+
+[
+R_{rep} = \exp\left(-\frac{1}{T}\sum_{i=1}^{T} D_i^{min}\right)
+]
+
+This formulation rewards selections that preserve the global structure of the original sequence.
+
+---
+
+## Combined Reward
+
+The final global reward is computed as:
+
+[
+R = 0.5R_{div} + 0.5R_{rep}
+]
+
+Instead of assigning the reward only at the episode level, the reward is distributed densely across selected frames:
+
+[
+r_t = \frac{R}{\sqrt{N}}
+]
+
+for every selected frame.
+
+The square-root normalization term stabilizes PPO training while preserving dense credit assignment.
+
+---
+
+# PPO Optimization
+
+The PPO objective uses clipped policy optimization.
+
+The probability ratio between the new and old policies is:
+
+[
+r_t(\theta) = \frac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{old}}(a_t|s_t)}
+]
+
+The clipped surrogate objective is:
+
+[
+L^{CLIP}(\theta) = \mathbb{E}_t\left[
+\min
+\left(
+r_t(\theta)A_t,
+\text{clip}(r_t(\theta),1-\epsilon,1+\epsilon)A_t
+\right)
+\right]
+]
+
+where:
+
+* (A_t) denotes the advantage estimate
+* (\epsilon = 0.2)
+
+---
+
+# Generalized Advantage Estimation (GAE)
+
+Advantages are estimated using Generalized Advantage Estimation:
+
+[
+\delta_t = r_t + \gamma V(s_{t+1}) - V(s_t)
+]
+
+[
+A_t = \delta_t + \gamma \lambda A_{t+1}
+]
+
+where:
+
+* (\gamma = 0.99)
+* (\lambda = 0.95)
+
+Advantage normalization is applied:
+
+[
+\hat{A}_t = \frac{A_t - \mu_A}{\sigma_A + 10^{-8}}
+]
+
+This normalization stabilizes gradient updates and reduces variance during PPO optimization.
+
+---
+
+# Critic Loss
+
+The critic network is optimized using Mean Squared Error loss:
+
+[
+L_{critic} = ||V(s_t) - R_t||^2
+]
+
+where:
+
+* (R_t) denotes the estimated return
+
+---
+
+# Entropy Regularization
+
+Entropy regularization is incorporated to encourage exploration:
+
+[
+L_{entropy} = -\beta H(\pi)
+]
+
+where:
+
+* (\beta = 0.02)
+* (H(\pi)) represents policy entropy
+
+The final PPO loss becomes:
+
+[
+L = L_{actor} + 0.5L_{critic} - 0.02L_{entropy}
+]
+
+---
+
+# Training Algorithm
+
+## PPO Training Procedure
+
+1. Load EEG feature sequence
+2. Construct local temporal fragments
+3. Extract graph-enhanced contextual representations using ClassifierGNN
+4. Fuse raw and graph features
+5. Predict frame-selection probabilities and state values using DSN
+6. Sample frame-selection actions using Bernoulli policy
+7. Compute diversity and representativeness rewards
+8. Estimate advantages using GAE
+9. Update actor and critic using PPO clipped objective
+10. Repeat for all training videos
+
+---
+
+# Testing Procedure
+
+During inference:
+
+1. Graph-enhanced features are extracted
+2. DSN predicts frame-selection probabilities
+3. Frames are ranked according to importance probabilities
+4. Top-ranked temporal segments are selected
+5. Temporal IoU overlap with ground-truth emotional segments is computed
+6. Recall is measured as the primary evaluation metric
+
+---
+
+# Experimental Results
+
+## Training Without Reward Normalization
+
+The original PPO configuration without reward normalization produced unstable reward dynamics.
+
+Key observations include:
+
+* Large reward fluctuations across epochs
+* Significant instability in policy learning
+* Rapid collapse of reward magnitude after early epochs
+* High variance in recall performance
+
+The best recall obtained without reward normalization was:
+
+[
+\text{Recall} = 0.3577
+]
+
+The testing performance achieved:
+
+[
+\text{Mean Recall} = 0.3092
+]
+
+The reward curve demonstrated severe oscillations:
+
+* Early epochs showed sudden reward spikes
+* Later epochs converged to extremely small reward values (~0.0006)
+* PPO updates became unstable due to inconsistent reward scaling
+
+This behavior suggests that sparse reward propagation and inconsistent trajectory magnitudes negatively affected policy optimization.
+
+---
+
+# Training With Reward Normalization
+
+After incorporating advantage normalization and stabilized reward scaling, the PPO training process became significantly more stable.
+
+Key improvements observed:
+
+* Smoother reward convergence
+* More stable PPO optimization
+* Reduced variance across epochs
+* Improved recall consistency
+* Better exploration-exploitation balance
+
+The normalized configuration achieved:
+
+[
+\text{Best Recall} = 0.3936
+]
+
+which improved over the non-normalized baseline.
+
+Unlike the previous setting, the reward values remained stable throughout training:
+
+[
+R \approx 0.036 - 0.051
+]
+
+This indicates that normalization prevented reward collapse and stabilized gradient updates.
+
+---
+
+# Comparative Analysis
+
+| Configuration             | Best Recall | Training Stability | Reward Behavior    |
+| ------------------------- | ----------- | ------------------ | ------------------ |
+| PPO without normalization | 0.3577      | Unstable           | Large oscillations |
+| PPO with normalization    | 0.3936      | Stable             | Smooth convergence |
+
+The experimental results demonstrate that reward and advantage normalization significantly improve PPO optimization for temporal affective segment localization.
+
+The normalized framework exhibited:
+
+* improved policy stability
+* reduced reward variance
+* stronger convergence behavior
+* improved temporal localization recall
+
+---
+
+# Discussion
+
+The experimental observations reveal several important insights.
+
+First, PPO optimization in temporal affective segment selection is highly sensitive to reward scaling. Sparse and highly fluctuating rewards lead to unstable advantage estimates, causing large oscillations in policy updates.
+
+Second, dense reward distribution across selected temporal frames improves credit assignment. Instead of assigning reward only at the trajectory level, distributing the reward to selected frames enables the critic network to better identify informative temporal regions.
+
+Third, the combination of diversity and representativeness rewards effectively balances redundancy reduction and global temporal coverage. Diversity encourages emotionally distinct frame selection, while representativeness preserves the overall affective structure.
+
+Finally, advantage normalization substantially improves training stability. By normalizing the advantage estimates, PPO avoids excessively large policy gradients and achieves smoother convergence.
+
+---
+
+# Conclusion
+
+This work presents a PPO-based reinforcement learning framework for temporal affective segment localization using graph-enhanced EEG representations.
+
+The proposed method integrates:
+
+* graph neural feature enhancement
+* PPO-based frame selection
+* diversity-aware reward optimization
+* representativeness-driven temporal coverage
+* generalized advantage estimation
+
+Experimental results demonstrate that reward stabilization and advantage normalization significantly improve PPO training stability and temporal localization performance.
+
+The proposed framework achieves improved recall performance while maintaining stable reinforcement learning optimization dynamics.
+
+
+
+can you pls give what commands to run in google collab for training 3 differnt sac variantions and their respective testing their models respectively

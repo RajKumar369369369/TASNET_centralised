@@ -38,7 +38,7 @@ def evaluate(args, model1, model2, dataset, test_keys):
             gt = torch.from_numpy(gt)
             label_idx = key_idx
             local_label = local_labels[label_idx]
-            seq = torch.from_numpy(seq)  # input shape (seq_len, dim)
+            seq = torch.from_numpy(seq).float()  # input shape (seq_len, dim)
             seq = seq.to(DEVICE)
 
             local_graphs0 = None
@@ -61,9 +61,9 @@ def evaluate(args, model1, model2, dataset, test_keys):
             seq_graph0 = torch.add(seq, local_graphs0)
             seq_graph0 = seq_graph0.unsqueeze(dim=0)
 
-            sig_probs = model2(seq_graph0)
+            sig_probs, _ = model2(seq_graph0)
 
-            probs_importance = sig_probs.data.cpu().squeeze().numpy()
+            probs_importance = sig_probs.data.cpu().reshape(-1).numpy()  # reshape(-1) safe for single-frame sequences
 
             limits = args.num_fragment
             order = np.argsort(probs_importance)[::-1]
@@ -92,4 +92,4 @@ def evaluate(args, model1, model2, dataset, test_keys):
                             break
                 local_recall = n_t / len(local_label)
                 local_recalls.append(local_recall)
-    return np.mean(local_recalls, axis=0)
+    return np.mean(local_recalls) if local_recalls else 0.0

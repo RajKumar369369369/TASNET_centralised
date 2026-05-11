@@ -215,7 +215,8 @@ if __name__ == '__main__':
                 print("epoch {}/{}\t reward {}\t  cost {}\t".format(epoch + 1,
                                                                     100, epoch_reward, cost))
             if (epoch + 1) % 1 == 0:
-                Recall = evaluate(args, Network1, Network2, datasets, test_keys)
+                Recall = evaluate(args, Network1, Network2, datasets, test_keys,
+                                  marl_net=marl_net)
                 print(Recall)
                 if Recall > best_recall:
                     best_recall = Recall
@@ -323,8 +324,9 @@ if __name__ == '__main__':
                  [[63, 80], [97, 113], [120, 134], [165, 180], [184, 205]]]
             for key_idx, key in enumerate(test_keys):
                 seq = datasets[key]['features'][...]
-                gt = datasets[key]['labels'][...]
-                gt = torch.from_numpy(gt)
+                gt_raw = datasets[key]['labels'][...]
+                gt_scalar = int(gt_raw.flat[0])  # scalar for torch.full
+                gt = torch.from_numpy(gt_raw)
                 label_idx = key_idx
                 local_label = local_labels[label_idx]
 
@@ -408,9 +410,14 @@ if __name__ == '__main__':
                     save_idx.write(log_str0 + '\n')
                     save_idx.flush()
 
+                # Guard: skip empty fragments (left_int_idx >= right_int_idx)
+                all_fragment = [f for f in all_fragment if f.shape[0] > 0]
+                if len(all_fragment) == 0:
+                    print("[test] key {} produced no valid fragments, skipping.".format(key))
+                    continue
                 all_fragment = torch.vstack(all_fragment)
                 print(all_fragment.shape[0])
-                labels = torch.full((all_fragment.shape[0], 1), gt)
+                labels = torch.full((all_fragment.shape[0], 1), gt_scalar, dtype=torch.long)
                 num_segments_trial.append(all_fragment.shape[0])
 
                 if all_features is not None:
@@ -419,10 +426,22 @@ if __name__ == '__main__':
                 else:
                     all_features = all_fragment
                     all_labels = labels
-            all_features = all_features.cpu().data.numpy()
-            all_labels = all_labels.cpu().data.numpy()
-            print(all_features.shape, all_labels.shape)
-            mat_file = os.path.join(out_path, 'TAS_' + 'subject' + str(args.subject_id)  + '_' + str(args.reward_function) + '_' + str(args.num_fragment) + '.mat')
-            savemat(mat_file, {'feature': all_features, 'label': all_labels})
+            if all_features is None:
+                print("[test] ERROR: No valid fragments collected across all test keys. Cannot save .mat")
+            else:
+                all_features = all_features.cpu().data.numpy()
+                all_labels = all_labels.cpu().data.numpy()
+                print("all_features shape: {}, all_labels shape: {}".format(all_features.shape, all_labels.shape))
+                mat_file = os.path.join(out_path, 'TAS_' + 'subject' + str(args.subject_id) + '_' + str(args.reward_function) + '_' + str(args.num_fragment) + '.mat')
+                savemat(mat_file, {'feature': all_features, 'label': all_labels})
+                print("[test] Saved features to {}".format(mat_file))
+
+            # ── Compute and print overall Recall from log file ──────────────
+            overall_recall = evaluate(args, model1, model2, datasets, test_keys,
+                                      marl_net=marl_net_infer)
+            print("\n=======> Testing Recall: {:.4f} <=======".format(overall_recall))
+            save_idx.write('\nOverall Recall: {:.4f}\n'.format(overall_recall))
+            save_idx.flush()
+            save_idx.close()
 
 #python -u "d:\PycharmProjects\pythonProject\RL_reserach\last_repication_of_TASNET\TAS-Net\main.py" --training --subject_id 0 --gpu 0 --epochs 100 --deep_features "d:\PycharmProjects\pythonProject\RL_reserach\last_repication_of_TASNET\features\session_1\source_h5_file.h5" --save_path "./checkpoints"

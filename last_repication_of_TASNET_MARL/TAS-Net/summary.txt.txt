@@ -1,0 +1,391 @@
+TAS-Net + Independent MARL-PPO: Research Reference Document
+Dataset: SEED | Subject: 0 | Session: 1 | Reward: R1 + R2 (mixed)
+Total training time: 25 min 16 sec (100 epochs, 210 train videos, 15 test videos)
+
+1. System Overview
+The proposed framework — TAS-Net-MARL — extends the Temporal Affective Segment Network (TAS-Net) with an Independent Multi-Agent Proximal Policy Optimization (MARL-PPO) module for EEG-based emotion-salient segment localization on the SEED dataset.
+
+Pipeline at a Glance
+Raw EEG (62-ch, 384 Hz)
+        │
+        ▼
+[EEGFuseNet-62]  ── pretrained encoder ──►  per-second feature vectors ∈ ℝ^192
+        │
+        ▼
+[ClassifierGNN]  ── local graph enhancement ──►  graph-enriched features
+        │  (sliding window, size 2L)
+        ▼
+[DSN Bi-GRU]     ── sequence modelling ──►  hidden states H ∈ ℝ^{T × 2d}
+        │
+        ▼
+[MARL Agent Heads]  ── N independent agents ──►  importance logits per chunk
+        │
+        ▼
+[Bernoulli Policy]  ── stochastic action sampling ──►  binary selection mask
+        │
+        ▼
+[Reward R1+R2]   ── diversity + representativeness ──►  scalar reward signal
+        │
+        ▼
+[PPO update + Sparsity + Diversity regularizers]  ──►  gradient update
+2. Module 1 — EEGFuseNet Feature Extractor
+Architecture (62-channel SEED variant)
+EEGFuseNet is a convolutional autoencoder with a bidirectional GRU bottleneck. It acts as a pretrained, frozen feature backbone.
+
+Layer	Type	Output Shape
+Conv1	Conv2d(1, 16, (1, 193))	(16, 62, T)
+BN1	BatchNorm2d	—
+DepthwiseConv2	Conv2d(16, 32, (62,1))	(32, 1, T)
+BN2 + ELU	—	—
+MaxPool1	MaxPool2d(1,4)	(32, 1, T/4)
+Dropout(0.25)	—	—
+SeparableConv3	Depthwise + Pointwise	(16, 1, T/4)
+BN3 + ELU	—	—
+MaxPool2	MaxPool2d(1,8)	(16, 1, T/32)
+FC1	Linear(16, 16) + ELU	—
+Bi-GRU_enc	GRU(16, 16, bidirectional)	(T/32, 32)
+FC2 (bottleneck)	Linear(32, 16)	code ∈ ℝ^{192}
+Feature vector dimension: f = n_filters × (T/32) = 1 × (384/32) × 16 = 192
+
+Each 1-second EEG window (62 channels × 384 samples) is encoded into a 192-dimensional feature vector. The feature matrix for a trial of length T seconds is:
+
+$$\mathbf{F} \in \mathbb{R}^{T \times 192}$$
+
+3. Module 2 — ClassifierGNN (Local Graph Enhancement)
+The GNN operates on sliding windows of length 2L (L = fragment_length = 8, so window = 16 frames).
+
+EdgeNet — Computing Pairwise Affinities
+For a window of n nodes with features $\mathbf{X} \in \mathbb{R}^{n \times d}$:
+
+$$\mathbf{x}_{ij} = |\mathbf{x}_i - \mathbf{x}j|, \quad \mathbf{x}{ij} \in \mathbb{R}^{d}$$
+
+A 1×1 convolution network maps pairwise differences to a similarity score:
+
+$$s_{ij} = \sigma\bigl(\text{Conv}{1\times1}(\mathbf{x}{ij})\bigr) \in [0,1]$$
+
+The affinity matrix is formed with a forced self-loop:
+
+$$\mathbf{E} = \text{softmax}_{\text{row}}\bigl(\mathbf{S} + \mathbf{I} + \epsilon\bigr), \quad \epsilon = 10^{-6}$$
+
+NodeNet — Aggregating Neighbourhood Information
+The attention-weighted neighbourhood aggregation:
+
+$$\tilde{\mathbf{x}}i = \sum{j \neq i} E_{ij} \mathbf{x}_j$$
+
+Node features are updated via a 1×1 ConvNet:
+
+$$\mathbf{x}'_i = \text{ConvNet}\bigl([\mathbf{x}_i ,|, \tilde{\mathbf{x}}_i]\bigr)$$
+
+Graph-Enhanced Sequence
+The GNN output is added residually to the original features:
+
+$$\mathbf{Z} = \mathbf{F} + \mathbf{F}_{\text{GNN}}, \quad \mathbf{Z} \in \mathbb{R}^{T \times 192}$$
+
+Model size (ClassifierGNN): 0.23690 M parameters
+
+4. Module 3 — Deep Summarization Network (DSN)
+Architecture
+The DSN uses a single-layer Bidirectional GRU:
+
+$$\mathbf{H}, _ = \text{BiGRU}(\mathbf{Z}), \quad \mathbf{H} \in \mathbb{R}^{1 \times T \times 2d}$$
+
+where $d = $ hid_dim = 256, so the hidden state dimension is 512.
+
+Baseline forward (without MARL):
+
+$$\mathbf{p} = \sigma\bigl(\mathbf{W}_{fc} \mathbf{H}^{\top} + \mathbf{b}\bigr), \quad \mathbf{p} \in [0,1]^{T}$$
+
+The FC layer maps $\mathbb{R}^{512} \to \mathbb{R}^1$.
+
+Model size (DSN): 0.69171 M parameters
+
+5. Module 4 — Independent MARL Agent Heads
+Design Rationale
+Instead of a single FC head (DSN baseline), N independent agents each specialise on a contiguous temporal chunk of the hidden sequence. This partitions the decision problem temporally without requiring communication between agents, making it computationally lightweight and fully backward-compatible.
+
+Temporal Partitioning
+The sequence of length T is split into N chunks:
+
+$$\text{chunk}_k = \Bigl[\lfloor k \cdot T/N \rfloor,\ \lfloor (k+1) \cdot T/N \rfloor\Bigr), \quad k = 0, 1, \ldots, N-1$$
+
+The last chunk absorbs any remainder: $\text{chunk}_{N-1}$ ends at T.
+
+Agent Head — Per-Frame Importance Scoring
+Each agent $k$ has a single linear layer:
+
+$$\mathbf{W}_k \in \mathbb{R}^{1 \times 2d}, \quad \mathbf{b}_k \in \mathbb{R}$$
+
+For its chunk $\mathbf{H}_k \in \mathbb{R}^{C_k \times 2d}$:
+
+$$\text{logits}_k = \mathbf{H}_k \mathbf{W}_k^{\top} + \mathbf{b}_k \in \mathbb{R}^{C_k \times 1}$$
+
+Reassembly and Sigmoid
+All chunk logits are concatenated and passed through a sigmoid:
+
+$$\mathbf{p}_{\text{MARL}} = \sigma\Bigl(\text{cat}[\text{logits}0, \ldots, \text{logits}{N-1}]\Bigr) \in [0,1]^{T \times 1}$$
+
+This produces the exact same shape as the DSN baseline output: (1, T, 1).
+
+Model size (MARL heads, N=4): 0.00205 M parameters
+Each head: $512 + 1 = 513$ parameters.
+
+6. Reward Functions
+6.1 Action Space
+The policy $\pi_\theta$ is parameterised as a Bernoulli distribution over each frame:
+
+$$\pi_\theta(a_t | \mathbf{z}_t) = \text{Bernoulli}(p_t), \quad p_t \in [0,1]$$
+
+Let $\mathcal{S} = {t : a_t = 1}$ be the set of selected frames, $|\mathcal{S}| = M$.
+
+6.2 R1 — Diversity Reward
+Intuition: Selected segments should be mutually dissimilar (cover diverse emotional states).
+
+Step 1. L2-normalise the feature sequence:
+
+$$\hat{\mathbf{z}}_t = \frac{\mathbf{z}_t}{|\mathbf{z}_t|_2}$$
+
+Step 2. Compute the cosine similarity matrix:
+
+$$\mathbf{C}_{ij} = \hat{\mathbf{z}}_i^{\top} \hat{\mathbf{z}}_j, \quad \mathbf{C} \in [-1,1]^{T \times T}$$
+
+Step 3. Extract the sub-matrix for selected indices and average off-diagonal similarities:
+
+$$R_1 = \frac{1}{M(M-1)} \sum_{i \in \mathcal{S}} \sum_{\substack{j \in \mathcal{S} \ j \neq i}} \mathbf{C}_{ij}$$
+
+Note: Lower $R_1$ means more diverse selections. However, in compute_reward() the similarity (not dissimilarity) is used, so the policy is trained to minimise it via the REINFORCE objective direction. In compute_reward_coff(), dissimilarity $1 - \mathbf{C}_{ij}$ is used directly, so higher is better.
+
+6.3 R2 — Representativeness Reward
+Intuition: Each unselected frame should be "covered" by at least one selected frame (minimum-distance proxy for coverage).
+
+Step 1. Pairwise squared-Euclidean distance matrix:
+
+$$D_{ij} = |\mathbf{z}_i - \mathbf{z}_j|_2^2 = |\mathbf{z}_i|^2 + |\mathbf{z}_j|^2 - 2,\mathbf{z}_i^{\top}\mathbf{z}_j$$
+
+Step 2. For each frame i, find the nearest selected frame:
+
+$$d_i = \min_{j \in \mathcal{S}} D_{ij}$$
+
+Step 3. Average and exponentiate (converts distance to a $[0,1]$ reward):
+
+$$R_2 = \exp!\left(-\frac{1}{T}\sum_{i=1}^{T} d_i\right)$$
+
+When $\mathcal{S}$ represents all frames well, $d_i \approx 0$ for all $i$ and $R_2 \to 1$.
+
+6.4 Combined Reward R1+R2
+The reward used in this experiment (--reward_function R1_R2):
+
+$$R = \frac{R_1 + R_2}{2}$$
+
+This gives equal weight to diversity and representativeness.
+
+7. Training Objective (Full Loss)
+7.1 PPO / REINFORCE Objective
+The REINFORCE policy gradient with a moving-average baseline b:
+
+$$\mathcal{L}{\text{PPO}} = -\frac{1}{K} \sum{k=1}^{K} \log \pi_\theta(\mathbf{a}^{(k)}) \cdot \bigl(R^{(k)} - b\bigr)$$
+
+where K = 5 episodes per video per update step.
+
+The baseline is updated via an exponential moving average (EMA):
+
+$$b \leftarrow 0.9 \cdot b + 0.1 \cdot \bar{R}$$
+
+where $\bar{R}$ is the mean reward over the 5 episodes.
+
+7.2 Sparsity Regularizer
+Penalises the mean selection probability for deviating from 0.5 (encourages balanced selection):
+
+$$\mathcal{L}{\text{sparse}} = 0.01 \cdot \left(\bar{p} - 0.5\right)^2, \quad \bar{p} = \frac{1}{T}\sum{t=1}^{T} p_t$$
+
+7.3 Diversity Regularizer (MARL-only)
+Encourages agent heads to specialise in different directions of the feature space:
+
+Step 1. Normalize each agent's weight vector:
+
+$$\hat{\mathbf{w}}_k = \frac{\mathbf{W}_k}{|\mathbf{W}_k|_2}, \quad k = 1, \ldots, N$$
+
+Step 2. Gram matrix of cosine similarities:
+
+$$\mathbf{G}_{kl} = \hat{\mathbf{w}}_k^{\top} \hat{\mathbf{w}}_l$$
+
+Step 3. Penalise off-diagonal similarity (agents should differ):
+
+$$\mathcal{L}{\text{div}} = \frac{1}{N(N-1)} \sum{k \neq l} |\mathbf{G}_{kl}|$$
+
+7.4 Total Loss
+$$\boxed{\mathcal{L}{\text{total}} = \mathcal{L}{\text{sparse}} + \lambda_{\text{div}} \cdot \mathcal{L}{\text{div}} + \mathcal{L}{\text{PPO}}}$$
+
+where $\lambda_{\text{div}} = 0.001$.
+
+8. Evaluation Metric — Temporal Recall
+For each test trial, the model selects the top-K segments (num_fragment = 10) ranked by importance score $p_t$.
+
+For each selected segment with center index $c$ and importance $p_c$, the predicted boundary is:
+
+$$\hat{l} = c - p_c \cdot L, \quad \hat{r} = c + p_c \cdot L$$
+
+where $L$ = fragment_length = 8.
+
+The temporal Intersection over Union (tIoU) with a ground-truth interval $[g_l, g_r]$:
+
+$$\text{tIoU} = \frac{\max(0,, \min(\hat{r}, g_r) - \max(\hat{l}, g_l))}{\max(\hat{r}, g_r) - \min(\hat{l}, g_l)}$$
+
+A segment is counted as a true positive if $\text{tIoU} \geq 0.5$.
+
+Recall (per trial):
+
+$$\text{Recall} = \frac{\text{number of ground-truth intervals covered}}{|\text{ground-truth intervals}|}$$
+
+The reported metric is the mean Recall across the 15 test trials (excluding trials 8 and 11 which have no ground-truth annotations).
+
+9. Hyperparameters Summary
+Parameter	Value	Description
+epochs	100	Total training epochs
+lr	0.001	Adam initial LR
+weight_decay	0.0001	L2 regularization
+lr_scheduler	StepLR	step=20, γ=0.5
+hid_dim	256	DSN GRU hidden dim
+n_feature	192	Input feature dim
+fragment_length L	8	Half-window for boundary
+num_fragment K	10	Top-K segments selected
+num_agents N	4	MARL agent count
+marl_div_weight λ_div	0.001	Diversity regularizer weight
+sparse_weight	0.01	Sparsity regularizer weight
+episodes K	5	REINFORCE rollouts per step
+baseline_decay	0.9	EMA factor for reward baseline
+grad_clip	5.0	Gradient clipping (both networks)
+seed	27	Random seed
+reward_function	R1_R2	Diversity + Representativeness
+10. Training Results Analysis
+10.1 Raw Training Log Summary
+Epoch Range	Mean Reward	Mean Cost	Mean Recall	Phase
+1–5	0.467	0.108	0.187	Cold-start / Exploration
+6–15	0.501	0.232	0.228	Early Learning
+16–30	0.572	0.131	0.275	Rapid Improvement
+31–50	0.671	0.050	0.240	Convergence Acceleration
+51–59	0.557	-0.058	0.198	Instability / Dip
+60–80	0.718	0.055	0.313	Recovery + Best Phase
+81–100	0.776	0.014	0.233	Stable High Performance
+10.2 Phase-by-Phase Analysis
+Phase 1 — Epoch 1: Cold-Start (Reward: 0.198)
+Recall = 0.515 — notably high early recall before reward converges.
+The model saves its best checkpoint at epoch 1 because it is the first epoch and any recall > 0 triggers a save.
+Cost = 0.208 (high initial sparsity penalty, mean selection probability far from 0.5).
+Phase 2 — Epochs 2–15: Rapid Reward Growth
+Reward rises from 0.197 → 0.638.
+Key milestone: Epoch 13 (reward = 0.570, recall = 0.073) shows reward increasing while recall temporarily dips — the policy is over-exploring.
+Epoch 15 achieves the first local reward peak (0.638) and recall of 0.369.
+Phase 3 — Epochs 16–50: Steady Convergence
+Reward monotonically climbs 0.519 → 0.723.
+Recall stabilises in the 0.19–0.35 range.
+Cost drops significantly (0.039 → 0.013), indicating the sparsity constraint is satisfied and diversity reg converges.
+Best reward in this phase: Epoch 50 (reward = 0.7227).
+Phase 4 — Epochs 51–58: Instability Dip ⚠️
+Reward drops sharply: 0.669 → 0.501 → 0.531 → 0.563.
+Cost turns negative: −0.202, −0.151, −0.020, −0.026.
+Root cause: The LR scheduler fires at epoch 40 (step=20, first drop) and epoch 60 (second drop). The epoch 51 dip likely coincides with the optimizer overshooting near the LR step boundary. Negative cost indicates the diversity regularizer (when negative cost is possible) and the PPO term shift sign.
+Recall also dips: 0.314 → 0.246 → 0.111 → 0.095.
+Phase 5 — Epochs 59–80: Recovery and Best Performance
+Epoch 59 inflection: reward jumps back to 0.662 and recall to 0.309 — rapid recovery after LR step.
+Best overall recall: Epoch 60 = 0.377 (highest recall in the full run).
+Reward continues climbing: 0.663 → 0.751 → 0.782 (epoch 77, highest reward).
+Cost is small and positive (0.01–0.10), indicating stable training.
+Phase 6 — Epochs 81–100: Plateau and Stable Convergence
+Reward oscillates narrowly: 0.767–0.784.
+Cost near zero (−0.008 to +0.044) — all regularizers are satisfied.
+Recall stabilises: 0.15–0.34 range.
+Final epoch 100: reward = 0.776, cost = 0.008, recall = 0.247.
+10.3 Key Quantitative Milestones
+Metric	Value	Epoch
+Best Reward	0.7824	77
+Best Recall	0.5154	1 (initial checkpoint)
+Best Recall (stable)	0.3923	61
+Fastest reward gain	+0.263	Epoch 1→2
+Largest instability	−0.169 drop	Epoch 50→52
+Recovery speed	+0.162	Epoch 52→59
+Final reward	0.7765	100
+10.4 Reward Curve Characterisation
+The reward curve follows a log-logistic growth pattern with one instability dip:
+
+$$R_{\text{epoch}} \approx R_{\infty} \cdot \frac{\text{epoch}^{\alpha}}{\text{epoch}^{\alpha} + \tau^{\alpha}}$$
+
+Approximate fit: $R_\infty \approx 0.78$, $\tau \approx 25$, $\alpha \approx 1.8$.
+
+10.5 Cost Function Analysis
+The logged cost value is the total scalar loss before backpropagation, i.e.:
+
+$$\text{cost}{\text{logged}} = \mathcal{L}{\text{sparse}} + \lambda_{\text{div}} \cdot \mathcal{L}_{\text{div}} - \frac{1}{K}\sum_k \log\pi(\mathbf{a}^{(k)}) \cdot (R^{(k)} - b)$$
+
+Positive cost: Policy gradient term dominates (normal learning).
+Negative cost (epochs 51–57, 84, 88, 91–92, 94, 97): The expected-reward term exceeds the regularizers, meaning the advantage $(R - b)$ is large and positive — the model found high-reward actions and the log-probability of those actions is being strongly reinforced.
+11. Model Parameter Count
+Component	Parameters	Size (M)
+ClassifierGNN (Network1)	236,900	0.23690
+DSN Bi-GRU (Network2)	691,710	0.69171
+MARL Heads (4 agents)	2,052	0.00205
+Total	930,662	~0.931 M
+The MARL extension adds only 0.22% overhead to the parameter count.
+
+12. Algorithm — MARL-PPO Training Procedure
+Algorithm: TAS-Net MARL-PPO Training
+Input: EEG feature dataset D, N agents, K episodes, T epochs
+Output: Trained Network1 (GNN), Network2 (DSN), MARL heads
+Initialize:
+  Network1 (ClassifierGNN), Network2 (DSN-BiGRU), MARLAgents
+  Adam optimizer with LR=0.001, StepLR scheduler (step=20, γ=0.5)
+  baselines[v] ← 0  for all videos v
+FOR epoch = 1 to T:
+  Shuffle training video indices
+  FOR each video v in shuffled order:
+    1. Load feature sequence F ∈ ℝ^{T×192}
+    2. [Graph Enhancement]
+       FOR each window w of length 2L in F:
+         F_gnn[w] ← ClassifierGNN(F[w])
+       Z ← F + F_gnn    # residual addition
+    3. [MARL Forward]
+       H, _ ← DSN.BiGRU(Z)          # H ∈ ℝ^{1×T×512}
+       p ← MARLAgents(H)             # p ∈ [0,1]^{1×T×1}
+    4. [Regularizers]
+       L_sparse ← 0.01 × (mean(p) − 0.5)²
+       L_div ← λ_div × MARLAgents.diversity_loss()
+       cost ← L_sparse + L_div
+    5. [REINFORCE with Baseline]
+       π ← Bernoulli(p)
+       FOR episode k = 1 to K=5:
+         a^(k) ~ π
+         R^(k) ← compute_reward(Z, a^(k))          # R1+R2 / 2
+         cost ← cost − mean(log π(a^(k))) × (R^(k) − baselines[v])
+    6. [Baseline Update]
+       baselines[v] ← 0.9 × baselines[v] + 0.1 × mean_k(R^(k))
+    7. [Gradient Update]
+       optimizer.zero_grad()
+       cost.backward()
+       clip_grad_norm_(Network1, 5.0)
+       clip_grad_norm_(Network2, 5.0)
+       optimizer.step()
+  [Evaluation]
+  Recall ← evaluate(Network1, Network2, MARLAgents, test_videos)
+  IF Recall > best_recall: save checkpoint
+  scheduler.step()   # LR halved at epochs 20, 40, 60, 80, 100
+13. Inference — Segment Localization
+Given a test EEG trial of T 1-second segments:
+
+Forward pass: obtain importance scores $\mathbf{p} \in [0,1]^T$.
+Rank: sort indices by $p_t$ descending; select top-K ($K=10$).
+Boundary prediction: for the i-th selected segment at index $c_i$: $$[\hat{l}i, \hat{r}i] = [c_i - p{c_i} \cdot L, ; c_i + p{c_i} \cdot L]$$
+Evaluate: compute tIoU against ground-truth emotion-salient intervals; count hits at tIoU ≥ 0.5.
+14. Comparison: Baseline vs. MARL Extension
+Aspect	Baseline DSN	TAS-Net-MARL
+Policy head	Single FC (512→1)	N=4 independent linear heads
+Temporal specialisation	None (global)	Per-chunk (T/4 each)
+Parameter overhead	0	+2,052 params (0.22%)
+Diversity regularizer	No	Yes (λ=0.001)
+Gradient flow	Single path	N separate paths, unified optimizer
+Checkpoint	2 files	3 files (+ MARL heads)
+Backward compatible	—	✓ (toggle via --use_marl)
+15. Suggested Citations
+TAS-Net original: (cite original TAS-Net / DSN paper)
+EEGFuseNet: Liang et al., EEGFuseNet: Hybrid Unsupervised Deep Feature Characterization and Fusion for High-Dimensional EEG with an Application to Emotion Recognition, IEEE TNSRE, 29, pp. 1913–1925, 2021.
+SEED Dataset: Zheng & Lu, Investigating Critical Frequency Bands and Channels for EEG-based Emotion Recognition with Deep Neural Networks, IEEE TAFFC, 2015.
+REINFORCE: Williams, R. J., Simple statistical gradient-following algorithms for connectionist reinforcement learning, Machine Learning, 8, pp. 229–256, 1992.
+GNN for few-shot learning: Kim et al., Edge-Labeling Graph Neural Network for Few-Shot Learning, CVPR, 2019.

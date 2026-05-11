@@ -1,0 +1,182 @@
+DQN Variants in TAS-Net: Algorithms, Configurations, and Mathematical Formulations
+1. Shared Framework: TAS-Net EEG Episode MDP
+All four DQN variants operate on the same Markov Decision Process formulation derived from the original TAS-Net pipeline.
+
+MDP Element	Definition
+Episode	One EEG session/video sequence
+Timestep	One EEG frame $t \in {0, 1, \ldots, T-1}$
+State $s_t$	GRU/GNN hidden representation: $s_t = h_t \in \mathbb{R}^{2 \times d_{hid}}$ (bidirectional GRU output at frame $t$)
+Action space	Binary: $a_t \in {0=\text{discard},\ 1=\text{select}}$
+Terminal state	$t = T - 1$ (end of sequence)
+2. Reward Function (Shared Across All DQN Variants)
+All variants use the original TAS-Net global reward, treating the sequence as a single episode. The reward is computed once per episode and broadcast to all transitions.
+
+2.1 Diversity Component (R₁)
+Let $\mathcal{S} = {s_t : a_t = 1}$ be the set of selected frames, with $|\mathcal{S}| = K$.
+
+Normalised frame features:
+
+$$\hat{f}_i = \frac{f_i}{|f_i|_2 + \epsilon}$$
+
+Pairwise cosine similarity matrix over selected frames:
+
+$$\text{sim}_{ij} = \hat{f}_i^\top \hat{f}_j, \quad i, j \in \mathcal{S}$$
+
+Average pairwise similarity (lower = more diverse):
+
+$$R_{\text{div}} = \frac{1}{K(K-1)} \sum_{i \neq j, , i,j \in \mathcal{S}} \text{sim}_{ij}$$
+
+Note: If $K = 1$, then $R_{\text{div}} = 0$.
+
+2.2 Representativeness Component (R₂)
+Squared Euclidean distance from every frame to its nearest selected frame:
+
+$$d_i = \min_{j \in \mathcal{S}} |f_i - f_j|^2_2, \quad \forall i \in {1,\ldots,T}$$
+
+Coverage reward (higher = better coverage of the full sequence):
+
+$$R_{\text{rep}} = \exp!\left(-\frac{1}{T}\sum_{i=1}^{T} d_i\right)$$
+
+2.3 Episode-Level Reward (Final)
+$$\boxed{R_{\text{episode}} = \frac{R_{\text{div}} + R_{\text{rep}}}{2}}$$
+
+This scalar is assigned identically to every transition $(s_t, a_t, R_{\text{episode}}, s_{t+1}, \mathbf{1}_{t=T-1})$ generated within the episode.
+
+3. Training Configurations (Shared)
+Hyperparameter	Value
+Optimizer	Adam
+Learning Rate	$1 \times 10^{-4}$
+Weight Decay	$1 \times 10^{-5}$
+Epochs	100
+Batch Size	64
+Replay Buffer Size	10,000
+Discount Factor $\gamma$	0.99
+Soft Update Rate $\tau$	0.005
+$\epsilon_{\text{start}}$	1.0
+$\epsilon_{\text{end}}$	0.01
+$\epsilon_{\text{decay}}$ (steps)	500
+Gradient Clip Norm	5.0
+Train / Test Split	210 / 15 sequences
+LR Scheduler	StepLR (step=20, $\gamma_{\text{sched}}$=0.5)
+GNN Feature Dim	192
+GRU Hidden Dim	256 (bidirectional → 512)
+Off-policy updates per video	4
+4. Selection Balance Loss (Shared Stabilizer)
+To prevent policy collapse into all-discard or all-select:
+
+$$\pi_{\text{select}}(t) = \text{softmax}(Q(s_t, \cdot))_{\text{select}}$$
+
+$$\bar{\pi} = \frac{1}{T}\sum_{t=1}^{T} \pi_{\text{select}}(t)$$
+
+$$\mathcal{L}_{\text{balance}} = 0.01 \cdot \left(\bar{\pi} - 0.5\right)^2$$
+
+The total training loss for all variants is:
+
+$$\mathcal{L}{\text{total}} = \mathcal{L}{\text{TD}} + \mathcal{L}_{\text{balance}}$$
+
+5. Soft Target Network Update (Shared)
+$$\theta^- \leftarrow \tau , \theta + (1 - \tau) , \theta^-$$
+
+where $\theta$ = online network parameters, $\theta^-$ = target network parameters, $\tau = 0.005$.
+
+6. Algorithm 1: Vanilla DQN
+6.1 Network Architecture
+Standard Q-network using a bidirectional GRU backbone:
+
+$$h_t = \text{BiGRU}(f_t;, W_{\text{gru}})$$
+
+$$Q(s_t, a;, \theta) = \text{Linear}(\text{ReLU}(\text{Linear}(h_t)))$$
+
+Output: $Q(s_t, \cdot) \in \mathbb{R}^2$ for $a \in {\text{discard}, \text{select}}$.
+
+6.2 TD Target
+$$y_t = R_{\text{episode}} + \gamma \cdot \max_{a'} Q(s_{t+1}, a';, \theta^-) \cdot (1 - \mathbf{1}_{t=T-1})$$
+
+6.3 Loss
+$$\mathcal{L}{\text{TD}} = \frac{1}{B}\sum{b=1}^{B} \mathcal{H}!\left(Q(s_b, a_b;, \theta),; y_b\right)$$
+
+where $\mathcal{H}(\cdot)$ is the Huber (Smooth L1) loss.
+
+6.4 Best Recall
+Best Recall = 0.2564 (Epoch 3)
+
+7. Algorithm 2: Double DQN (DDQN)
+7.1 Key Difference from Vanilla DQN
+Standard DQN overestimates Q-values by using the same network for action selection and evaluation. DDQN decouples these:
+
+Action selection: Use the online network $\theta$
+Action evaluation: Use the target network $\theta^-$
+7.2 TD Target
+$$a^*{t+1} = \arg\max{a'} Q(s_{t+1}, a';, \theta) \quad \text{(online network selects)}$$
+
+$$y_t^{\text{DDQN}} = R_{\text{episode}} + \gamma \cdot Q(s_{t+1}, a^*{t+1};, \theta^-) \cdot (1 - \mathbf{1}{t=T-1})$$
+
+7.3 Loss
+Same Huber loss as Vanilla DQN:
+
+$$\mathcal{L}{\text{TD}} = \frac{1}{B}\sum{b=1}^{B} \mathcal{H}!\left(Q(s_b, a_b;, \theta),; y_b^{\text{DDQN}}\right)$$
+
+7.4 Best Recall
+Best Recall = 0.2474 (Epoch 44)
+
+8. Algorithm 3: Dueling DQN
+8.1 Network Architecture
+The Q-head is decomposed into two separate streams sharing the same GRU backbone:
+
+$$h_t = \text{BiGRU}(f_t;, W_{\text{gru}})$$
+
+Value stream (estimates state value):
+
+$$V(s_t;, \theta_V) = W_V^{(2)},\text{ReLU}(W_V^{(1)} h_t) \in \mathbb{R}$$
+
+Advantage stream (estimates action advantage):
+
+$$A(s_t, a;, \theta_A) = W_A^{(2)},\text{ReLU}(W_A^{(1)} h_t) \in \mathbb{R}^2$$
+
+Combined Q-value (with mean-subtraction normalization for identifiability):
+
+$$\boxed{Q(s_t, a;, \theta) = V(s_t;, \theta_V) + A(s_t, a;, \theta_A) - \frac{1}{|\mathcal{A}|}\sum_{a'} A(s_t, a';, \theta_A)}$$
+
+8.2 TD Target
+Uses standard DQN target (vanilla, not double):
+
+$$y_t^{\text{Dueling}} = R_{\text{episode}} + \gamma \cdot \max_{a'} Q(s_{t+1}, a';, \theta^-) \cdot (1 - \mathbf{1}_{t=T-1})$$
+
+8.3 Loss
+$$\mathcal{L}{\text{TD}} = \frac{1}{B}\sum{b=1}^{B} \mathcal{H}!\left(Q(s_b, a_b;, \theta),; y_b^{\text{Dueling}}\right)$$
+
+8.4 Best Recall
+Best Recall = 0.2603 (Epoch 6)
+
+9. Algorithm 4: Double Dueling DQN (D3QN)
+9.1 Architecture
+Combines the Dueling architecture (Section 8.1) with the Double DQN target (Section 7.2). This is the most advanced variant.
+
+$$h_t = \text{BiGRU}(f_t;, W_{\text{gru}})$$
+
+$$Q(s_t, a;, \theta) = V(s_t;, \theta_V) + A(s_t, a;, \theta_A) - \frac{1}{|\mathcal{A}|}\sum_{a'} A(s_t, a';, \theta_A)$$
+
+9.2 TD Target
+$$a^*{t+1} = \arg\max{a'} Q(s_{t+1}, a';, \theta)$$
+
+$$y_t^{\text{D3QN}} = R_{\text{episode}} + \gamma \cdot Q(s_{t+1}, a^*{t+1};, \theta^-) \cdot (1 - \mathbf{1}{t=T-1})$$
+
+9.3 Loss
+$$\mathcal{L}{\text{TD}} = \frac{1}{B}\sum{b=1}^{B} \mathcal{H}!\left(Q(s_b, a_b;, \theta),; y_b^{\text{D3QN}}\right)$$
+
+9.4 Best Recall
+Best Recall = 0.3218 (Epoch 18)
+
+10. Evaluation: Importance Score Computation
+During evaluation, frame importance scores are computed as the softmax selection probability from the learned Q-network, consistent with the baseline DSN sigmoid output scale:
+
+$$\text{importance}t = \text{softmax}!\left(Q(s_t, \cdot)\right){\text{select}} \in [0, 1]$$
+
+Frames are ranked in descending order of importance and the top-$k$ fragments are selected for tIoU-based Recall evaluation.
+
+11. Summary Comparison Table
+Algorithm	Q-Network	Target Action	Best Recall
+DQN	Standard BiGRU + Q-head	$\max_{a'} Q_{\theta^-}(s',a')$	0.2564
+DDQN	Standard BiGRU + Q-head	$Q_{\theta^-}(s', \arg\max_{\theta}Q)$	0.2474
+Dueling DQN	BiGRU + V/A streams (mean-subtract)	$\max_{a'} Q_{\theta^-}(s',a')$	0.2603
+D3QN	BiGRU + V/A streams (mean-subtract)	$Q_{\theta^-}(s', \arg\max_{\theta}Q)$	0.3218

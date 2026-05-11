@@ -1,4 +1,5 @@
 from __future__ import print_function
+from torch import optim
 import torch
 import os.path as osp
 import time
@@ -265,11 +266,11 @@ if __name__ == '__main__':
         model1 = ClassifierGNN(in_features=args.n_feature, edge_features=args.edge_features, out_features=args.n_feature, device=DEVICE).to(DEVICE)
         model2 = DSN(in_dim=args.n_feature, hid_dim=args.hid_dim, num_layers=1, cell='gru').to(DEVICE)
 
-        checkpoint_path1 = osp.join(args.save_path, f'best_model1_subj{args.subject_id}.pth.tar')
-        checkpoint_path2 = osp.join(args.save_path, f'best_model2_subj{args.subject_id}.pth.tar')
+        checkpoint_path1 = osp.join(args.save_path, f'best_model1_subj{args.subject_id}.pth')
+        checkpoint_path2 = osp.join(args.save_path, f'best_model2_subj{args.subject_id}.pth')
         
-        model1.load_state_dict(torch.load(checkpoint_path1, map_location=DEVICE)['state_dict'])
-        model2.load_state_dict(torch.load(checkpoint_path2, map_location=DEVICE)['state_dict'])
+        model1.load_state_dict(torch.load(checkpoint_path1, map_location=DEVICE))
+        model2.load_state_dict(torch.load(checkpoint_path2, map_location=DEVICE))
 
         with torch.no_grad():
             model1.eval()
@@ -294,7 +295,7 @@ if __name__ == '__main__':
             ]
 
             for key_idx, key in enumerate(test_keys):
-                seq = torch.from_numpy(datasets[key]['features'][...]).to(DEVICE)
+                seq = torch.from_numpy(datasets[key]['features'][...]).float().to(DEVICE)
                 gt = datasets[key]['labels'][...] 
                 label_idx = key_idx
                 local_label = local_labels[label_idx]
@@ -312,7 +313,7 @@ if __name__ == '__main__':
                 seq_graph = torch.add(seq, sub_graphs).unsqueeze(0)
                 
                 sig_probs, _ = model2(seq_graph)
-                probs_importance = sig_probs.data.cpu().squeeze().numpy()
+                probs_importance = sig_probs.data.cpu().reshape(-1).numpy()  # reshape(-1) safe for single-frame sequences
 
                 limits = args.num_fragment
                 order = np.argsort(probs_importance)[::-1]

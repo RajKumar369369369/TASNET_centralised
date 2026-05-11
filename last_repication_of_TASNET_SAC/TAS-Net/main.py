@@ -251,6 +251,9 @@ if __name__ == '__main__':
             print(f"   [Debug] A-Loss: {a_l:.4f} | C-Loss: {c_l:.4f} | Q-val: {q_v:.4f} | Ent: {ent:.4f}")
             
             Recall = evaluate(args, Network1, actor, datasets, test_keys)
+            # Restore train mode after evaluate() sets models to eval()
+            Network1.train()
+            actor.train()
             print(f"Recall: {Recall:.6f}")
             if Recall > best_recall:
                 best_recall = Recall
@@ -280,8 +283,8 @@ if __name__ == '__main__':
         checkpoint_path1 = osp.join(args.save_path, f'best_gnn_subj{args.subject_id}.pth')
         checkpoint_path2 = osp.join(args.save_path, f'best_actor_subj{args.subject_id}.pth')
         
-        model1.load_state_dict(torch.load(checkpoint_path1, map_location=DEVICE))
-        model2.load_state_dict(torch.load(checkpoint_path2, map_location=DEVICE))
+        model1.load_state_dict(torch.load(checkpoint_path1, map_location=DEVICE, weights_only=False))
+        model2.load_state_dict(torch.load(checkpoint_path2, map_location=DEVICE, weights_only=False))
 
         with torch.no_grad():
             model1.eval()
@@ -306,27 +309,31 @@ if __name__ == '__main__':
             ]
 
             for key_idx, key in enumerate(test_keys):
-                seq = torch.from_numpy(datasets[key]['features'][...]).to(DEVICE)
-                gt = datasets[key]['labels'][...] 
+                seq = torch.from_numpy(datasets[key]['features'][...]).float().to(DEVICE)  # ensure float32
+                gt = datasets[key]['labels'][...]
                 label_idx = key_idx
                 local_label = local_labels[label_idx]
 
                 sub_graphs = []
                 for n in range(math.ceil(seq.shape[0] / (args.fragment_length * 2))):
                     chunk = seq[(args.fragment_length * 2) * n : (args.fragment_length * 2) * (n + 1), :]
-                    if chunk.shape[0] > 1:
+                    if chunk.shape[0] <= 1:
+                        sub_graphs.append(chunk)  # skip GNN for single-frame chunks
+                    else:
                         sg, _ = model1(chunk)
                         sub_graphs.append(sg)
-                    else:
-                        sub_graphs.append(chunk)
-                
+
                 sub_graphs = torch.cat(sub_graphs, dim=0)
                 seq_graph = torch.add(seq, sub_graphs).unsqueeze(0)
-                
-                sig_probs = model2.get_action_probs(seq_graph)
-                probs_importance = sig_probs.data.cpu().squeeze().numpy()
 
-                limits = args.num_fragment
+                sig_probs = model2.get_action_probs(seq_graph)
+                # Ensure probs_importance is always 1-D (handles single-frame sequences)
+                probs_importance = sig_probs.data.cpu().squeeze().numpy()
+                if probs_importance.ndim == 0:
+                    probs_importance = probs_importance.reshape(1)
+
+                # Clamp limits to actual sequence length to prevent IndexError
+                limits = min(args.num_fragment, len(probs_importance))
                 order = np.argsort(probs_importance)[::-1]
 
                 all_fragment = []
@@ -410,25 +417,28 @@ if __name__ == '__main__':
             # Calculate and print the average Recall across all test videos
             all_recalls = []
             log_filepath = os.path.join(out_path, f'log_subject{args.subject_id}_{args.reward_function}.txt')
-            
+
             if os.path.exists(log_filepath):
                 with open(log_filepath, 'r') as f:
                     for line in f:
                         if 'Recall' in line:
                             try:
-                                # Extract numeric recall value from the log line
-                                recall_val = float(line.split('Recall')[-1].strip())
+                                # Log format: 'i_th trial X\tRecall Y.YY'
+                                parts = line.strip().split('Recall')
+                                recall_val = float(parts[-1].strip())
                                 all_recalls.append(recall_val)
-                            except ValueError:
+                            except (ValueError, IndexError):
                                 continue
 
+            print("\n" + "="*40)
+            print(f"TESTING SUMMARY (Subject {args.subject_id})")
             if all_recalls:
                 mean_recall = np.mean(all_recalls)
-                print(f"\n" + "="*30)
-                print(f"TESTING SUMMARY (Subject {args.subject_id})")
-                print(f"Mean Recall: {mean_recall:.4f}")
-                print(f"Log saved to: {log_filepath}")
-                print("="*30 + "\n")
+                print(f"Mean Recall @ IoU>=0.5 : {mean_recall:.4f}  (over {len(all_recalls)} valid trials)")
+            else:
+                print("No recall values collected — check that test_keys contain valid labelled trials.")
+            print(f"Log saved to           : {log_filepath}")
+            print("="*40 + "\n")
             
         # This is the end of the torch.no_grad() block
         datasets.close()

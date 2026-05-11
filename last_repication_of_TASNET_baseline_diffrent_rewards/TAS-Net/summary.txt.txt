@@ -1,0 +1,679 @@
+Notation
+
+Let an EEG sequence be represented by a set of frame embeddings:
+
+H={h
+1
+	​
+
+,h
+2
+	​
+
+,…,h
+T
+	​
+
+},h
+t
+	​
+
+∈R
+d
+
+where T is the number of temporal frames and h
+t
+	​
+
+ is the hidden representation of frame t.
+
+Let S⊆{1,…,T} be the selected fragment indices, and let 
+S
+ˉ
+ denote the unselected indices.
+
+Define the selection ratio:
+
+ρ=
+T
+∣S∣
+	​
+
+,ρ
+target
+	​
+
+=
+T
+K
+	​
+
+
+where K is the desired number of selected fragments.
+
+All rewards are computed at the sequence level and then assigned to the episode.
+
+1) Original author reward
+
+This is the reward used by the original TAS-Net pipeline. In your paper, you can describe it as the baseline sequence-quality reward that encourages representative and informative fragment selection.
+
+A generic form is:
+
+R
+orig
+	​
+
+=F
+repr
+	​
+
+(H,S)+F
+div
+	​
+
+(H,S)−F
+red
+	​
+
+(H,S)
+
+where:
+
+F
+repr
+	​
+
+: representativeness term
+F
+div
+	​
+
+: diversity term
+F
+red
+	​
+
+: redundancy penalty
+Interpretation
+
+This reward encourages the selected fragments to summarize the whole EEG sequence while avoiding repeated or highly similar fragments. It is a good generic reward, but it may not explicitly favor boundaries, compact emotion-specific clusters, or temporal continuity.
+
+Your result
+
+Best recall observed in your run: about 0.4564.
+
+2) Reward R1: Coverage + Diversity + Low Redundancy
+
+This reward is designed to select fragments that both cover the whole sequence and remain diverse.
+
+Mathematical form
+R
+1
+	​
+
+=λ
+c
+	​
+
+C+λ
+d
+	​
+
+D−λ
+u
+	​
+
+U−λ
+p
+	​
+
+P
+
+with:
+
+C=exp(−
+T
+1
+	​
+
+i=1
+∑
+T
+	​
+
+j∈S
+min
+	​
+
+∥h
+i
+	​
+
+−h
+j
+	​
+
+∥
+2
+	​
+
+)
+D=
+∣S∣(∣S∣−1)
+2
+	​
+
+i,j∈S
+i<j
+	​
+
+∑
+	​
+
+∥h
+i
+	​
+
+−h
+j
+	​
+
+∥
+2
+	​
+
+U=
+∣S∣(∣S∣−1)
+2
+	​
+
+i,j∈S
+i<j
+	​
+
+∑
+	​
+
+cos(h
+i
+	​
+
+,h
+j
+	​
+
+)
+P=(ρ−ρ
+target
+	​
+
+)
+2
+
+A concrete version matching your earlier design is:
+
+R
+1
+	​
+
+=1.0C+0.7D−0.5U−0.3P
+Meaning of terms
+Coverage C: rewards selected fragments that explain the entire sequence well.
+Diversity D: rewards non-redundant selected fragments that cover different emotion-relevant patterns.
+Redundancy U: penalizes selecting nearly identical frames.
+Selection penalty P: keeps the number of selected fragments near the target.
+Why it may work
+
+This reward is strong when emotional information is spread over different parts of the sequence, because it encourages broad but non-repetitive coverage.
+
+Your result
+Reward saturated at 5.0 very early.
+Best recall observed: about 0.4859.
+
+That reward saturation is important. It suggests the reward may be too aggressively clipped or too easy to maximize under the current normalization, so the model quickly hits the ceiling.
+
+3) Reward R2: Boundary / Transition-Aware Reward
+
+This reward is meant to capture emotionally important temporal changes. It is useful when discriminative information lies near transitions or abrupt changes in EEG patterns.
+
+Mathematical form
+
+Define a local boundary score for frame t:
+
+b
+t
+	​
+
+=
+2
+1
+	​
+
+(∥h
+t
+	​
+
+−h
+t−1
+	​
+
+∥
+2
+	​
+
++∥h
+t+1
+	​
+
+−h
+t
+	​
+
+∥
+2
+	​
+
+)
+
+Then define the boundary reward over selected frames:
+
+B=
+∣S∣
+1
+	​
+
+t∈S
+∑
+	​
+
+b
+t
+	​
+
+
+The full reward is:
+
+R
+2
+	​
+
+=λ
+b
+	​
+
+B+λ
+c
+	​
+
+C−λ
+u
+	​
+
+U−λ
+p
+	​
+
+P
+
+A concrete version matching your design is:
+
+R
+2
+	​
+
+=1.0B+0.5C−0.5U−0.3P
+Meaning of terms
+Boundary score B: rewards selected fragments near strong temporal transitions.
+Coverage C: keeps the selection representative.
+Redundancy U: prevents repeated selection of similar frames.
+Penalty P: controls the selected fragment ratio.
+Why it may work
+
+EEG emotion signals are often not static. They may emerge in transitions, spikes, or changes between mental states. This reward biases the sampler toward those informative points.
+
+Your result
+Best recall observed: about 0.4859.
+Training was a bit unstable early, which is consistent with a reward that is sensitive to local temporal variation.
+4) Reward R3: Compactness + Separation Reward
+
+This is the most class-separation-oriented reward. It tries to make the selected fragments form a tight informative cluster that is clearly different from the unselected fragments.
+
+Mathematical form
+
+Define the selected centroid:
+
+μ
+S
+	​
+
+=
+∣S∣
+1
+	​
+
+t∈S
+∑
+	​
+
+h
+t
+	​
+
+
+and the unselected centroid:
+
+μ
+S
+ˉ
+	​
+
+=
+∣
+S
+ˉ
+∣
+1
+	​
+
+t∈
+S
+ˉ
+∑
+	​
+
+h
+t
+	​
+
+
+Define separation:
+
+Sep=∥μ
+S
+	​
+
+−μ
+S
+ˉ
+	​
+
+∥
+2
+	​
+
+
+Compactness:
+
+Comp=
+∣S∣
+1
+	​
+
+t∈S
+∑
+	​
+
+∥h
+t
+	​
+
+−μ
+S
+	​
+
+∥
+2
+	​
+
+
+Redundancy:
+
+U=
+∣S∣(∣S∣−1)
+2
+	​
+
+i,j∈S
+i<j
+	​
+
+∑
+	​
+
+cos(h
+i
+	​
+
+,h
+j
+	​
+
+)
+
+Penalty:
+
+P=(ρ−ρ
+target
+	​
+
+)
+2
+
+Then:
+
+R
+3
+	​
+
+=λ
+s
+	​
+
+Sep−λ
+c
+	​
+
+Comp−λ
+u
+	​
+
+U−λ
+p
+	​
+
+P
+
+A concrete version matching your implementation is:
+
+R
+3
+	​
+
+=1.0Sep−0.7Comp−0.3U−0.3P
+Meaning of terms
+Separation Sep: selected fragments should be distinct from the rest of the sequence.
+Compactness Comp: selected fragments should internally agree, forming a coherent emotional region.
+Redundancy U: avoids repeating very similar selected frames.
+Why it may work
+
+This reward is useful when emotional fragments occupy a specific subspace in feature space. It directly pushes the selected set away from the background EEG.
+
+Your result
+Best recall observed: about 0.4859.
+Your curve is the most stable in later epochs, which fits a reward that encourages a coherent selected cluster.
+5) Reward R4: Temporal Smoothness + Contiguity Reward
+
+This reward forces the model to prefer contiguous selected intervals rather than isolated selected frames.
+
+Mathematical form
+
+Let the selected indices form contiguous runs r
+1
+	​
+
+,r
+2
+	​
+
+,…,r
+m
+	​
+
+, where each run has length ℓ
+k
+	​
+
+.
+
+Define contiguity:
+
+Contig=
+m
+1
+	​
+
+k=1
+∑
+m
+	​
+
+T
+ℓ
+k
+	​
+
+	​
+
+
+Define isolation penalty:
+
+Iso=
+∣S∣
+#isolated selected frames
+	​
+
+
+Coverage:
+
+C=exp(−
+T
+1
+	​
+
+i=1
+∑
+T
+	​
+
+j∈S
+min
+	​
+
+∥h
+i
+	​
+
+−h
+j
+	​
+
+∥
+2
+	​
+
+)
+
+Redundancy:
+
+U=
+∣S∣(∣S∣−1)
+2
+	​
+
+i,j∈S
+i<j
+	​
+
+∑
+	​
+
+cos(h
+i
+	​
+
+,h
+j
+	​
+
+)
+
+Penalty:
+
+P=(ρ−ρ
+target
+	​
+
+)
+2
+
+Then:
+
+R
+4
+	​
+
+=λ
+t
+	​
+
+Contig+λ
+c
+	​
+
+C−λ
+i
+	​
+
+Iso−λ
+u
+	​
+
+U−λ
+p
+	​
+
+P
+
+A concrete version matching your design is:
+
+R
+4
+	​
+
+=1.0Contig+0.5C−0.5Iso−0.3U−0.3P
+Meaning of terms
+Contiguity Contig: rewards selecting smooth continuous temporal segments.
+Isolation penalty Iso: discourages isolated single-frame picks.
+Coverage C and redundancy U keep the selection useful and non-repetitive.
+Why it may work
+
+If emotion-related EEG activity occurs in short continuous windows, this reward can help. But if discriminative information is scattered, it may over-constrain the model.
+
+Your result
+
+This was the weakest of the four in your run:
+
+peaked around 0.4436
+then drifted downward
+
+That is consistent with the reward being too restrictive for this dataset.
+
+What your training logs suggest
+
+This is the strongest paper-level interpretation:
+
+Original reward gives a reasonable baseline, but recall plateaus around the mid-0.45 range.
+R1 improves early recall because coverage and diversity are directly encouraged.
+R2 improves by targeting temporal transitions, which seems useful for EEG.
+R3 is the most stable among the alternatives and gives strong recall, likely because it aligns well with class-separable fragment structure.
+R4 is too smooth/contiguity-biased for this data and underperforms the others.

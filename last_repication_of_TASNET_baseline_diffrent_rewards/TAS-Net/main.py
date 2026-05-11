@@ -257,6 +257,7 @@ if __name__ == '__main__':
                  [[21, 31], [92, 103], [119, 129], [224, 240]],
                  [[49, 60], [138, 150], [162, 174], [195, 210]],
                  [[63, 80], [97, 113], [120, 134], [165, 180], [184, 205]]]
+            local_recalls = []
             for key_idx, key in enumerate(test_keys):
                 seq = datasets[key]['features'][...]
                 gt = datasets[key]['labels'][...]
@@ -318,6 +319,7 @@ if __name__ == '__main__':
                                 n_t += 1
                                 break
                     local_recall = n_t / len(local_label)
+                    local_recalls.append(local_recall)
                     log_str1 = 'i_th trial %.0f\tRecall %.02f' % (
                         label_idx, local_recall)
                     save_idx.write(log_str1 + '\n')
@@ -354,5 +356,11 @@ if __name__ == '__main__':
             print(all_features.shape, all_labels.shape)
             mat_file = os.path.join(out_path, 'TAS_' + 'subject' + str(args.subject_id)  + '_' + str(args.reward_function) + '_' + str(args.num_fragment) + '.mat')
             savemat(mat_file, {'feature': all_features, 'label': all_labels})
+            
+            if len(local_recalls) > 0:
+                mean_testing_recall = np.mean(local_recalls)
+                print("==================================================")
+                print("Testing Mean Recall: {:.4f}".format(mean_testing_recall))
+                print("==================================================")
 
 #python -u "d:\PycharmProjects\pythonProject\RL_reserach\last_repication_of_TASNET\TAS-Net\main.py" --training --subject_id 0 --gpu 0 --epochs 100 --deep_features "d:\PycharmProjects\pythonProject\RL_reserach\last_repication_of_TASNET\features\session_1\source_h5_file.h5" --save_path "./checkpoints"
