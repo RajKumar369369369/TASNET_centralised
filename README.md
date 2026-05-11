@@ -1,0 +1,1 @@
+for features use 200 as sampling rate, else if you want to train without running feature extraction you can download using this link(https://drive.google.com/drive/folders/19732vGG1eMAwulbNQ3REsp-vy05xOGS7?usp=sharing)
